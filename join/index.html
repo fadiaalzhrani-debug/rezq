@@ -161,6 +161,14 @@ select.unit{appearance:none;-webkit-appearance:none;width:auto;max-width:100%;mi
 .status{font-size:13.5px;color:var(--ok);text-align:center;min-height:1.4em;font-weight:500}
 .status.err{color:var(--ink)}
 .after{display:flex;flex-direction:column;gap:8px;padding-block:12px;padding-inline:14px;border-radius:12px;background:var(--gold-soft)}
+.done{display:flex;flex-direction:column;gap:10px;padding-block:16px;padding-inline:16px;border-radius:12px;background:var(--gold-soft);text-align:center}
+.done .big{font-size:20px;font-weight:700;margin:0}
+.done .ref{font-size:15px;margin:0}
+.done .ref b{font-size:22px;font-variant-numeric:tabular-nums}
+.done p{margin:0}
+.done .btn{text-decoration:none}
+.fbnote{margin:0;font-weight:700}
+.hp{position:absolute;inset-inline-start:-9999px;width:1px;height:1px;overflow:hidden}
 .after .big{font-size:16px;font-weight:700}
 .num{font-size:18px;font-weight:700;font-variant-numeric:tabular-nums;unicode-bidi:isolate;white-space:nowrap}
 .after .status{text-align:start;min-height:0}
@@ -344,6 +352,7 @@ select.unit{appearance:none;-webkit-appearance:none;width:auto;max-width:100%;mi
     </div>
   </section>
 
+  <div class="hp" aria-hidden="true"><label>Website <input id="hpWebsite" type="text" tabindex="-1" autocomplete="off"></label></div>
   <section class="send" aria-label="الإرسال" data-ta="sendArea">
     <p class="missing" id="missing" role="alert" hidden></p>
     <button type="button" class="btn main" id="reviewBtn" data-t="review">راجع رسالتك وأرسل</button>
@@ -351,7 +360,18 @@ select.unit{appearance:none;-webkit-appearance:none;width:auto;max-width:100%;mi
 
     <section class="card review" id="review" aria-labelledby="rvH" hidden>
       <h2 id="rvH" tabindex="-1" data-t="rvH">هذي رسالتك لخافت</h2>
-      <p class="sub" id="rvSub" data-t="rvSub">راجعها، وإذا كل شي تمام اضغط الزر.</p>
+      <p class="sub" id="rvSub" data-t="rvSub">راجعه، وإذا كل شي تمام اضغط «أرسل الطلب».</p>
+      <div class="done" id="done" hidden>
+        <p class="big" data-t="doneH">✅ وصل طلبك</p>
+        <p class="ref"><span data-t="doneRef">رقم طلبك:</span> <b id="doneNo" dir="ltr"></b></p>
+        <p data-t="d2">نراجعه ونتواصل معك على جوالك.</p>
+        <p data-t="d3">عندك صور من شغلك؟ أرسلها لنا على واتساب.</p>
+        <a id="photosWa" class="btn ghost" href="https://wa.me/966590497866" target="_blank" rel="noopener" data-t="sendPhotos">أرسل الصور على واتساب</a>
+        <button type="button" class="linkbtn" id="newForm2" data-t="newForm">نموذج جديد لمقدم خدمة ثاني</button>
+      </div>
+      <button type="button" class="btn main" id="sendBtn" data-t="send">أرسل الطلب</button>
+      <p class="status" id="sendStatus" role="status"></p>
+      <p class="fbnote" id="fbNote" data-t="fbNote" hidden>أو أرسله على واتساب:</p>
       <div class="after" id="after" hidden>
         <p class="big" data-t="a1">باقي خطوة: اضغط زر الإرسال ➤ في واتساب.</p>
         <p id="aCopied" data-t="a2" hidden>وانتسخت الرسالة احتياط.</p>
@@ -362,11 +382,11 @@ select.unit{appearance:none;-webkit-appearance:none;width:auto;max-width:100%;mi
         <p data-t="a5">نراجع رسالتك ونتواصل معك.</p>
         <button type="button" class="linkbtn" id="newForm" data-t="newForm">نموذج جديد لمقدم خدمة ثاني</button>
       </div>
-      <a id="sendWa" class="btn main wa" href="https://wa.me/966590497866" target="_blank" rel="noopener" data-t="openWa">افتح واتساب وأرسل</a>
+      <a id="sendWa" class="btn main wa" href="https://wa.me/966590497866" target="_blank" rel="noopener" data-t="openWa" hidden>افتح واتساب وأرسل</a>
       <div class="pv" id="preview" dir="rtl" lang="ar"></div>
       <p class="note" id="longNote" data-t="long" hidden>رسالتك طويلة، إذا وصلت ناقصة انسخها والصقها في واتساب.</p>
-      <a id="sendWa2" class="btn main wa" href="https://wa.me/966590497866" target="_blank" rel="noopener" data-t="openWa">افتح واتساب وأرسل</a>
-      <div class="btnrow">
+      <a id="sendWa2" class="btn main wa" href="https://wa.me/966590497866" target="_blank" rel="noopener" data-t="openWa" hidden>افتح واتساب وأرسل</a>
+      <div class="btnrow" id="rvBtns">
         <button type="button" class="btn ghost" id="copyMsg" data-t="copy">انسخ الرسالة</button>
         <button type="button" class="btn ghost" id="editBtn" data-t="edit">عدّل</button>
       </div>
@@ -380,6 +400,9 @@ select.unit{appearance:none;-webkit-appearance:none;width:auto;max-width:100%;mi
 'use strict';
 
 var WA = '966590497866';
+/* الطلب يوصل مباشرة لقاعدة بيانات خافت (لوحة المؤسسة في رزق)، وواتساب احتياط لو فشل الإرسال */
+var SB_URL = 'https://zulogtqxbuqxmdmjpzqj.supabase.co';
+var SB_KEY = 'sb_publishable_ssggqTzT4GG4sreXV1LObQ_C3yiYhaG';
 var KEY = 'khafet_join_v2';
 var INSPECT = 'بعد المعاينة';
 
@@ -388,8 +411,8 @@ var T0 = {
   brand:['خافت','Khafet'],
   langGroup:['اللغة','Language'],
   h1:['انضم لخافت كفني أو مقدم خدمة','Join Khafet as a technician or service provider'],
-  lead:['اكتب خدماتك وأسعارك، وبالأخير ينفتح واتساب برسالة جاهزة، اضغط إرسال. نراجعها ونتواصل معك.','Type your services and prices. At the end WhatsApp opens with a ready message, just tap send. We review it and contact you.'],
-  meta:['ياخذ دقايق · يوصلنا على واتساب','Takes a few minutes · Reaches us on WhatsApp'],
+  lead:['اكتب خدماتك وأسعارك واضغط إرسال، ويوصلنا طلبك مباشرة. نراجعه ونتواصل معك.','Type your services and prices and tap send. Your request reaches us directly. We review it and contact you.'],
+  meta:['ياخذ دقايق','Takes a few minutes'],
   draft:['رجعنا لك اللي كتبته آخر مرة.','We brought back what you typed last time.'],
   restart:['ابدأ من جديد','Start over'],
   restartSure:['متأكد؟ امسح الكل','Sure? Clear everything'],
@@ -457,7 +480,7 @@ var T0 = {
   eq0:['سيارة','A car'], eq1:['عدة شغل كاملة','A full tool kit'],
 
   sendArea:['الإرسال','Send'],
-  review:['راجع رسالتك وأرسل','Review your message and send'],
+  review:['راجع طلبك وأرسل','Review your request and send'],
   privacy:['النموذج ما يطلب رقم إقامة ولا حساب بنكي.','This form never asks for an iqama number or a bank account.'],
   missing:['ناقص: ','Missing: '],
   andMore:['، و {n} غيرها',', and {n} more'],
@@ -493,8 +516,19 @@ var T0 = {
   s_name:['الاسم','Name'], s_phone:['الجوال','Mobile'],
   s_city:['المدن','Cities'], s_cityOther:['اسم المدينة','City name'],
 
-  rvH:['هذي رسالتك لخافت','This is your message to Khafet'],
-  rvSub:['راجعها، وإذا كل شي تمام اضغط الزر.','Check it, and if all is good tap the button.'],
+  rvH:['هذا طلبك لخافت','This is your request to Khafet'],
+  rvSub:['راجعه، وإذا كل شي تمام اضغط «أرسل الطلب».','Check it, and if all is good tap “Send request”.'],
+  send:['أرسل الطلب','Send request'],
+  sending:['جاري الإرسال…','Sending…'],
+  e_send:['ما قدرنا نرسل الحين. أرسله على واتساب بدالها من الزر تحت.','We could not send it now. Send it on WhatsApp instead with the button below.'],
+  e_tooMany:['وصلنا أكثر من طلب من هذا الرقم اليوم. لو تبي تعدل شي أرسله على واتساب.','We already got requests from this number today. To change something, send it on WhatsApp.'],
+  e_invalid:['تأكد من الاسم ورقم الجوال.','Check your name and mobile number.'],
+  fbNote:['أو أرسله على واتساب:','Or send it on WhatsApp:'],
+  doneH:['✅ وصل طلبك','✅ Request received'],
+  doneRef:['رقم طلبك:','Your request number:'],
+  d2:['نراجعه ونتواصل معك على جوالك.','We review it and contact you on your mobile.'],
+  d3:['عندك صور من شغلك؟ أرسلها لنا على واتساب.','Have photos of your work? Send them to us on WhatsApp.'],
+  sendPhotos:['أرسل الصور على واتساب','Send photos on WhatsApp'],
   long:['رسالتك طويلة، إذا وصلت ناقصة انسخها والصقها في واتساب.','Your message is long. If it arrives cut, copy it and paste it in WhatsApp.'],
   openWa:['افتح واتساب وأرسل','Open WhatsApp and send'],
   copy:['انسخ الرسالة','Copy message'],
@@ -1253,8 +1287,95 @@ function renderReview(){
   var m = message(), href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(m);
   $('preview').textContent = m;
   qa('#review .wa').forEach(function(a){ a.href = href; });
-  $('longNote').hidden = m.length <= 3000; // عدد حروف الرسالة نفسها
+  $('longNote').hidden = !fbMode || m.length <= 3000; // عدد حروف الرسالة نفسها
 }
+
+/* الإرسال المباشر */
+var fbMode = false, sending = false, sentRef = null;
+function setFallback(on){
+  fbMode = !!on;
+  $('sendWa').hidden = !fbMode;
+  $('sendWa2').hidden = !fbMode;
+  $('fbNote').hidden = !fbMode;
+  if (!review.hidden) renderReview();
+}
+function payload(){
+  var cities = checkedValues('city').filter(function(v){ return v !== 'مدينة ثانية'; });
+  if ($('city6').checked && san($('cityOther').value)) cities.push(san($('cityOther').value));
+  var cats = [];
+  sel.forEach(function(id){
+    var c = CAT[id], R = rows[id], svcs = [];
+    function sv(code, name, r){
+      var p = parsePrice(r.price, 20000), insp = r.unit === INSPECT;
+      svcs.push({ code: code, name: name, price: p.ok ? Number(p.n) : null, unit: insp ? INSPECT : T[unitKey(id, r.unit)].ar, inspect: insp });
+    }
+    c.s.forEach(function(sg, i){ if (R.s[i].on) sv(sg[0] || 'جديد', sg[1], R.s[i]); });
+    R.c.forEach(function(r){ sv('جديد', san(r.name), r); });
+    if (!svcs.length) return;
+    cats.push({ id: c.isNew ? 'new' : id, name: id === 'other' ? san(otherName) : T['cat_' + id].ar, isNew: !!c.isNew, services: svcs });
+  });
+  var visit = radioValue('visit'), vp = parsePrice($('visitPrice').value, 5000);
+  return {
+    v: 2, lang: lang, name: san($('name').value), phone: phone($('phone').value), cities: cities,
+    team: radioValue('team') || null, exp: $('exp').value || null, company: san($('company').value) || null,
+    doc: radioValue('doc') || null, equipment: checkedValues('eq'), materials: radioValue('mat'),
+    categories: cats, warranty: radioValue('war'),
+    visit: { type: visit, price: visit === 'بسعر' ? (vp.n || null) : null, deduct: visit === 'بسعر' ? !!$('visitDeduct').checked : null },
+    times: checkedValues('time'), friday: !!$('fri').checked, urgent: !!$('urgent').checked,
+    notes: san($('notes').value) || null,
+    website: $('hpWebsite').value || '',
+    message: message()
+  };
+}
+function showDone(ref){
+  sentRef = ref;
+  ['card1', 'card2', 'card3', 'card4', 'draftNote', 'reviewBtn', 'missing'].forEach(function(id){ if ($(id)) $(id).hidden = true; });
+  qa('#root .send > .note').forEach(function(el){ el.hidden = true; });
+  $('done').hidden = false;
+  $('rvH').hidden = true;
+  $('rvSub').hidden = true;
+  $('sendBtn').hidden = true;
+  $('sendStatus').textContent = '';
+  $('preview').hidden = true;
+  $('rvBtns').hidden = true;
+  $('longNote').hidden = true;
+  $('after').hidden = true;
+  fbMode = false; $('sendWa').hidden = true; $('sendWa2').hidden = true; $('fbNote').hidden = true;
+  $('doneNo').textContent = ref;
+  var who = san($('name').value);
+  $('photosWa').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent((lang === 'en' ? 'Photos of my work · Join request #' : 'صور شغلي · طلب انضمام رقم ') + ref + (who ? ' · ' + who : ''));
+  try { localStorage.removeItem(KEY); } catch (e) {}
+  window.scrollTo(0, 0);
+  $('done').scrollIntoView({block:'start'});
+}
+$('sendBtn').addEventListener('click', function(){
+  if (sending) return;
+  if (!validate({all:true, scroll:true})) {
+    tried = true;
+    renderMissing(collect());
+    hideReview();
+    return;
+  }
+  sending = true;
+  $('sendBtn').disabled = true;
+  setStatus('sendStatus', 'sending');
+  var ctrl = null, timer = null;
+  try { ctrl = new AbortController(); timer = setTimeout(function(){ try { ctrl.abort(); } catch (e) {} }, 20000); } catch (e) {}
+  var done = function(){ if (timer) clearTimeout(timer); sending = false; $('sendBtn').disabled = false; };
+  var fail = function(key){ done(); setStatus('sendStatus', key || 'e_send', true); setFallback(true); };
+  try {
+    fetch(SB_URL + '/rest/v1/rpc/submit_join_request', {
+      method: 'POST',
+      headers: { apikey: SB_KEY, Authorization: 'Bearer ' + SB_KEY, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ p: payload() }),
+      signal: ctrl ? ctrl.signal : undefined
+    }).then(function(r){ return r.json(); }).then(function(j){
+      if (j && j.ok) { done(); showDone(j.ref); return; }
+      var e = j && j.error;
+      fail(e === 'too_many' ? 'e_tooMany' : e === 'invalid' ? 'e_invalid' : 'e_send');
+    }).catch(function(){ fail('e_send'); });
+  } catch (e) { fail('e_send'); }
+});
 function setAfter(on){
   $('after').hidden = !on;
   $('rvSub').hidden = on;
@@ -1290,6 +1411,7 @@ $('reviewBtn').addEventListener('click', function(){
   }
   renderReview();
   setStatus('copyStatus', '');
+  setStatus('sendStatus', '');
   review.hidden = false;
   review.scrollIntoView({block:'start'});
   $('rvH').focus({preventScroll:true});
@@ -1344,6 +1466,10 @@ qa('#review .wa').forEach(function(a){
   });
 });
 $('newForm').addEventListener('click', resetAll);
+$('newForm2').addEventListener('click', function(){
+  try { localStorage.removeItem(KEY); } catch (e) {}
+  location.reload();
+});
 
 document.addEventListener('visibilitychange', function(){
   if (document.visibilityState === 'hidden') save();
