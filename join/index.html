@@ -1,0 +1,1519 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#F5C518">
+<meta name="description" content="للفنيين ومقدمي الخدمات: اكتب خدماتك وأسعارك وأرسلها لخافت على واتساب.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="خافت">
+<meta property="og:title" content="انضم لخافت كفني أو مقدم خدمة">
+<meta property="og:description" content="اكتب خدماتك وأسعارك، وتوصلنا على واتساب برسالة جاهزة.">
+<meta property="og:image" content="https://fadiaalzhrani-debug.github.io/khaft/www/logo.png">
+<meta property="og:url" content="https://fadiaalzhrani-debug.github.io/rezq/join/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="https://fadiaalzhrani-debug.github.io/khaft/www/logo.png">
+<link rel="apple-touch-icon" href="https://fadiaalzhrani-debug.github.io/khaft/www/logo.png">
+<title>انضم لخافت</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F4F4F1; --card:#FFFFFF; --ink:#16150F; --muted:#6B685C; --line:#E0DED4; --field:#FAFAF7; --ctl:#8C887A;
+  --gold:#F5C518; --gold-ink:#16150F; --gold-soft:#FFF3BF; --chip:#EFEDE4;
+  --err:#B42318; --err-soft:#FDECEA; --ok:#1E7A46; --focus:#16150F;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#12120F; --card:#1C1C18; --ink:#F3F1E8; --muted:#A5A293; --line:#34332C; --field:#15150F; --ctl:#6E6B60;
+    --gold:#F5C518; --gold-ink:#16150F; --gold-soft:#3A3212; --chip:#27261F;
+    --err:#FF8A7A; --err-soft:#3A1A16; --ok:#6FD39A; --focus:#F5C518;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#12120F; --card:#1C1C18; --ink:#F3F1E8; --muted:#A5A293; --line:#34332C; --field:#15150F; --ctl:#6E6B60;
+  --gold:#F5C518; --gold-ink:#16150F; --gold-soft:#3A3212; --chip:#27261F;
+  --err:#FF8A7A; --err-soft:#3A1A16; --ok:#6FD39A; --focus:#F5C518;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;font-size:15px;line-height:1.6;margin:0}
+.wrap{max-width:640px;margin:0 auto;padding-inline:16px;padding-block:16px 48px}
+p{margin:0}
+
+/* الرأس */
+.hero{display:flex;flex-direction:column;gap:8px;margin-block-end:16px}
+.toprow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-block-end:6px}
+.logo{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:16px}
+.logo i{width:32px;height:32px;border-radius:9px;background:var(--gold);color:var(--gold-ink);display:grid;place-items:center;font-style:normal;font-size:18px}
+.lang{display:inline-flex;border:1.5px solid var(--ctl);border-radius:12px;overflow:hidden;flex:none}
+.lang button{font:inherit;font-size:14px;font-weight:700;min-height:44px;min-width:66px;padding-inline:12px;border:0;background:var(--card);color:var(--ink);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+h1{font-size:24px;line-height:1.35;margin:0;text-wrap:balance}
+.hero p{color:var(--muted);max-width:56ch}
+.hero .meta{font-size:13px}
+.banner{display:flex;flex-wrap:wrap;align-items:center;gap:0 12px;background:var(--gold-soft);border-radius:12px;padding-inline:14px;padding-block:2px;margin-block-end:14px;font-size:14px}
+.linkbtn{font:inherit;font-size:14px;font-weight:700;min-height:44px;padding-inline:4px;border:0;background:transparent;color:var(--ink);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+
+/* البطاقات */
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-block-end:14px}
+.card h2{font-size:18px;line-height:1.4;margin:0;display:flex;align-items:center;gap:10px}
+.n{width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:13px;font-weight:700;display:grid;place-items:center;flex:none;line-height:1}
+.done .n{background:var(--gold);color:var(--gold-ink)}
+.done .n b{display:none}
+.done .n::after{content:"✓";font-size:14px}
+.sub{color:var(--muted);font-size:13px;margin-block:2px 12px}
+.card>.grid,.card>fieldset{margin-block-start:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 12px;align-items:start}
+.full{grid-column:1/-1}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{padding:0;margin:0 0 6px}
+.lbl,.f>label{font-size:14px;font-weight:700;line-height:1.4}
+.lbl small,.f>label small{font-size:12px;font-weight:400;color:var(--muted);margin-inline-start:4px;white-space:nowrap}
+
+/* الحقول */
+input,select,textarea{font:inherit;font-size:16px;min-height:44px}
+input[type=text],input[type=tel],select,textarea{color:var(--ink);background:var(--field);border:1.5px solid var(--ctl);border-radius:10px;padding-block:8px;padding-inline:11px;width:100%;min-width:0}
+select{cursor:pointer}
+textarea{min-height:88px;resize:vertical;line-height:1.55}
+input::placeholder,textarea::placeholder{color:var(--muted);opacity:1}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--focus);outline-offset:1px}
+#root[dir="rtl"] #phone{text-align:right}
+#root[dir="ltr"] #phone{text-align:left}
+#phone{font-variant-numeric:tabular-nums;letter-spacing:.02em}
+
+/* الشرائح */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips.tight{gap:6px}
+.chips.tight .chip>span{padding-inline:12px}
+.chip{position:relative;display:inline-flex;min-width:0}
+.chip>input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;pointer-events:none}
+.chip>span{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--ctl);background:var(--field);color:var(--ink);cursor:pointer;font-size:15px;line-height:1.3;user-select:none}
+.chip>input:checked+span{background:var(--gold);border-color:var(--gold);color:var(--gold-ink);font-weight:700}
+fieldset.bad .chip>input:not(:checked)+span,.bad>.chips .chip>input:not(:checked)+span{border-color:var(--err)}
+.emo{font-size:17px;line-height:1}
+button:focus-visible,a:focus-visible,.chip>input:focus-visible+span,.tickw>input:focus-visible+.box{outline:3px solid var(--focus);outline-offset:2px}
+
+/* الأخطاء */
+.msg{display:flex;align-items:flex-start;gap:6px;font-size:12.5px;line-height:1.45;color:var(--err);font-weight:500;margin-block-start:6px}
+.msg::before{content:"!";flex:none;width:16px;height:16px;margin-block-start:1px;border-radius:50%;background:var(--err);color:var(--card);font-size:11px;font-weight:700;display:grid;place-items:center;line-height:1}
+.f>.msg,.f>input+.msg{margin-block-start:0}
+
+/* الخدمات */
+.empty{color:var(--muted);font-size:14px;margin-block-start:14px;padding-block:14px;padding-inline:12px;border-radius:12px;background:var(--field);text-align:center}
+.cat{border-block-start:1px solid var(--line);margin-block-start:16px;padding-block-start:12px}
+.cat h3{margin:0 0 4px;font-size:16px;line-height:1.4;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.cat h3 .hn{display:inline-flex;align-items:center;gap:8px}
+.cat h3 small{font-weight:400;color:var(--muted);font-size:12.5px;white-space:nowrap}
+.cat>.msg{margin-block:0 6px}
+.otherf{margin-block:6px 8px}
+.svc{display:grid;grid-template-columns:44px minmax(0,1fr) 108px;column-gap:6px;align-items:center;padding-block:2px;padding-inline:4px;border-radius:10px;margin-block-start:2px}
+.svc.on{background:var(--gold-soft)}
+.svc.custom{row-gap:6px;padding-block:6px}
+.tickw{position:relative;grid-column:1;grid-row:1;width:44px;height:44px;display:grid;place-items:center;cursor:pointer}
+.tickw>input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.box{width:24px;height:24px;border-radius:7px;border:1.5px solid var(--ctl);background:var(--card);color:var(--gold-ink);display:grid;place-items:center;pointer-events:none}
+.box svg{width:16px;height:16px;opacity:0}
+.tickw>input:checked+.box{background:var(--gold);border-color:var(--gold)}
+.tickw>input:checked+.box svg{opacity:1}
+.txt{grid-column:2;grid-row:1;display:flex;flex-direction:column;justify-content:center;min-height:44px;min-width:0;padding-block:4px;line-height:1.35;overflow-wrap:anywhere;cursor:pointer}
+.t-en{display:none}
+#root[lang="en"] .t-en{display:block}
+#root[lang="en"] .t-ar{font-size:12px;color:var(--muted)}
+#root[lang="ar"] .svc.on .t-ar,#root[lang="en"] .svc.on .t-en{font-weight:700}
+.money{position:relative;display:block;min-width:0}
+.money>input[type=text]{padding-inline-start:8px;padding-inline-end:46px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums;background:var(--card)}
+.money>input[type=text]::placeholder{font-weight:400}
+.cur{position:absolute;inset-inline-end:10px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--muted);pointer-events:none;line-height:1}
+.svc>.money{grid-column:3;grid-row:1}
+/* طريقة السعر: خفيفة تحت اسم الخدمة */
+.unitw{grid-column:2/4;grid-row:2;justify-self:start;position:relative;display:flex;min-width:0;max-width:100%;margin-block-start:-10px}
+.unitw::after{content:"▾";position:absolute;inset-inline-end:6px;top:50%;transform:translateY(-50%);font-size:12px;line-height:1;color:var(--muted);pointer-events:none}
+select.unit{appearance:none;-webkit-appearance:none;width:auto;max-width:100%;min-width:0;border:0;border-radius:8px;background:transparent;color:var(--muted);padding-block:0;padding-inline:4px 22px}
+.svc.custom .unitw{margin-block-start:0}
+.svc.custom .cname{grid-column:1/3;grid-row:1;background:var(--card)}
+.del{grid-column:1;grid-row:2;width:44px;height:44px;display:grid;place-items:center;padding:0;border:1.5px solid var(--ctl);border-radius:10px;background:var(--card);color:var(--muted);cursor:pointer}
+.del svg{width:18px;height:18px}
+.svc>.msg{grid-column:2/-1;grid-row:3;margin:0;padding-block-end:6px}
+.add{font:inherit;font-size:15px;font-weight:700;width:100%;min-height:44px;margin-block-start:8px;border:1.5px dashed var(--ctl);border-radius:12px;background:transparent;color:var(--ink);cursor:pointer}
+.visitline{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-block-start:8px}
+.visitline .money{width:130px}
+#cityOther{margin-block-start:8px}
+
+/* الإرسال والمراجعة */
+.send{display:flex;flex-direction:column;gap:10px;margin-block-start:4px}
+.missing{background:var(--err-soft);color:var(--err);border-radius:12px;padding-block:10px;padding-inline:14px;font-size:14px;font-weight:700;line-height:1.5;overflow-wrap:anywhere}
+.btn{font:inherit;font-weight:700;font-size:17px;border:0;border-radius:13px;min-height:52px;padding-block:10px;padding-inline:18px;cursor:pointer;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;width:100%}
+.btn.main{background:var(--gold);color:var(--gold-ink)}
+.btn.ghost{background:transparent;border:1.5px solid var(--ctl);color:var(--ink);font-size:15px;min-height:44px;padding-block:6px;padding-inline:12px}
+.btn.sm{width:auto;display:inline-flex}
+.btnrow{display:flex;gap:8px}
+.btnrow .btn{flex:1}
+.note{font-size:13px;color:var(--muted);text-align:center}
+.review{display:flex;flex-direction:column;gap:10px;margin-block:6px 0;border-color:var(--ctl)}
+.review h2:focus{outline:none}
+.review .sub{margin:0}
+.pv{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--field);border:1.5px solid var(--line);border-radius:10px;padding-block:10px;padding-inline:12px;font-size:15px;line-height:1.7;-webkit-user-select:text;user-select:text}
+.status{font-size:13.5px;color:var(--ok);text-align:center;min-height:1.4em;font-weight:500}
+.status.err{color:var(--ink)}
+.after{display:flex;flex-direction:column;gap:8px;padding-block:12px;padding-inline:14px;border-radius:12px;background:var(--gold-soft)}
+.after .big{font-size:16px;font-weight:700}
+.num{font-size:18px;font-weight:700;font-variant-numeric:tabular-nums;unicode-bidi:isolate;white-space:nowrap}
+.after .status{text-align:start;min-height:0}
+.after .linkbtn{align-self:flex-start}
+
+@media (max-width:520px){
+  .grid>*{grid-column:1/-1}
+  .grid>.half{grid-column:auto;display:grid;grid-template-rows:1fr auto;align-self:stretch}
+  .grid>.half>label{align-self:end}
+  h1{font-size:22px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+/* لون الخطأ يجي بعد كل قواعد الحقول */
+.svc input.bad,.svc select.bad,.money>input.bad,input.bad,select.bad,textarea.bad{border-color:var(--err);background:var(--err-soft)}
+</style>
+<style>img{max-width:100%}</style>
+</head>
+<body>
+
+
+<div class="wrap" id="root" dir="rtl" lang="ar">
+  <header class="hero">
+    <div class="toprow">
+      <span class="logo"><i aria-hidden="true">خ</i><span data-t="brand">خافت</span></span>
+      <div class="lang" role="group" aria-label="اللغة" data-ta="langGroup">
+        <button type="button" id="langAr" data-lang="ar" lang="ar" aria-pressed="true">عربي</button>
+        <button type="button" id="langEn" data-lang="en" lang="en" aria-pressed="false">English</button>
+      </div>
+    </div>
+    <h1 data-t="h1">انضم لخافت كفني أو مقدم خدمة</h1>
+    <p data-t="lead">اكتب خدماتك وأسعارك، وبالأخير ينفتح واتساب برسالة جاهزة، اضغط إرسال. نراجعها ونتواصل معك.</p>
+    <p class="meta" data-t="meta">ياخذ دقايق · يوصلنا على واتساب</p>
+  </header>
+
+  <div class="banner" id="draftNote" role="status" hidden>
+    <span data-t="draft">رجعنا لك اللي كتبته آخر مرة.</span>
+    <button type="button" class="linkbtn" id="resetBtn" data-t="restart">ابدأ من جديد</button>
+  </div>
+
+  <section class="card" id="card1" aria-labelledby="h1s">
+    <h2 id="h1s"><span class="n" aria-hidden="true"><b>1</b></span><span data-t="c1">وش تشتغل؟</span></h2>
+    <p class="sub" data-t="c1sub">اختر كل الأقسام اللي تشتغلها.</p>
+    <div class="chips" id="catChips" role="group" aria-labelledby="h1s"></div>
+    <p class="msg" id="m_cats" hidden></p>
+  </section>
+
+  <section class="card" id="card2" aria-labelledby="h2s">
+    <h2 id="h2s"><span class="n" aria-hidden="true"><b>2</b></span><span data-t="c2">خدماتك وأسعارك</span></h2>
+    <p class="sub" data-t="c2sub">اكتب سعرك جنب كل خدمة تسويها، واترك الباقي فاضي.</p>
+    <fieldset class="f full" id="fs_mat">
+      <legend class="lbl" data-t="mat">أسعارك تشمل المواد؟</legend>
+      <div class="chips" role="radiogroup" aria-required="true">
+        <label class="chip"><input type="radio" name="mat" id="mat0" value="أجرة يد فقط، المواد على العميل" aria-describedby="m_mat"><span data-t="mat0">أجرة يد فقط</span></label>
+        <label class="chip"><input type="radio" name="mat" id="mat1" value="شامل المواد" aria-describedby="m_mat"><span data-t="mat1">شامل المواد</span></label>
+        <label class="chip"><input type="radio" name="mat" id="mat2" value="حسب الخدمة" aria-describedby="m_mat"><span data-t="mat2">حسب الخدمة</span></label>
+      </div>
+      <p class="msg" id="m_mat" hidden></p>
+    </fieldset>
+    <p class="empty" id="svcEmpty" data-t="svcEmpty">اختر قسمك من فوق، وتطلع خدماته هنا.</p>
+    <div id="cats"></div>
+  </section>
+
+  <section class="card" id="card3" aria-labelledby="h3s">
+    <h2 id="h3s"><span class="n" aria-hidden="true"><b>3</b></span><span data-t="c3">تفاصيل الشغل</span></h2>
+    <div class="grid">
+      <fieldset class="f full" id="fs_war">
+        <legend class="lbl" data-t="war">كم الضمان على شغلك؟</legend>
+        <div class="chips" role="radiogroup" aria-required="true">
+          <label class="chip"><input type="radio" name="war" id="war0" value="بدون ضمان" aria-describedby="m_war"><span data-t="war0">بدون ضمان</span></label>
+          <label class="chip"><input type="radio" name="war" id="war1" value="شهر" aria-describedby="m_war"><span data-t="war1">شهر</span></label>
+          <label class="chip"><input type="radio" name="war" id="war2" value="3 شهور" aria-describedby="m_war"><span data-t="war2">3 شهور</span></label>
+          <label class="chip"><input type="radio" name="war" id="war3" value="6 شهور" aria-describedby="m_war"><span data-t="war3">6 شهور</span></label>
+          <label class="chip"><input type="radio" name="war" id="war4" value="سنة" aria-describedby="m_war"><span data-t="war4">سنة</span></label>
+        </div>
+        <p class="msg" id="m_war" hidden></p>
+      </fieldset>
+      <fieldset class="f full" id="fs_visit">
+        <legend class="lbl" data-t="visit">المعاينة مجانية أو بسعر؟</legend>
+        <div class="chips" role="radiogroup" aria-required="true">
+          <label class="chip"><input type="radio" name="visit" id="visit0" value="مجانية" aria-describedby="m_visit"><span data-t="visit0">مجانية</span></label>
+          <label class="chip"><input type="radio" name="visit" id="visit1" value="بسعر" aria-describedby="m_visit"><span data-t="visit1">بسعر</span></label>
+        </div>
+        <p class="msg" id="m_visit" hidden></p>
+        <div class="visitline" id="visitLine" hidden>
+          <label class="money"><input type="text" id="visitPrice" inputmode="decimal" enterkeyhint="done" maxlength="14" autocomplete="off" placeholder="كم؟" data-tp="kam" aria-label="سعر المعاينة بالريال" data-ta="visitPriceA" aria-required="true" aria-describedby="m_visitPrice"><span class="cur" aria-hidden="true" data-t="sar">ريال</span></label>
+          <label class="chip"><input type="checkbox" id="visitDeduct" value="تنخصم إذا تم الشغل"><span data-t="deduct">تنخصم إذا تم الشغل</span></label>
+        </div>
+        <p class="msg" id="m_visitPrice" hidden></p>
+      </fieldset>
+      <fieldset class="f full" id="fs_time">
+        <legend class="lbl"><span data-t="times">متى تشتغل؟</span> <small data-t="opt">اختياري</small></legend>
+        <div class="chips" role="group">
+          <label class="chip"><input type="checkbox" name="time" id="time0" value="الصباح"><span data-t="time0">الصباح</span></label>
+          <label class="chip"><input type="checkbox" name="time" id="time1" value="العصر"><span data-t="time1">العصر</span></label>
+          <label class="chip"><input type="checkbox" name="time" id="time2" value="الليل"><span data-t="time2">الليل</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="f full" id="fs_extra">
+        <legend class="lbl"><span data-t="extra">الجمعة والمستعجل</span> <small data-t="opt">اختياري</small></legend>
+        <div class="chips" role="group">
+          <label class="chip"><input type="checkbox" id="fri" value="نعم"><span data-t="fri">أشتغل الجمعة</span></label>
+          <label class="chip"><input type="checkbox" id="urgent" value="نعم"><span data-t="urgent">أقبل الطلبات المستعجلة</span></label>
+        </div>
+      </fieldset>
+      <div class="f full">
+        <label for="notes"><span data-t="notes">ملاحظات</span> <small data-t="opt">اختياري</small></label>
+        <textarea id="notes" maxlength="300" placeholder="مثال: أشتغل على المكيفات المركزية بالفلل" data-tp="notesPh"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="card4" aria-labelledby="h4s">
+    <h2 id="h4s"><span class="n" aria-hidden="true"><b>4</b></span><span data-t="c4">بياناتك</span></h2>
+    <p class="sub" data-t="c4sub">عشان نتواصل معك.</p>
+    <div class="grid">
+      <div class="f">
+        <label for="name" data-t="name">اسمك الكامل</label>
+        <input type="text" id="name" maxlength="60" autocomplete="name" enterkeyhint="next" aria-required="true" aria-describedby="m_name">
+        <p class="msg" id="m_name" hidden></p>
+      </div>
+      <div class="f">
+        <label for="phone" data-t="phone">جوالك (واتساب)</label>
+        <input type="tel" id="phone" inputmode="tel" dir="ltr" maxlength="20" placeholder="05xxxxxxxx" autocomplete="tel" enterkeyhint="done" aria-required="true" aria-describedby="m_phone">
+        <p class="msg" id="m_phone" hidden></p>
+      </div>
+      <fieldset class="f full" id="fs_city">
+        <legend class="lbl" data-t="cities">المدن اللي تشتغل فيها</legend>
+        <div class="chips" role="group">
+          <label class="chip"><input type="checkbox" name="city" id="city0" value="الخبر" aria-describedby="m_city"><span data-t="city0">الخبر</span></label>
+          <label class="chip"><input type="checkbox" name="city" id="city1" value="الدمام" aria-describedby="m_city"><span data-t="city1">الدمام</span></label>
+          <label class="chip"><input type="checkbox" name="city" id="city2" value="الظهران" aria-describedby="m_city"><span data-t="city2">الظهران</span></label>
+          <label class="chip"><input type="checkbox" name="city" id="city3" value="القطيف" aria-describedby="m_city"><span data-t="city3">القطيف</span></label>
+          <label class="chip"><input type="checkbox" name="city" id="city4" value="الجبيل" aria-describedby="m_city"><span data-t="city4">الجبيل</span></label>
+          <label class="chip"><input type="checkbox" name="city" id="city5" value="الأحساء" aria-describedby="m_city"><span data-t="city5">الأحساء</span></label>
+          <label class="chip"><input type="checkbox" name="city" id="city6" value="مدينة ثانية" aria-describedby="m_city"><span data-t="city6">مدينة ثانية</span></label>
+        </div>
+        <p class="msg" id="m_city" hidden></p>
+        <input type="text" id="cityOther" maxlength="30" placeholder="اسم المدينة" data-tp="cityOtherPh" aria-label="اسم المدينة" data-ta="cityOtherPh" aria-required="true" aria-describedby="m_cityOther" hidden>
+        <p class="msg" id="m_cityOther" hidden></p>
+      </fieldset>
+      <fieldset class="f full" id="fs_team">
+        <legend class="lbl"><span data-t="team">كم فني بفريقك؟</span> <small data-t="teamHint">اختياري، احسب نفسك</small></legend>
+        <div class="chips tight" role="radiogroup">
+          <label class="chip"><input type="radio" name="team" id="tm0" value="فني واحد"><span data-t="team1">أنا بس</span></label>
+          <label class="chip"><input type="radio" name="team" id="tm1" value="من 2 إلى 3 فنيين"><span data-t="team2">2 إلى 3</span></label>
+          <label class="chip"><input type="radio" name="team" id="tm2" value="من 4 إلى 10 فنيين"><span data-t="team3">4 إلى 10</span></label>
+          <label class="chip"><input type="radio" name="team" id="tm3" value="أكثر من 10 فنيين"><span data-t="team4">فوق 10</span></label>
+        </div>
+      </fieldset>
+      <div class="f half">
+        <label for="exp"><span data-t="exp">الخبرة</span> <small data-t="opt">اختياري</small></label>
+        <select id="exp">
+          <option value="" data-t="choose">اختر</option>
+          <option value="أقل من سنة" data-t="exp1">أقل من سنة</option>
+          <option value="1 إلى 3 سنوات" data-t="exp2">1 إلى 3 سنوات</option>
+          <option value="4 إلى 10 سنوات" data-t="exp3">4 إلى 10 سنوات</option>
+          <option value="أكثر من 10 سنوات" data-t="exp4">أكثر من 10 سنوات</option>
+        </select>
+      </div>
+      <div class="f half">
+        <label for="company"><span data-t="company">اسم المؤسسة</span> <small data-t="opt">اختياري</small></label>
+        <input type="text" id="company" maxlength="60" autocomplete="organization">
+      </div>
+      <fieldset class="f full" id="fs_doc">
+        <legend class="lbl"><span data-t="doc">وش الوثيقة اللي تشتغل فيها؟</span> <small data-t="opt">اختياري</small></legend>
+        <div class="chips" role="radiogroup">
+          <label class="chip"><input type="radio" name="doc" id="doc0" value="سجل تجاري"><span data-t="doc0">سجل تجاري</span></label>
+          <label class="chip"><input type="radio" name="doc" id="doc1" value="وثيقة عمل حر"><span data-t="doc1">وثيقة عمل حر</span></label>
+          <label class="chip"><input type="radio" name="doc" id="doc2" value="تابع لمؤسسة"><span data-t="doc2">تابع لمؤسسة</span></label>
+          <label class="chip"><input type="radio" name="doc" id="doc3" value="ما عندي"><span data-t="doc3">ما عندي</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="f full" id="fs_eq">
+        <legend class="lbl"><span data-t="equip">عندك؟</span> <small data-t="opt">اختياري</small></legend>
+        <div class="chips" role="group">
+          <label class="chip"><input type="checkbox" name="eq" id="eq0" value="سيارة"><span data-t="eq0">سيارة</span></label>
+          <label class="chip"><input type="checkbox" name="eq" id="eq1" value="عدة شغل كاملة"><span data-t="eq1">عدة شغل كاملة</span></label>
+        </div>
+      </fieldset>
+    </div>
+  </section>
+
+  <section class="send" aria-label="الإرسال" data-ta="sendArea">
+    <p class="missing" id="missing" role="alert" hidden></p>
+    <button type="button" class="btn main" id="reviewBtn" data-t="review">راجع رسالتك وأرسل</button>
+    <p class="note" data-t="privacy">النموذج ما يطلب رقم إقامة ولا حساب بنكي.</p>
+
+    <section class="card review" id="review" aria-labelledby="rvH" hidden>
+      <h2 id="rvH" tabindex="-1" data-t="rvH">هذي رسالتك لخافت</h2>
+      <p class="sub" id="rvSub" data-t="rvSub">راجعها، وإذا كل شي تمام اضغط الزر.</p>
+      <div class="after" id="after" hidden>
+        <p class="big" data-t="a1">باقي خطوة: اضغط زر الإرسال ➤ في واتساب.</p>
+        <p id="aCopied" data-t="a2" hidden>وانتسخت الرسالة احتياط.</p>
+        <p><span data-t="a3">ما انفتح واتساب؟ الصق الرسالة في محادثة على</span> <span class="num" id="waNum" dir="ltr">+966 59 049 7866</span></p>
+        <div><button type="button" class="btn ghost sm" id="copyNum" data-t="copyNum">انسخ الرقم</button></div>
+        <p class="status" id="numStatus" role="status"></p>
+        <p data-t="a4">عندك صور من شغلك؟ أرسلها بنفس المحادثة.</p>
+        <p data-t="a5">نراجع رسالتك ونتواصل معك.</p>
+        <button type="button" class="linkbtn" id="newForm" data-t="newForm">نموذج جديد لمقدم خدمة ثاني</button>
+      </div>
+      <a id="sendWa" class="btn main wa" href="https://wa.me/966590497866" target="_blank" rel="noopener" data-t="openWa">افتح واتساب وأرسل</a>
+      <div class="pv" id="preview" dir="rtl" lang="ar"></div>
+      <p class="note" id="longNote" data-t="long" hidden>رسالتك طويلة، إذا وصلت ناقصة انسخها والصقها في واتساب.</p>
+      <a id="sendWa2" class="btn main wa" href="https://wa.me/966590497866" target="_blank" rel="noopener" data-t="openWa">افتح واتساب وأرسل</a>
+      <div class="btnrow">
+        <button type="button" class="btn ghost" id="copyMsg" data-t="copy">انسخ الرسالة</button>
+        <button type="button" class="btn ghost" id="editBtn" data-t="edit">عدّل</button>
+      </div>
+      <p class="status" id="copyStatus" role="status"></p>
+    </section>
+  </section>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+var WA = '966590497866';
+var KEY = 'khafet_join_v2';
+var INSPECT = 'بعد المعاينة';
+
+/* النصوص: [عربي، English] */
+var T0 = {
+  brand:['خافت','Khafet'],
+  langGroup:['اللغة','Language'],
+  h1:['انضم لخافت كفني أو مقدم خدمة','Join Khafet as a technician or service provider'],
+  lead:['اكتب خدماتك وأسعارك، وبالأخير ينفتح واتساب برسالة جاهزة، اضغط إرسال. نراجعها ونتواصل معك.','Type your services and prices. At the end WhatsApp opens with a ready message, just tap send. We review it and contact you.'],
+  meta:['ياخذ دقايق · يوصلنا على واتساب','Takes a few minutes · Reaches us on WhatsApp'],
+  draft:['رجعنا لك اللي كتبته آخر مرة.','We brought back what you typed last time.'],
+  restart:['ابدأ من جديد','Start over'],
+  restartSure:['متأكد؟ امسح الكل','Sure? Clear everything'],
+
+  c1:['وش تشتغل؟','What work do you do?'],
+  c1sub:['اختر كل الأقسام اللي تشتغلها.','Pick every category you work in.'],
+  cat_ac:['تكييف وتبريد','AC and cooling'], cat_paint:['دهان','Painting'], cat_plumb:['سباكة','Plumbing'],
+  cat_elec:['كهرباء','Electrical'], cat_carp:['نجارة','Carpentry'], cat_appl:['أجهزة منزلية','Home appliances'],
+  cat_clean:['تنظيف','Cleaning'], cat_insul:['عزل','Insulation'], cat_pest:['مكافحة حشرات','Pest control'],
+  cat_gen:['أعمال عامة','General work'], cat_other:['غيرها','Other'],
+
+  c2:['خدماتك وأسعارك','Your services and prices'],
+  c2sub:['اكتب سعرك جنب كل خدمة تسويها، واترك الباقي فاضي.','Type your price next to each service you do, leave the rest empty.'],
+  svcEmpty:['اختر قسمك من فوق، وتطلع خدماته هنا.','Pick your category above and its services show here.'],
+  mat:['أسعارك تشمل المواد؟','Do your prices include materials?'],
+  mat0:['أجرة يد فقط','Labor only'], mat1:['شامل المواد','Materials included'], mat2:['حسب الخدمة','Depends on the service'],
+  otherName:['اسم القسم','Category name'],
+  otherPh:['مثال: غرف تبريد','Example: cold rooms'],
+  addSvc:['+ أضف خدمة ثانية','+ Add another service'],
+  addSvcOther:['+ أضف خدمة','+ Add a service'],
+  svcNamePh:['اسم الخدمة','Service name'],
+  del:['حذف الخدمة','Delete service'],
+  pricePh:['سعرك','Price'],
+  priceFrom:['يبدأ من','From'],
+  sar:['ريال','SAR'],
+  priceAria:['سعر {name} بالريال','Price of {name} in SAR'],
+  unitAria:['طريقة حساب السعر','How the price is counted'],
+  count1:['خدمة وحدة','1 service'], count2:['خدمتين','2 services'],
+  countFew:['{n} خدمات','{n} services'], countMany:['{n} خدمة','{n} services'],
+  u_job:['للخدمة','Per job'], u_piece:['لكل قطعة','Per piece'], u_ac:['لكل مكيف','Per AC unit'], u_appl:['لكل جهاز','Per appliance'],
+  u_m2:['لكل متر مربع','Per square metre'], u_m:['لكل متر طولي','Per metre (length)'], u_room:['لكل غرفة','Per room'],
+  u_day:['لكل يوم','Per day'], u_hour:['لكل ساعة','Per hour'], u_insp:['بعد المعاينة','After inspection'],
+
+  c3:['تفاصيل الشغل','Work details'],
+  war:['كم الضمان على شغلك؟','How long is your warranty?'],
+  war0:['بدون ضمان','No warranty'], war1:['شهر','1 month'], war2:['3 شهور','3 months'], war3:['6 شهور','6 months'], war4:['سنة','1 year'],
+  visit:['المعاينة مجانية أو بسعر؟','Is the inspection visit free or paid?'],
+  visit0:['مجانية','Free'], visit1:['بسعر','Paid'],
+  kam:['كم؟','How much?'],
+  visitPriceA:['سعر المعاينة بالريال','Inspection price in SAR'],
+  deduct:['تنخصم إذا تم الشغل','Deducted if the job goes ahead'],
+  times:['متى تشتغل؟','When do you work?'],
+  time0:['الصباح','Morning'], time1:['العصر','Afternoon'], time2:['الليل','Night'],
+  extra:['الجمعة والمستعجل','Fridays and urgent jobs'], opt:['اختياري','Optional'],
+  fri:['أشتغل الجمعة','I work Fridays'], urgent:['أقبل الطلبات المستعجلة','I take urgent orders'],
+  notes:['ملاحظات','Notes'],
+  notesPh:['مثال: أشتغل على المكيفات المركزية بالفلل','Example: I work on central AC in villas'],
+
+  c4:['بياناتك','Your details'], c4sub:['عشان نتواصل معك.','So we can contact you.'],
+  name:['اسمك الكامل','Your full name'],
+  phone:['جوالك (واتساب)','Your mobile (WhatsApp)'],
+  cities:['المدن اللي تشتغل فيها','Cities you work in'],
+  city0:['الخبر','Al Khobar'], city1:['الدمام','Dammam'], city2:['الظهران','Dhahran'], city3:['القطيف','Qatif'],
+  city4:['الجبيل','Jubail'], city5:['الأحساء','Al Ahsa'], city6:['مدينة ثانية','Another city'],
+  cityOtherPh:['اسم المدينة','City name'],
+  team:['كم فني بفريقك؟','Technicians in your team'], teamHint:['اختياري، احسب نفسك','Optional, count yourself'],
+  choose:['اختر','Choose'],
+  team1:['أنا بس','Just me'], team2:['2 إلى 3','2 to 3'], team3:['4 إلى 10','4 to 10'], team4:['فوق 10','Over 10'],
+  exp:['الخبرة','Experience'],
+  exp1:['أقل من سنة','Under 1 year'], exp2:['1 إلى 3 سنوات','1 to 3 years'], exp3:['4 إلى 10 سنوات','4 to 10 years'], exp4:['أكثر من 10 سنوات','Over 10 years'],
+  company:['اسم المؤسسة','Company name'],
+  doc:['وش الوثيقة اللي تشتغل فيها؟','What document do you work under?'],
+  doc0:['سجل تجاري','Commercial registration'], doc1:['وثيقة عمل حر','Freelance permit'], doc2:['تابع لمؤسسة','Under a company'], doc3:['ما عندي','None'],
+  equip:['عندك؟','Do you have?'],
+  eq0:['سيارة','A car'], eq1:['عدة شغل كاملة','A full tool kit'],
+
+  sendArea:['الإرسال','Send'],
+  review:['راجع رسالتك وأرسل','Review your message and send'],
+  privacy:['النموذج ما يطلب رقم إقامة ولا حساب بنكي.','This form never asks for an iqama number or a bank account.'],
+  missing:['ناقص: ','Missing: '],
+  andMore:['، و {n} غيرها',', and {n} more'],
+  listSep:['، ',', '],
+
+  e_cats:['اختر قسم واحد على الأقل','Pick at least one category'],
+  e_otherName:['اكتب اسم القسم','Type the category name'],
+  e_mat:['اختر وش يشمل سعرك','Pick what your price includes'],
+  e_needPrice:['اكتب السعر، أو اختر «بعد المعاينة»، أو شيل الصح','Type the price, pick “After inspection”, or untick it'],
+  e_needPriceC:['اكتب السعر، أو اختر «بعد المعاينة»، أو احذف الخدمة','Type the price, pick “After inspection”, or delete the service'],
+  e_bad:['اكتب رقم واحد، مثل 150','Type one number, like 150'],
+  e_range:['اكتب رقم واحد. يتغير السعر؟ اختر «بعد المعاينة» واكتب أقل سعر','Type one number. Price varies? Pick “After inspection” and type the lowest price'],
+  e_out:['السعر لازم يكون من 1 إلى 20000','The price must be from 1 to 20000'],
+  e_svcName:['اكتب اسم الخدمة','Type the service name'],
+  e_dup:['الخدمة مكررة','This service is listed twice'],
+  e_dupAbove:['هذي الخدمة موجودة فوق، اكتب سعرك جنبها','This service is listed above, type your price next to it'],
+  e_catMin:['اكتب سعر خدمة وحدة على الأقل، أو شيل القسم','Price at least one service, or remove this category'],
+  e_catMinOther:['أضف خدمة وحدة على الأقل، أو شيل القسم','Add at least one service, or remove this category'],
+  e_war:['اختر مدة الضمان، أو «بدون ضمان»','Pick the warranty, or “No warranty”'],
+  e_visit:['اختر: مجانية أو بسعر','Pick free or paid'],
+  e_visitPrice:['اكتب سعر المعاينة','Type the inspection price'],
+  e_visitBad:['اكتب رقم واحد، مثل 50','Type one number, like 50'],
+  e_visitOut:['السعر لازم يكون من 1 إلى 5000','The price must be from 1 to 5000'],
+  e_name:['اكتب اسمك الكامل','Type your full name'],
+  e_phone:['اكتب رقم جوال سعودي، مثل 05xxxxxxxx','Type a Saudi mobile number, like 05xxxxxxxx'],
+  e_city:['اختر مدينة وحدة على الأقل','Pick at least one city'],
+  e_cityOther:['اكتب اسم المدينة','Type the city name'],
+
+  s_cats:['الأقسام','Categories'], s_otherName:['اسم القسم','Category name'], s_mat:['المواد','Materials'],
+  s_price:['سعر {name}','Price of {name}'], s_svcName:['اسم خدمة','Service name'], s_anySvc:['خدمة','a service'],
+  s_dup:['خدمة مكررة','Repeated service'], s_catMin:['خدمات {name}','{name} services'],
+  s_war:['الضمان','Warranty'], s_visit:['المعاينة','Inspection visit'], s_visitPrice:['سعر المعاينة','Inspection price'],
+  s_name:['الاسم','Name'], s_phone:['الجوال','Mobile'],
+  s_city:['المدن','Cities'], s_cityOther:['اسم المدينة','City name'],
+
+  rvH:['هذي رسالتك لخافت','This is your message to Khafet'],
+  rvSub:['راجعها، وإذا كل شي تمام اضغط الزر.','Check it, and if all is good tap the button.'],
+  long:['رسالتك طويلة، إذا وصلت ناقصة انسخها والصقها في واتساب.','Your message is long. If it arrives cut, copy it and paste it in WhatsApp.'],
+  openWa:['افتح واتساب وأرسل','Open WhatsApp and send'],
+  copy:['انسخ الرسالة','Copy message'],
+  edit:['عدّل','Edit'],
+  copied:['انتسخت الرسالة','Message copied'],
+  copyFail:['النص محدد، اضغط عليه مطولًا واختر نسخ','The text is selected. Long press it and pick Copy'],
+  a1:['باقي خطوة: اضغط زر الإرسال ➤ في واتساب.','One step left: tap the send button ➤ in WhatsApp.'],
+  a2:['وانتسخت الرسالة احتياط.','The message was also copied, just in case.'],
+  a3:['ما انفتح واتساب؟ الصق الرسالة في محادثة على','WhatsApp did not open? Paste the message in a chat with'],
+  copyNum:['انسخ الرقم','Copy number'],
+  numCopied:['انتسخ الرقم','Number copied'],
+  numFail:['الرقم محدد، اضغط عليه مطولًا واختر نسخ','The number is selected. Long press it and pick Copy'],
+  a4:['عندك صور من شغلك؟ أرسلها بنفس المحادثة.','Have photos of your work? Send them in the same chat.'],
+  a5:['نراجع رسالتك ونتواصل معك.','We review your message and contact you.'],
+  newForm:['نموذج جديد لمقدم خدمة ثاني','New form for another provider']
+};
+var T = {};
+Object.keys(T0).forEach(function(k){ T[k] = {ar:T0[k][0], en:T0[k][1]}; });
+
+var lang = 'ar';
+function t(key, params){
+  var e = T[key], s = e ? e[lang] : key;
+  if (params) Object.keys(params).forEach(function(p){ s = s.split('{' + p + '}').join(params[p]); });
+  return s;
+}
+
+/* طرق السعر بالترتيب. القيمة عربية دائمًا، والنص يتغير حسب اللغة */
+var UNITS = [
+  ['للخدمة','u_job'], ['لكل قطعة','u_piece'], ['لكل متر مربع','u_m2'], ['لكل متر طولي','u_m'],
+  ['لكل غرفة','u_room'], ['لكل يوم','u_day'], ['لكل ساعة','u_hour'], [INSPECT,'u_insp']
+];
+function unitKey(cat, u){
+  if (u === 'لكل قطعة' && cat === 'ac') return 'u_ac';
+  if (u === 'لكل قطعة' && cat === 'appl') return 'u_appl';
+  for (var i = 0; i < UNITS.length; i++) if (UNITS[i][0] === u) return UNITS[i][1];
+  return 'u_job';
+}
+function isUnit(u){ return UNITS.some(function(x){ return x[0] === u; }); }
+
+/* الأقسام بترتيب الشرائح. كل خدمة: [الكود أو null، الاسم كما في الكتالوج، طريقة السعر، English] */
+var CATS = [
+  {id:'ac', emoji:'❄️', s:[
+    ['ac1','تنظيف مكيف سبليت','لكل قطعة','Split AC cleaning'],
+    ['ac2','تعبئة فريون','لكل قطعة','Freon refill'],
+    [null,'تنظيف مكيف شباك','لكل قطعة','Window AC cleaning'],
+    [null,'تركيب مكيف سبليت','لكل قطعة','Split AC installation'],
+    [null,'فك مكيف سبليت','لكل قطعة','Split AC removal'],
+    [null,'كشف عطل مكيف','للخدمة','AC fault check'],
+    [null,'صيانة مكيف مركزي',INSPECT,'Central AC maintenance']]},
+  {id:'paint', emoji:'🎨', s:[
+    ['pt1','دهان غرفة','لكل غرفة','Paint a room'],
+    ['pt2','ترميم وتلميس دهان','للخدمة','Touch up paint'],
+    ['pt3','معالجة تشققات ورطوبة',INSPECT,'Cracks and damp repair'],
+    [null,'دهان جدران','لكل متر مربع','Wall painting'],
+    [null,'دهان واجهة خارجية','لكل متر مربع','Exterior painting'],
+    [null,'ورق جدران','لكل متر مربع','Wallpaper']]},
+  {id:'plumb', emoji:'🔧', s:[
+    ['p1','تغيير شطّاف','لكل قطعة','Bidet spray change'],
+    ['p2','تسليك مجاري/بالوعة','للخدمة','Unclog drain'],
+    ['p3','تغيير خلاط ماء','لكل قطعة','Water mixer change'],
+    ['p4','إصلاح تسريب مياه','للخدمة','Water leak repair'],
+    ['pleak','كشف تسريب المياه بالأجهزة','للخدمة','Leak detection with devices'],
+    ['p5','تركيب/إصلاح سخان','لكل قطعة','Water heater install or repair'],
+    ['p6','إصلاح سيفون الحمام','للخدمة','Toilet flush repair'],
+    [null,'تغيير محبس زاوية','لكل قطعة','Angle valve change'],
+    [null,'تركيب كرسي حمام','لكل قطعة','Toilet installation']]},
+  {id:'elec', emoji:'⚡', s:[
+    ['e1','تغيير لمبة/إضاءة','لكل قطعة','Light change'],
+    ['e2','تركيب ثريا','لكل قطعة','Chandelier installation'],
+    ['e3','إصلاح قصر/انقطاع','للخدمة','Short circuit or outage repair'],
+    ['e4','تغيير مفتاح/بريزة','لكل قطعة','Switch or socket change'],
+    ['e5','تركيب مروحة سقف','لكل قطعة','Ceiling fan installation'],
+    ['e6','فحص لوحة الكهرباء','للخدمة','Power panel check']]},
+  {id:'carp', emoji:'🔨', s:[
+    ['c1','إصلاح باب/مفصلات','للخدمة','Door or hinge repair'],
+    ['c2','إصلاح دولاب/مطبخ','للخدمة','Cabinet or kitchen repair'],
+    ['c3','إصلاح نافذة/شيش','للخدمة','Window repair'],
+    ['c4','تركيب/تجميع أثاث','لكل قطعة','Furniture assembly'],
+    [null,'تغيير قفل باب','لكل قطعة','Door lock change'],
+    [null,'تركيب ستارة','لكل قطعة','Curtain installation']]},
+  {id:'appl', emoji:'🔌', s:[
+    ['a1','إصلاح غسالة','للخدمة','Washer repair'],
+    ['a2','إصلاح ثلاجة','للخدمة','Fridge repair'],
+    ['a3','إصلاح غسالة صحون','للخدمة','Dishwasher repair'],
+    ['a4','إصلاح فرن/بوتاجاز','للخدمة','Oven or stove repair']]},
+  {id:'clean', emoji:'🧽', s:[
+    ['cl1','تنظيف عام للمنزل','للخدمة','General home cleaning'],
+    ['cl2','تنظيف كنب وسجاد','للخدمة','Sofa and carpet cleaning'],
+    ['cl3','تنظيف خزان المياه','للخدمة','Water tank cleaning'],
+    [null,'تنظيف فيلا','للخدمة','Villa cleaning']]},
+  {id:'insul', emoji:'🧱', isNew:true, s:[
+    [null,'عزل أسطح','لكل متر مربع','Roof insulation'],
+    [null,'عزل خزان','للخدمة','Tank insulation'],
+    [null,'معالجة تسريب سطح',INSPECT,'Roof leak repair']]},
+  {id:'pest', emoji:'🐜', isNew:true, s:[
+    [null,'رش شقة','للخدمة','Apartment pest spraying'],
+    [null,'رش فيلا','للخدمة','Villa pest spraying'],
+    [null,'مكافحة نمل أبيض',INSPECT,'Termite control']]},
+  {id:'gen', emoji:'🛠️', s:[
+    ['g1','تعليق/تركيب رفوف','لكل قطعة','Shelf mounting'],
+    ['g2','عزل تسرب بسيط','للخدمة','Simple leak sealing'],
+    ['g4','ترويبة بلاط/سيراميك','للخدمة','Tile grouting'],
+    [null,'تعليق تلفزيون','لكل قطعة','TV mounting'],
+    [null,'تعليق مراية أو لوحة','لكل قطعة','Mirror or frame hanging']]},
+  {id:'other', emoji:'➕', isNew:true, s:[]}
+];
+var CAT = {};
+CATS.forEach(function(c){ CAT[c.id] = c; });
+
+/* normalizers:start */
+/* أرقام عربية وفارسية وهندية ونيبالية وبنغالية إلى 0 إلى 9 */
+var DIGIT_ZEROS = [0x0660, 0x06F0, 0x0966, 0x09E6];
+function west(s){
+  return String(s == null ? '' : s).replace(/[\u0660-\u0669\u06F0-\u06F9\u0966-\u096F\u09E6-\u09EF]/g, function(d){
+    var c = d.charCodeAt(0);
+    for (var i = DIGIT_ZEROS.length - 1; i >= 0; i--) if (c >= DIGIT_ZEROS[i]) return String(c - DIGIT_ZEROS[i]);
+    return d;
+  });
+}
+
+/* علامات ما تنشاف: اتجاه النص، مسافات صفرية، الشرطة الناعمة */
+var INVIS = /[\u00AD\u061C\u200B-\u200F\u202A-\u202E\u2060-\u2064\u2066-\u2069\uFEFF]/g;
+/* كل أشكال الشرطة */
+var DASHES = '\\-\\u2010-\\u2015\\u2043\\u2212\\u2E3A\\u2E3B\\uFE58\\uFE63\\uFF0D';
+var RX_RANGE = new RegExp('(\\d)\\s*[' + DASHES + ']\\s*(?=\\d)', 'g');
+var RX_JOINED = (function(){
+  try { return new RegExp('([\\p{L}\\p{M}\\d])[' + DASHES + '](?=[\\p{L}\\d])', 'gu'); }
+  catch (e) {
+    var L = 'A-Za-z0-9\\u00C0-\\u024F\\u0370-\\u03FF\\u0400-\\u04FF\\u0600-\\u06FF\\u0750-\\u077F\\u08A0-\\u08FF\\u0900-\\u0DFF\\uFB50-\\uFDFF\\uFE70-\\uFEFC';
+    return new RegExp('([' + L + '])[' + DASHES + '](?=[' + L + '])', 'g');
+  }
+})();
+var RX_DASH = new RegExp('\\s*[' + DASHES + ']\\s*', 'g');
+
+/* يرجع {empty} أو {ok,n} أو {range} أو {bad} أو {out} */
+function parsePrice(raw, max){
+  var s = west(raw).replace(INVIS, '').trim();
+  s = s.replace(/ريال|ر\.س|\uFDFC|SAR|SR/gi, '').trim();
+  s = s.replace(/(\d)[,\u066C\u060C](?=\d{3}(?!\d))/g, '$1');
+  s = s.replace(/\u066B/g, '.').replace(/[,\u060C](?=\d{1,2}$)/, '.');
+  if (!s) return {empty:true};
+  var tokens = s.match(/\d+(\.\d+)?/g) || [];
+  if (tokens.length >= 2) return {range:true};
+  if (tokens.length !== 1 || s !== tokens[0]) return {bad:true};
+  var dec = tokens[0].split('.')[1];
+  if (dec && dec.length > 2) return {bad:true};
+  var n = Number(tokens[0]);
+  if (!(n > 0) || n > max) return {out:true};
+  return {ok:true, n:String(n)};
+}
+
+/* يرجع الرقم بصيغة 05xxxxxxxx أو نص فاضي إذا غير صالح */
+function phone(p){
+  p = west(p).replace(/\D/g, '');
+  if (p.slice(0, 2) === '00') p = p.slice(2);
+  if (/^96605\d{8}$/.test(p)) p = p.slice(3);
+  if (/^9665\d{8}$/.test(p)) p = '0' + p.slice(3);
+  else if (/^5\d{8}$/.test(p)) p = '0' + p;
+  return /^05\d{8}$/.test(p) ? p : '';
+}
+
+/* ينظف أي نص كتبه المستخدم قبل ما يدخل الرسالة */
+function san(s){
+  s = west(s).replace(INVIS, '');
+  s = s.replace(/(^|\s)\u0640+(?=\s|$)/g, '$1-');  // تطويل لحاله يعتبر فاصل
+  s = s.replace(/\u0640/g, '');                     // تطويل داخل الكلمة ينشال
+  s = s.replace(RX_RANGE, '$1 إلى ');
+  s = s.replace(RX_JOINED, '$1 ');
+  s = s.replace(RX_DASH, '، ');
+  s = s.replace(/[*_~`#|\u2022\u00B7:]/g, ' ');
+  s = s.replace(/\r\n|\r|\n/g, '، ');
+  s = s.replace(/\s+/g, ' ');
+  s = s.replace(/\s*\u060C(\s*\u060C)*\s*/g, '، ');
+  return s.replace(/^[\s\u060C]+|[\s\u060C]+$/g, '');
+}
+/* normalizers:end */
+
+function $(id){ return document.getElementById(id); }
+function esc(s){
+  return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; });
+}
+function qa(sel, root){ return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
+function checkedValues(name){ return qa('#root input[name="' + name + '"]:checked').map(function(x){ return x.value; }); }
+function radioValue(name){ return checkedValues(name)[0] || ''; }
+function visible(el){ return !!(el && el.getClientRects().length); }
+
+/* الحالة */
+var sel = [];        // الأقسام المختارة بترتيب الشرائح
+var rows = {};       // القسم ← {s:[{on,price,unit}], c:[{id,name,price,unit}]}
+var otherName = '';
+var tried = false;   // صار فيه محاولة إرسال ناقصة
+var sentTap = false; // ضغط زر واتساب
+var uid = 0;
+var quiet = {};      // صفوف وأقسام انضافت بعد المحاولة: ما يطلع خطأها حتى يطلع منها أو يضغط إرسال
+var left = {};       // صفوف دخلها وطلع منها
+var visited = {};    // عناصر فيها التركيز الحين أو قبل شوي
+
+function newRows(id){
+  return {s: CAT[id].s.map(function(sg){ return {on:false, price:'', unit:sg[2]}; }), c: []};
+}
+function ensureRows(id){ return rows[id] || (rows[id] = newRows(id)); }
+function sortSel(){ sel = CATS.map(function(c){ return c.id; }).filter(function(id){ return sel.indexOf(id) > -1; }); }
+function catLabel(id){ return t('cat_' + id); }
+function normName(s){ return san(s).replace(/\s+/g, '').toLowerCase(); }
+function clip(s, n){
+  var a = Array.from(String(s));
+  return a.length > n ? a.slice(0, n - 1).join('') + '…' : a.join('');
+}
+
+var CHECK_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+var X_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>';
+
+/* شرائح الأقسام */
+$('catChips').innerHTML = CATS.map(function(c){
+  return '<label class="chip"><input type="checkbox" id="cat_' + c.id + '" value="' + c.id + '" aria-describedby="m_cats">' +
+    '<span><span class="emo" aria-hidden="true">' + c.emoji + '</span><span data-t="cat_' + c.id + '">' + esc(T['cat_' + c.id].ar) + '</span></span></label>';
+}).join('');
+
+/* بناء صفوف الخدمات */
+function unitOptions(cat, current){
+  return UNITS.map(function(u){
+    return '<option value="' + u[0] + '"' + (u[0] === current ? ' selected' : '') + '>' + esc(t(unitKey(cat, u[0]))) + '</option>';
+  }).join('');
+}
+function priceLabel(x){
+  if (x.kind === 's') { var sg = CAT[x.cat].s[x.i]; return lang === 'en' ? sg[3] : sg[1]; }
+  return san(x.r.name) || t('s_anySvc');
+}
+function priceBox(key, r){
+  return '<label class="money"><input type="text" class="price" id="pr_' + key + '" inputmode="decimal" enterkeyhint="next" maxlength="14" autocomplete="off"' +
+    ' value="' + esc(r.price) + '" placeholder="' + esc(t(r.unit === INSPECT ? 'priceFrom' : 'pricePh')) + '" aria-describedby="rm_' + key + '">' +
+    '<span class="cur" aria-hidden="true" data-t="sar">' + esc(t('sar')) + '</span></label>';
+}
+function unitHTML(id, key, r, hide){
+  return '<span class="unitw"' + (hide ? ' hidden' : '') + '><select class="unit" id="un_' + key + '" data-ta="unitAria" aria-label="' + esc(t('unitAria')) + '">' +
+    unitOptions(id, r.unit) + '</select></span>';
+}
+/* الصح بمربع 44 بكسل لحاله. الضغط على الاسم يودي لخانة السعر وما يشيل الصح */
+function sugRowHTML(id, i){
+  var sg = CAT[id].s[i], r = rows[id].s[i], key = id + '_s' + i;
+  return '<div class="svc' + (r.on ? ' on' : '') + '" data-cat="' + id + '" data-kind="s" data-i="' + i + '" id="row_' + key + '">' +
+    '<label class="tickw"><input type="checkbox" class="tick" id="tk_' + key + '" aria-labelledby="nm_' + key + '" aria-describedby="rm_' + key + '"' + (r.on ? ' checked' : '') + '>' +
+    '<span class="box" aria-hidden="true">' + CHECK_SVG + '</span></label>' +
+    '<label class="txt" id="nm_' + key + '" for="pr_' + key + '"><span class="t-en" lang="en">' + esc(sg[3]) + '</span><span class="t-ar" lang="ar">' + esc(sg[1]) + '</span></label>' +
+    priceBox(key, r) + unitHTML(id, key, r, !r.on) +
+    '<p class="msg" id="rm_' + key + '" hidden></p></div>';
+}
+function customRowHTML(id, r){
+  var key = id + '_c' + r.id;
+  return '<div class="svc custom on" data-cat="' + id + '" data-kind="c" data-id="' + r.id + '" id="row_' + key + '">' +
+    '<input type="text" class="cname" id="cn_' + key + '" maxlength="60" enterkeyhint="next" value="' + esc(r.name) + '"' +
+    ' placeholder="' + esc(t('svcNamePh')) + '" data-tp="svcNamePh" aria-label="' + esc(t('svcNamePh')) + '" data-ta="svcNamePh" aria-describedby="rm_' + key + '">' +
+    priceBox(key, r) +
+    '<button type="button" class="del" data-ta="del" aria-label="' + esc(t('del')) + '">' + X_SVG + '</button>' +
+    unitHTML(id, key, r, false) +
+    '<p class="msg" id="rm_' + key + '" hidden></p></div>';
+}
+function blockHTML(id){
+  var c = CAT[id], R = ensureRows(id), h = '';
+  h += '<div class="cat" id="blk_' + id + '" data-cat="' + id + '" role="group" aria-labelledby="bh_' + id + '" aria-describedby="cm_' + id + '">';
+  h += '<h3 id="bh_' + id + '"><span class="hn"><span class="emo" aria-hidden="true">' + c.emoji + '</span><span data-t="cat_' + id + '">' + esc(catLabel(id)) + '</span></span><small class="cnt"></small></h3>';
+  h += '<p class="msg" id="cm_' + id + '" hidden></p>';
+  if (id === 'other') {
+    h += '<div class="f otherf"><label for="otherName" data-t="otherName">' + esc(t('otherName')) + '</label>' +
+      '<input type="text" id="otherName" maxlength="30" value="' + esc(otherName) + '" placeholder="' + esc(t('otherPh')) + '" data-tp="otherPh" aria-required="true" aria-describedby="m_otherName">' +
+      '<p class="msg" id="m_otherName" hidden></p></div>';
+  }
+  c.s.forEach(function(sg, i){ h += sugRowHTML(id, i); });
+  h += '<div class="customs">' + R.c.map(function(r){ return customRowHTML(id, r); }).join('') + '</div>';
+  var addKey = id === 'other' ? 'addSvcOther' : 'addSvc';
+  h += '<button type="button" class="add" data-t="' + addKey + '">' + esc(t(addKey)) + '</button></div>';
+  return h;
+}
+function fromHTML(html){ var d = document.createElement('div'); d.innerHTML = html; return d.firstChild; }
+
+function showBlock(id){
+  if ($('blk_' + id)) return;
+  var box = $('cats'), idx = CATS.indexOf(CAT[id]), before = null;
+  qa('.cat', box).some(function(b){
+    if (CATS.indexOf(CAT[b.dataset.cat]) > idx) { before = b; return true; }
+    return false;
+  });
+  box.insertBefore(fromHTML(blockHTML(id)), before);
+  qa('#blk_' + id + ' .svc').forEach(function(el){ var x = rowOf(el); if (x) refreshRowText(x); });
+  updateCount(id);
+}
+
+/* يرجع وصف الصف من أي عنصر داخله، أو null إذا الصف انحذف */
+function rowOf(el){
+  var row = el && el.closest ? el.closest('.svc') : null;
+  if (!row) return null;
+  var R = rows[row.dataset.cat], x = {el:row, cat:row.dataset.cat, kind:row.dataset.kind};
+  if (!R) return null;
+  if (x.kind === 's') { x.i = +row.dataset.i; x.r = R.s[x.i]; }
+  else x.r = R.c.filter(function(r){ return String(r.id) === row.dataset.id; })[0];
+  if (!x.r) return null;
+  x.key = x.cat + (x.kind === 's' ? '_s' + x.i : '_c' + x.r.id);
+  return x;
+}
+function refreshRowText(x){
+  var p = $('pr_' + x.key);
+  p.placeholder = t(x.r.unit === INSPECT ? 'priceFrom' : 'pricePh');
+  p.setAttribute('aria-label', t('priceAria', {name: priceLabel(x)}));
+}
+function includedCount(id){
+  var R = rows[id];
+  return R.s.filter(function(r){ return r.on; }).length + R.c.length;
+}
+function countText(n){
+  if (!n) return '';
+  if (n === 1) return t('count1');
+  if (n === 2) return t('count2');
+  return t(n <= 10 || lang === 'en' ? 'countFew' : 'countMany', {n:n});
+}
+function updateCount(id){
+  var b = $('blk_' + id);
+  if (b) b.querySelector('.cnt').textContent = countText(includedCount(id));
+}
+function updateEnterHints(){
+  var list = qa('#cats .price').filter(visible);
+  list.forEach(function(el, i){ el.setAttribute('enterkeyhint', i === list.length - 1 ? 'done' : 'next'); });
+}
+
+/* رسائل الخطأ */
+function showMsg(m, key, params){
+  if (!m) return;
+  m.dataset.k = key;
+  m.dataset.p = params ? JSON.stringify(params) : '';
+  m.textContent = t(key, params);
+  m.hidden = false;
+}
+function hideMsg(m){
+  if (!m) return;
+  m.hidden = true;
+  m.textContent = '';
+  delete m.dataset.k;
+}
+function setBad(el, bad){
+  if (!el) return;
+  if (el.type !== 'radio' && el.type !== 'checkbox') el.classList.toggle('bad', bad);
+  el.setAttribute('aria-invalid', bad ? 'true' : 'false');
+}
+function rowPriceError(r, custom){
+  var p = parsePrice(r.price, 20000);
+  if (p.empty) return r.unit === INSPECT ? '' : (custom ? 'e_needPriceC' : 'e_needPrice');
+  if (p.range) return 'e_range';
+  if (p.bad) return 'e_bad';
+  if (p.out) return 'e_out';
+  return '';
+}
+
+/* شيل الصح يفضي الخانة ويحفظ السعر، ورجعة الصح ترجعه. typed: انحط الصح لأنه كتب سعر */
+function setTick(x, on, typed){
+  var pr = $('pr_' + x.key), unit = $('un_' + x.key), def = CAT[x.cat].s[x.i][2];
+  if (on && !x.r.on) {
+    if (!typed && x.r.memo) {
+      x.r.price = x.r.memo.price;
+      x.r.unit = x.r.memo.unit;
+      pr.value = x.r.price;
+      unit.value = x.r.unit;
+    }
+    x.r.memo = null;
+    x.r.auto = !!typed;
+    if (tried) quiet[x.el.id] = true;
+  } else if (!on && x.r.on) {
+    x.r.memo = x.r.price !== '' || x.r.unit !== def ? {price:x.r.price, unit:x.r.unit} : null;
+    x.r.price = '';
+    pr.value = '';
+    x.r.unit = def;
+    unit.value = def;
+    x.r.auto = false;
+    delete quiet[x.el.id];
+    delete left[x.el.id];
+    qa('.bad', x.el).forEach(function(c){ setBad(c, false); });
+    hideMsg($('rm_' + x.key));
+  }
+  x.r.on = on;
+  x.el.classList.toggle('on', on);
+  $('tk_' + x.key).checked = on;
+  unit.parentNode.hidden = !on;
+  refreshRowText(x);
+  updateCount(x.cat);
+}
+
+/* أحداث الخدمات: كلها تعدل الصفحة في مكانها بدون إعادة رسم */
+var catsBox = $('cats');
+
+catsBox.addEventListener('change', function(e){
+  var el = e.target, x = rowOf(el);
+  if (!x) return;
+  if (el.classList.contains('tick')) {
+    setTick(x, el.checked);
+    if (el.checked) $('pr_' + x.key).focus();
+  } else if (el.classList.contains('unit')) {
+    x.r.unit = el.value;
+    x.r.auto = false;
+    refreshRowText(x);
+  }
+});
+
+catsBox.addEventListener('input', function(e){
+  var el = e.target;
+  if (el.id === 'otherName') { otherName = el.value; setBad(el, false); hideMsg($('m_otherName')); return; }
+  var x = rowOf(el);
+  if (!x || !(el.classList.contains('price') || el.classList.contains('cname'))) return;
+  if (el.classList.contains('price')) {
+    x.r.price = el.value;
+    if (x.kind === 's') {
+      if (!x.r.on && el.value !== '') setTick(x, true, true);
+      // صح انحط من الكتابة وبعدين انمسح السعر: يرجع بدون صح
+      else if (x.r.on && x.r.auto && el.value === '' && x.r.unit === CAT[x.cat].s[x.i][2]) setTick(x, false);
+    }
+  } else {
+    x.r.name = el.value;
+    refreshRowText(x);
+  }
+  // وهو يكتب ما يطلع له خطأ، الخطأ يطلع لما يطلع من الصف
+  setBad(el, false);
+  hideMsg($('rm_' + x.key));
+});
+
+catsBox.addEventListener('keydown', function(e){
+  if (e.key !== 'Enter' || e.isComposing) return;
+  var el = e.target;
+  if (el.classList.contains('price')) {
+    e.preventDefault();
+    var list = qa('#cats .price').filter(visible), i = list.indexOf(el);
+    if (i > -1 && i < list.length - 1) list[i + 1].focus(); else el.blur();
+  } else if (el.classList.contains('cname')) {
+    e.preventDefault();
+    el.closest('.svc').querySelector('.price').focus();
+  }
+});
+
+catsBox.addEventListener('click', function(e){
+  var add = e.target.closest('.add'), del = e.target.closest('.del');
+  if (add) {
+    var blk = add.closest('.cat'), id = blk.dataset.cat, r = {id: ++uid, name:'', price:'', unit:'للخدمة'};
+    rows[id].c.push(r);
+    var rowEl = fromHTML(customRowHTML(id, r));
+    blk.querySelector('.customs').appendChild(rowEl);
+    refreshRowText(rowOf(rowEl));
+    if (tried) quiet[rowEl.id] = true;
+    rowEl.querySelector('.cname').focus();
+    updateCount(id);
+    updateEnterHints();
+    changed();
+  } else if (del) {
+    var x = rowOf(del);
+    if (!x) return;
+    var list = rows[x.cat].c, prev = x.el.previousElementSibling, block = x.el.closest('.cat');
+    // التركيز يطلع من الصف قبل ما تنشال بياناته
+    (prev && prev.querySelector('.cname') ? prev.querySelector('.cname') : block.querySelector('.add')).focus();
+    list.splice(list.indexOf(x.r), 1);
+    delete quiet[x.el.id];
+    delete left[x.el.id];
+    delete visited[x.el.id];
+    x.el.remove();
+    updateCount(x.cat);
+    updateEnterHints();
+    changed();
+  }
+});
+
+/* اختيار الأقسام: الشي الوحيد اللي يرسم قسم من جديد */
+$('catChips').addEventListener('change', function(e){
+  var id = e.target.value;
+  if (e.target.checked) {
+    if (sel.indexOf(id) < 0) sel.push(id);
+    sortSel();
+    if (tried) quiet['blk_' + id] = true;
+    showBlock(id);
+  } else {
+    sel = sel.filter(function(x){ return x !== id; });
+    var b = $('blk_' + id);
+    if (b) b.remove();
+  }
+  $('svcEmpty').hidden = sel.length > 0;
+  updateEnterHints();
+});
+
+/* الحقول الثابتة */
+function syncReveals(){
+  $('visitLine').hidden = radioValue('visit') !== 'بسعر';
+  $('cityOther').hidden = !$('city6').checked;
+}
+function clearOwn(el){
+  if (!el || el.closest('#cats')) return;
+  setBad(el, false);
+  var fs = el.closest('fieldset');
+  if ((el.type === 'radio' || el.type === 'checkbox') && fs) {
+    fs.classList.remove('bad');
+    qa('input[aria-invalid]', fs).forEach(function(i){ if (i.type === el.type) i.setAttribute('aria-invalid', 'false'); });
+  }
+  if (el.closest('#catChips')) $('card1').classList.remove('bad');
+  var d = el.getAttribute('aria-describedby');
+  if (d) hideMsg($(d));
+}
+$('root').addEventListener('change', function(e){
+  var el = e.target;
+  // change حق خانات الكتابة يجي وقت ما يطلع منها، يعني وسط الضغطة الجاية. الكتابة يغطيها input
+  if (el.type !== 'radio' && el.type !== 'checkbox' && el.tagName !== 'SELECT') return;
+  if (el.name === 'visit' || el.id === 'city6') {
+    syncReveals();
+    if (el.checked && el.value === 'بسعر') $('visitPrice').focus();
+    if (el.id === 'city6' && el.checked) $('cityOther').focus();
+  }
+  clearOwn(el);
+  changed();
+});
+$('root').addEventListener('input', function(e){
+  var el = e.target;
+  if (el.type === 'radio' || el.type === 'checkbox' || el.tagName === 'SELECT') return; // يغطيها change
+  clearOwn(el);
+  changed();
+});
+
+/* إذا طلع من صف أو خانة نفحصها، بس بعد ما تخلص الضغطة عشان ما تتحرك الصفحة تحت الإصبع */
+var pointerDown = false, downAt = 0, leaveTimer = null;
+document.addEventListener('pointerdown', function(){ pointerDown = true; downAt = Date.now(); }, true);
+document.addEventListener('pointerup', function(){ pointerDown = false; }, true);
+document.addEventListener('pointercancel', function(){ pointerDown = false; }, true);
+$('root').addEventListener('focusin', function(e){
+  var el = e.target;
+  if (!el.closest) return;
+  var holder = el.closest('#cats .svc') || (/^(INPUT|SELECT|TEXTAREA)$/.test(el.tagName) && el.id ? el : null);
+  var blk = el.closest('#cats .cat');
+  if (holder) visited[holder.id] = holder;
+  if (blk) visited[blk.id] = blk;
+});
+$('root').addEventListener('focusout', function(){
+  clearTimeout(leaveTimer);
+  leaveTimer = setTimeout(flushLeft, 350);
+});
+function flushLeft(){
+  if (pointerDown && Date.now() - downAt < 2500) { leaveTimer = setTimeout(flushLeft, 200); return; }
+  var act = document.activeElement, any = false;
+  Object.keys(visited).forEach(function(k){
+    var el = visited[k];
+    if (el.isConnected && act && el.contains(act)) return;
+    delete visited[k];
+    delete quiet[k];
+    if (el.classList.contains('svc')) {
+      left[k] = true;
+      var b = el.closest('.cat');
+      if (b) delete quiet[b.id];
+    }
+    any = true;
+  });
+  if (any) validate({});
+}
+$('visitPrice').addEventListener('keydown', function(e){
+  if (e.key === 'Enter' && !e.isComposing) { e.preventDefault(); this.blur(); }
+});
+$('name').addEventListener('keydown', function(e){
+  if (e.key === 'Enter' && !e.isComposing) { e.preventDefault(); $('phone').focus(); }
+});
+$('phone').addEventListener('keydown', function(e){
+  if (e.key === 'Enter' && !e.isComposing) { e.preventDefault(); this.blur(); }
+});
+
+/* التحقق: يجمع الأخطاء بدون ما يلمس الصفحة */
+function collect(){
+  var E = [];
+  function push(o){ o.ctrls = o.ctrls || []; E.push(o); }
+
+  var catInputs = qa('#catChips input');
+  if (!sel.length) push({card:1, key:'e_cats', short:t('s_cats'), ctrls:catInputs, group:$('card1'), box:$('catChips'), msg:$('m_cats')});
+
+  if (sel.indexOf('other') > -1 && !san(otherName)) {
+    push({card:2, key:'e_otherName', short:t('s_otherName'), ctrls:[$('otherName')], msg:$('m_otherName'), bk:'blk_other'});
+  }
+
+  if (!radioValue('mat')) push({card:2, key:'e_mat', short:t('s_mat'), ctrls:qa('input[name="mat"]'), group:$('fs_mat'), msg:$('m_mat')});
+
+  sel.forEach(function(id){
+    var R = rows[id], valid = 0, rowErrs = 0, bk = 'blk_' + id;
+    var sug = Object.create(null), seen = Object.create(null);
+    CAT[id].s.forEach(function(sg, i){
+      sug[normName(sg[1])] = i;
+      sug[normName(sg[3])] = i;
+      var r = R.s[i];
+      if (!r.on) return;
+      var pe = rowPriceError(r), key = id + '_s' + i;
+      if (pe) {
+        rowErrs++;
+        push({card:2, key:pe, short:t('s_price', {name: lang === 'en' ? sg[3] : sg[1]}), ctrls:[$('pr_' + key)], msg:$('rm_' + key), rk:'row_' + key, bk:bk});
+      } else valid++;
+    });
+    R.c.forEach(function(r){
+      var key = id + '_c' + r.id, rk = 'row_' + key, nm = san(r.name), nk = normName(r.name), bad = false;
+      if (!nm) {
+        push({card:2, key:'e_svcName', short:t('s_svcName'), ctrls:[$('cn_' + key)], msg:$('rm_' + key), rk:rk, bk:bk});
+        bad = true;
+      } else if (nk in seen || nk in sug) {
+        // موجودة بالقائمة فوق وما عليها صح: نوديه لها بدل ما نقول مكررة
+        var above = !(nk in seen) && !R.s[sug[nk]].on;
+        push({card:2, key: above ? 'e_dupAbove' : 'e_dup', short:t('s_dup'), ctrls:[$('cn_' + key)], msg:$('rm_' + key), rk:rk, bk:bk});
+        bad = true;
+      } else seen[nk] = true;
+      var pe = rowPriceError(r, true);
+      if (pe) {
+        push({card:2, key:pe, short:t('s_price', {name: clip(nm || t('s_anySvc'), 30)}), ctrls:[$('pr_' + key)], msg:$('rm_' + key), rk:rk, bk:bk});
+        bad = true;
+      }
+      if (bad) rowErrs++; else valid++;
+    });
+    if (!valid && !rowErrs) {
+      var blk = $('blk_' + id), other = id === 'other' ? san(otherName) : '';
+      push({card:2, key: id === 'other' ? 'e_catMinOther' : 'e_catMin', short:t('s_catMin', {name: other ? clip(other, 30) : catLabel(id)}),
+        box:blk, msg:$('cm_' + id), bk:bk, focus: blk && (blk.querySelector('.price') || blk.querySelector('.add'))});
+    }
+  });
+
+  if (!radioValue('war')) push({card:3, key:'e_war', short:t('s_war'), ctrls:qa('input[name="war"]'), group:$('fs_war'), msg:$('m_war')});
+  var visit = radioValue('visit');
+  if (!visit) push({card:3, key:'e_visit', short:t('s_visit'), ctrls:qa('input[name="visit"]'), group:$('fs_visit'), msg:$('m_visit')});
+  else if (visit === 'بسعر') {
+    var vp = parsePrice($('visitPrice').value, 5000);
+    if (!vp.ok) push({card:3, key: vp.empty ? 'e_visitPrice' : (vp.out ? 'e_visitOut' : 'e_visitBad'), short:t('s_visitPrice'), ctrls:[$('visitPrice')], msg:$('m_visitPrice')});
+  }
+
+  if (!san($('name').value)) push({card:4, key:'e_name', short:t('s_name'), ctrls:[$('name')], msg:$('m_name')});
+  if (!phone($('phone').value)) push({card:4, key:'e_phone', short:t('s_phone'), ctrls:[$('phone')], msg:$('m_phone')});
+  if (!checkedValues('city').length) push({card:4, key:'e_city', short:t('s_city'), ctrls:qa('input[name="city"]'), group:$('fs_city'), msg:$('m_city')});
+  if ($('city6').checked && !san($('cityOther').value)) push({card:4, key:'e_cityOther', short:t('s_cityOther'), ctrls:[$('cityOther')], msg:$('m_cityOther')});
+
+  /* ترتيب الأخطاء حسب مكانها بالصفحة */
+  function anchor(o){ return o.ctrls[0] || o.box || o.group || o.msg; }
+  return E.sort(function(a, b){
+    var pa = anchor(a), pb = anchor(b);
+    if (!pa || !pb || pa === pb) return 0;
+    return pa.compareDocumentPosition(pb) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1;
+  });
+}
+
+var CHECKED_CTRLS = '#catChips input, #otherName, input[name="mat"], #cats .price, #cats .cname, input[name="war"], input[name="visit"], #visitPrice, #name, #phone, input[name="city"], #cityOther';
+
+/* متى يبان الخطأ جنب الخانة:
+   عند الإرسال: كل الأخطاء.
+   قبل أول محاولة: بس الصفوف اللي دخلها وطلع منها.
+   بعد المحاولة: كل شي، إلا اللي انضاف بعدها ولسا ما طلع منه.
+   والخانة اللي فيها التركيز ما يطلع لها خطأ جديد وهو فيها. */
+function mayShow(o, all, shown){
+  if (all) return true;
+  if (o.bk && quiet[o.bk]) return false;
+  if (o.rk) { if (quiet[o.rk] || (!tried && !left[o.rk])) return false; }
+  else if (!tried) return false;
+  var holder = o.rk ? $(o.rk) : (o.ctrls.length === 1 ? o.ctrls[0] : null), act = document.activeElement;
+  if (holder && act && holder.contains(act) && !(o.msg && shown[o.msg.id] === o.key)) return false;
+  return true;
+}
+
+function validate(opts){
+  opts = opts || {};
+  if (opts.all) quiet = {};
+  var E = collect(), shown = {}, keep = {};
+  qa('#root .msg').forEach(function(m){ if (!m.hidden && m.dataset.k) shown[m.id] = m.dataset.k; });
+  qa('#root .bad').forEach(function(el){ el.classList.remove('bad'); });
+  qa(CHECKED_CTRLS).forEach(function(el){ el.setAttribute('aria-invalid', 'false'); });
+  E.forEach(function(o){
+    if (!mayShow(o, opts.all, shown)) return;
+    o.ctrls.forEach(function(c){ setBad(c, true); });
+    if (o.group) o.group.classList.add('bad');
+    if (o.msg && !keep[o.msg.id]) keep[o.msg.id] = o.key;
+  });
+  qa('#root .msg').forEach(function(m){
+    var k = keep[m.id];
+    if (!k) { if (!m.hidden) hideMsg(m); }
+    else if (m.hidden || m.dataset.k !== k) showMsg(m, k);
+  });
+  renderMissing(E);
+  updateDone(E);
+  if (opts && opts.scroll && E.length) {
+    var first = E[0], target = first.box || first.group || first.ctrls[0] || first.msg;
+    var smooth = !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    target.scrollIntoView({behavior: smooth ? 'smooth' : 'auto', block:'center'});
+    var f = first.focus || first.ctrls[0];
+    if (f) setTimeout(function(){ try { f.focus({preventScroll:true}); } catch (x) {} }, 350);
+  }
+  return !E.length;
+}
+
+function renderMissing(E){
+  var box = $('missing');
+  if (!tried || !E.length) { box.hidden = true; box.textContent = ''; return; }
+  var names = [];
+  E.forEach(function(o){ if (names.indexOf(o.short) < 0) names.push(o.short); });
+  box.textContent = t('missing') + names.slice(0, 3).join(t('listSep')) + (names.length > 3 ? t('andMore', {n: names.length - 3}) : '');
+  box.hidden = false;
+}
+
+function updateDone(E){
+  E = E || collect();
+  [1, 2, 3, 4].forEach(function(n){
+    var ok = !E.some(function(o){ return o.card === n; });
+    if (n === 2 && !sel.length) ok = false;
+    $('card' + n).classList.toggle('done', ok);
+  });
+}
+
+/* رسالة واتساب: عربية دائمًا وبنفس الترتيب */
+function serviceLine(name, r, cat, code){
+  var p = parsePrice(r.price, 20000);
+  if (r.unit === INSPECT) return '• ' + name + (p.ok ? ' · يبدأ من ' + p.n + ' ريال' : '') + ' · ' + INSPECT + ' · #' + code;
+  return '• ' + name + ' · ' + (p.ok ? p.n : '') + ' ريال · ' + T[unitKey(cat, r.unit)].ar + ' · #' + code;
+}
+function message(){
+  var L = ['*نموذج انضمام مقدم خدمة · خافت*', 'السلام عليكم، هذي بياناتي وخدماتي وأسعاري.', '', '*البيانات*'];
+  L.push('الاسم: ' + san($('name').value));
+  L.push('الجوال: ' + phone($('phone').value));
+  var cities = checkedValues('city').filter(function(v){ return v !== 'مدينة ثانية'; });
+  if ($('city6').checked && san($('cityOther').value)) cities.push(san($('cityOther').value));
+  L.push('المدن: ' + cities.join('، '));
+  var team = radioValue('team');
+  if (team) L.push('الفريق: ' + team);
+  if ($('exp').value) L.push('الخبرة: ' + $('exp').value);
+  var company = san($('company').value);
+  if (company) L.push('المؤسسة: ' + company);
+  var doc = radioValue('doc');
+  if (doc) L.push('الوثيقة: ' + (doc === 'ما عندي' ? 'ما عنده' : doc));
+  var eq = checkedValues('eq');
+  if (eq.length) L.push('عنده: ' + eq.join('، '));
+  if (lang === 'en') L.push('لغة التعبئة: English');
+
+  L.push('', '*الخدمات والأسعار* (بالريال)', 'المواد: ' + radioValue('mat'));
+  var count = 0;
+  sel.forEach(function(id){
+    var c = CAT[id], R = rows[id], lines = [];
+    c.s.forEach(function(sg, i){ if (R.s[i].on) lines.push(serviceLine(sg[1], R.s[i], id, sg[0] || 'جديد')); });
+    R.c.forEach(function(r){ lines.push(serviceLine(san(r.name), r, id, 'جديد')); });
+    if (!lines.length) return;
+    L.push('*' + (id === 'other' ? san(otherName) : T['cat_' + id].ar) + '* #' + (c.isNew ? 'جديد' : id));
+    L = L.concat(lines);
+    count += lines.length;
+  });
+
+  var visit = radioValue('visit'), vp = parsePrice($('visitPrice').value, 5000);
+  var visitText = visit === 'بسعر' ? (vp.n || '') + ' ريال، ' + ($('visitDeduct').checked ? 'تنخصم إذا تم الشغل' : 'ما تنخصم') : visit;
+  L.push('', '*الشغل*', 'الضمان: ' + radioValue('war'), 'المعاينة: ' + visitText);
+  // الاختياري ينكتب بس إذا اختاره، عشان ما نقول «لا» عن شي ما جاوب عليه
+  var times = checkedValues('time');
+  if (times.length) L.push('الأوقات: ' + times.join('، '));
+  if ($('fri').checked) L.push('الجمعة: نعم');
+  if ($('urgent').checked) L.push('المستعجل: نعم');
+  var notes = san($('notes').value);
+  if (notes) L.push('ملاحظات: ' + notes);
+  L.push('', 'عدد الخدمات: ' + count, 'نسخة النموذج: 2');
+  return L.join('\n');
+}
+
+/* لوحة المراجعة */
+var review = $('review');
+
+function renderReview(){
+  var m = message(), href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(m);
+  $('preview').textContent = m;
+  qa('#review .wa').forEach(function(a){ a.href = href; });
+  $('longNote').hidden = m.length <= 3000; // عدد حروف الرسالة نفسها
+}
+function setAfter(on){
+  $('after').hidden = !on;
+  $('rvSub').hidden = on;
+  if (!on) { $('aCopied').hidden = true; setStatus('numStatus', ''); }
+}
+function hideReview(){
+  review.hidden = true;
+  setAfter(false);
+  setStatus('copyStatus', '');
+}
+function setStatus(id, key, isErr){
+  var el = $(id);
+  el.dataset.k = key || '';
+  el.textContent = key ? t(key) : '';
+  el.classList.toggle('err', !!isErr);
+}
+
+function changed(){
+  save();
+  validate({});
+  if (!review.hidden) {
+    if (collect().length) { hideReview(); tried = true; validate({}); }
+    else renderReview();
+  }
+}
+
+$('reviewBtn').addEventListener('click', function(){
+  if (!validate({all:true, scroll:true})) {
+    tried = true;
+    renderMissing(collect());
+    hideReview();
+    return;
+  }
+  renderReview();
+  setStatus('copyStatus', '');
+  review.hidden = false;
+  review.scrollIntoView({block:'start'});
+  $('rvH').focus({preventScroll:true});
+});
+
+$('editBtn').addEventListener('click', function(){
+  hideReview();
+  $('card1').scrollIntoView({block:'start', behavior:'smooth'});
+});
+
+/* النسخ: الحافظة أولًا، وبعدها execCommand، وإذا فشل يبقى النص محدد */
+function copyText(text, select, okKey, failKey, statusId){
+  function fallback(){
+    var ok = false;
+    try { select(); ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    if (ok) { setStatus(statusId, okKey); return; }
+    try { select(); } catch (e) {}
+    setStatus(statusId, failKey, true);
+  }
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ setStatus(statusId, okKey); }, fallback);
+      return;
+    }
+  } catch (e) {}
+  fallback();
+}
+function selectNode(node){
+  var r = document.createRange(), s = window.getSelection();
+  r.selectNodeContents(node);
+  s.removeAllRanges();
+  s.addRange(r);
+}
+$('copyMsg').addEventListener('click', function(){
+  copyText(message(), function(){ selectNode($('preview')); }, 'copied', 'copyFail', 'copyStatus');
+});
+/* الرقم بالصيغة الدولية: يشتغل حتى لو واتساب الفني على رقم من بلد ثاني */
+$('copyNum').addEventListener('click', function(){
+  copyText('+' + WA, function(){ selectNode($('waNum')); }, 'numCopied', 'numFail', 'numStatus');
+});
+
+/* ضغط رابط واتساب: ما نمنع الفتح، ننسخ احتياط ونعرض الخطوة الباقية */
+qa('#review .wa').forEach(function(a){
+  a.addEventListener('click', function(){
+    sentTap = true;
+    var m = message();
+    setAfter(true);
+    try {
+      navigator.clipboard.writeText(m).then(function(){ $('aCopied').hidden = false; }, function(){});
+    } catch (e) {}
+    review.scrollIntoView({block:'start'});
+  });
+});
+$('newForm').addEventListener('click', resetAll);
+
+document.addEventListener('visibilitychange', function(){
+  if (document.visibilityState === 'hidden') save();
+  else if (sentTap && !review.hidden && !$('after').hidden) review.scrollIntoView({block:'start'});
+});
+window.addEventListener('pagehide', save);
+
+/* المسودة: محفوظة بهذا الجهاز فقط */
+function fieldEls(){
+  return qa('#root input[id], #root select[id], #root textarea[id]').filter(function(el){
+    return el.id !== 'preview' && !el.closest('#cats, #catChips');
+  });
+}
+function save(){
+  try {
+    var d = {v:2, lang:lang, sel:sel.slice(), otherName:otherName, rows:{}, f:{}};
+    Object.keys(rows).forEach(function(id){
+      var s = {};
+      CAT[id].s.forEach(function(sg, i){
+        var r = rows[id].s[i];
+        if (r.on) s[sg[1]] = {on:true, price:r.price, unit:r.unit};
+      });
+      d.rows[id] = {s:s, c:rows[id].c.map(function(r){ return {name:r.name, price:r.price, unit:r.unit}; })};
+    });
+    fieldEls().forEach(function(el){
+      if (el.type === 'radio' || el.type === 'checkbox') { if (el.checked) d.f[el.id] = true; }
+      else if (el.value) d.f[el.id] = el.value;
+    });
+    localStorage.setItem(KEY, JSON.stringify(d));
+  } catch (e) {}
+}
+
+/* يرجع true إذا فيه مسودة فيها شي */
+function restore(){
+  var d = null;
+  try { d = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return false; }
+  if (!d || d.v !== 2) return false;
+  try {
+    if (d.lang === 'ar' || d.lang === 'en') lang = d.lang;
+    var f = d.f || {};
+    fieldEls().forEach(function(el){
+      if (!Object.prototype.hasOwnProperty.call(f, el.id)) return;
+      var v = f[el.id];
+      if (el.type === 'radio' || el.type === 'checkbox') { el.checked = v === true; return; }
+      v = String(v);
+      if (el.tagName === 'SELECT' && !qa('option', el).some(function(o){ return o.value === v; })) return;
+      el.value = v;
+    });
+    otherName = typeof d.otherName === 'string' ? d.otherName : '';
+    sel = (Array.isArray(d.sel) ? d.sel : []).filter(function(id){ return !!CAT[id]; });
+    sortSel();
+    Object.keys(d.rows || {}).forEach(function(id){
+      if (!CAT[id]) return;
+      var src = d.rows[id] || {}, R = rows[id] = newRows(id);
+      Object.keys(src.s || {}).forEach(function(nm){
+        var v = src.s[nm] || {}, idx = -1, unit = isUnit(v.unit) ? v.unit : '', price = typeof v.price === 'string' ? v.price : '';
+        CAT[id].s.forEach(function(sg, i){ if (sg[1] === nm) idx = i; });
+        if (!v.on) return;
+        if (idx > -1) R.s[idx] = {on:true, price:price, unit:unit || CAT[id].s[idx][2]};
+        else R.c.push({id:++uid, name:nm, price:price, unit:unit || 'للخدمة'}); // خدمة انشالت من القائمة تصير خدمة مضافة
+      });
+      (Array.isArray(src.c) ? src.c : []).forEach(function(v){
+        if (!v || typeof v !== 'object') return;
+        R.c.push({id:++uid, name:String(v.name || ''), price:String(v.price || ''), unit:isUnit(v.unit) ? v.unit : 'للخدمة'});
+      });
+    });
+    sel.forEach(function(id){ ensureRows(id); $('cat_' + id).checked = true; });
+    return true;
+  } catch (e) { return false; }
+}
+/* الشريط يطلع بس إذا فيه شي مكتوب يبان قدامه */
+function hasVisibleContent(){
+  return sel.length > 0 || fieldEls().some(function(el){
+    if (!visible(el)) return false;
+    return el.type === 'radio' || el.type === 'checkbox' ? el.checked : !!el.value.trim();
+  });
+}
+
+/* ابدأ من جديد: ضغطتين */
+var armed = false, armTimer = null;
+function disarm(){
+  armed = false;
+  clearTimeout(armTimer);
+  var b = $('resetBtn');
+  b.dataset.t = 'restart';
+  b.textContent = t('restart');
+}
+$('resetBtn').addEventListener('click', function(){
+  if (!armed) {
+    armed = true;
+    this.dataset.t = 'restartSure';
+    this.textContent = t('restartSure');
+    armTimer = setTimeout(disarm, 5000);
+    return;
+  }
+  disarm();
+  resetAll();
+});
+
+function resetAll(){
+  try { localStorage.removeItem(KEY); } catch (e) {}
+  qa('#root input, #root select, #root textarea').forEach(function(el){
+    if (el.type === 'radio' || el.type === 'checkbox') el.checked = false;
+    else el.value = '';
+  });
+  sel = []; rows = {}; otherName = ''; tried = false; sentTap = false;
+  quiet = {}; left = {}; visited = {};
+  $('cats').innerHTML = '';
+  $('svcEmpty').hidden = false;
+  qa('#root .bad').forEach(function(el){ el.classList.remove('bad'); });
+  qa('#root [aria-invalid]').forEach(function(el){ el.setAttribute('aria-invalid', 'false'); });
+  qa('#root .msg').forEach(hideMsg);
+  syncReveals();
+  hideReview();
+  $('draftNote').hidden = true;
+  renderMissing([]);
+  updateDone();
+  window.scrollTo(0, 0);
+}
+
+/* اللغة */
+function applyLang(){
+  var dir = lang === 'ar' ? 'rtl' : 'ltr', root = $('root');
+  root.setAttribute('dir', dir);
+  root.setAttribute('lang', lang);
+  document.documentElement.setAttribute('dir', dir);
+  document.documentElement.setAttribute('lang', lang);
+  qa('[data-t]').forEach(function(el){ el.textContent = t(el.dataset.t); });
+  qa('[data-tp]').forEach(function(el){ el.setAttribute('placeholder', t(el.dataset.tp)); });
+  qa('[data-ta]').forEach(function(el){ el.setAttribute('aria-label', t(el.dataset.ta)); });
+  qa('#cats select.unit').forEach(function(s){
+    var cat = s.closest('.svc').dataset.cat;
+    qa('option', s).forEach(function(o){ o.textContent = t(unitKey(cat, o.value)); });
+  });
+  qa('#cats .svc').forEach(function(el){ var x = rowOf(el); if (x) refreshRowText(x); });
+  sel.forEach(updateCount);
+  qa('#root .msg[data-k]').forEach(function(m){ m.textContent = t(m.dataset.k, m.dataset.p ? JSON.parse(m.dataset.p) : null); });
+  qa('#root .status').forEach(function(el){ if (el.dataset.k) el.textContent = t(el.dataset.k); });
+  $('langAr').setAttribute('aria-pressed', String(lang === 'ar'));
+  $('langEn').setAttribute('aria-pressed', String(lang === 'en'));
+  if (tried) renderMissing(collect());
+  if (!review.hidden) renderReview();
+}
+qa('.lang button').forEach(function(b){
+  b.addEventListener('click', function(){
+    if (lang === b.dataset.lang) return;
+    lang = b.dataset.lang;
+    applyLang();
+    save();
+  });
+});
+function detectLang(){
+  var n = String(navigator.language || '').toLowerCase();
+  // العربي هو الأساس (حتى لو الجوال إنجليزي)، والإنجليزي لجوالات لغات العمالة الوافدة
+  if (/^(hi|ne|bn|ur|fil|tl|si|ta|ml|te)\b/.test(n)) return 'en';
+  return 'ar';
+}
+
+/* البداية */
+lang = detectLang();
+var hadDraft = restore();
+sel.forEach(showBlock);
+$('svcEmpty').hidden = sel.length > 0;
+syncReveals();
+applyLang();
+updateEnterHints();
+updateDone();
+if (hadDraft && hasVisibleContent()) $('draftNote').hidden = false;
+})();
+</script>
+
+</body>
+</html>
