@@ -4,1754 +4,638 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#F5C518">
-<meta name="description" content="للفنيين ومقدمي الخدمات: اكتب خدماتك وأسعارك وأرسلها لخافت على واتساب.">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="خافت">
-<meta property="og:title" content="انضم لخافت كفني أو مقدم خدمة">
-<meta property="og:description" content="اكتب خدماتك وأسعارك، وتوصلنا على واتساب برسالة جاهزة.">
-<meta property="og:image" content="https://fadiaalzhrani-debug.github.io/khaft/www/logo.png">
-<meta property="og:url" content="https://fadiaalzhrani-debug.github.io/rezq/join/">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="https://fadiaalzhrani-debug.github.io/khaft/www/logo.png">
-<link rel="apple-touch-icon" href="https://fadiaalzhrani-debug.github.io/khaft/www/logo.png">
-<title>انضم لخافت</title>
+<meta name="description" content="انضم إلى شبكة خافت للفنيين ومقدمي خدمات الصيانة في الخبر والدمام والظهران">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111'/%3E%3Ctext x='32' y='46' font-size='40' font-weight='800' text-anchor='middle' fill='%23F5C518' font-family='Arial'%3Eخ%3C/text%3E%3C/svg%3E">
+<title>انضم إلى خافت</title>
+<script>document.documentElement.dir='rtl';document.documentElement.lang='ar';</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  color-scheme:light;
-  --bg:#F4F4F1; --card:#FFFFFF; --ink:#16150F; --muted:#6B685C; --line:#E0DED4; --field:#FAFAF7; --ctl:#8C887A;
-  --gold:#F5C518; --gold-ink:#16150F; --gold-soft:#FFF3BF; --chip:#EFEDE4;
-  --err:#B42318; --err-soft:#FDECEA; --ok:#1E7A46; --focus:#16150F;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --bg:#12120F; --card:#1C1C18; --ink:#F3F1E8; --muted:#A5A293; --line:#34332C; --field:#15150F; --ctl:#6E6B60;
-    --gold:#F5C518; --gold-ink:#16150F; --gold-soft:#3A3212; --chip:#27261F;
-    --err:#FF8A7A; --err-soft:#3A1A16; --ok:#6FD39A; --focus:#F5C518;
-  }
-}
-:root[data-theme="dark"]{
-  color-scheme:dark;
-  --bg:#12120F; --card:#1C1C18; --ink:#F3F1E8; --muted:#A5A293; --line:#34332C; --field:#15150F; --ctl:#6E6B60;
-  --gold:#F5C518; --gold-ink:#16150F; --gold-soft:#3A3212; --chip:#27261F;
-  --err:#FF8A7A; --err-soft:#3A1A16; --ok:#6FD39A; --focus:#F5C518;
-}
+:root{--y:#F5C518;--y2:#FFE466;--yd:#A87F00;--ink:#111110;--bg:#F1F1EC;--card:#FFFFFF;--tx:#17170F;--mu:#6A685E;--ln:#E1DFD6;--soft:#F7F6F1;--ok:#1C7C4A;--oks:#E3F4EA;--err:#B42318;--sh:0 12px 30px rgba(20,20,10,.10)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F0F0C;--card:#1A1A15;--tx:#F1EEE2;--mu:#A5A293;--ln:#2E2D26;--soft:#22221C;--yd:#F5C518;--ok:#5CC98A;--oks:#173324;--err:#F08A7E;--sh:0 12px 30px rgba(0,0,0,.5)}}
+:root[data-theme="dark"]{--bg:#0F0F0C;--card:#1A1A15;--tx:#F1EEE2;--mu:#A5A293;--ln:#2E2D26;--soft:#22221C;--yd:#F5C518;--ok:#5CC98A;--oks:#173324;--err:#F08A7E;--sh:0 12px 30px rgba(0,0,0,.5)}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;font-size:15px;line-height:1.6;margin:0}
-.wrap{max-width:640px;margin:0 auto;padding-inline:16px;padding-block:16px 48px}
-p{margin:0}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif;font-size:15px;line-height:1.55;-webkit-text-size-adjust:100%}
+.d,h1,h2,h3,h4{font-family:Changa,"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif}
+.in{max-width:680px;margin:0 auto;padding-inline:16px}
+a{color:inherit}
+button{font-family:inherit}
 
-/* الرأس */
-.hero{display:flex;flex-direction:column;gap:8px;margin-block-end:16px}
-.toprow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-block-end:6px}
-.logo{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:16px}
-.logo i{width:32px;height:32px;border-radius:9px;background:var(--gold);color:var(--gold-ink);display:grid;place-items:center;font-style:normal;font-size:18px}
-.lang{display:inline-flex;border:1.5px solid var(--ctl);border-radius:12px;overflow:hidden;flex:none}
-.lang button{font:inherit;font-size:14px;font-weight:700;min-height:44px;min-width:66px;padding-inline:12px;border:0;background:var(--card);color:var(--ink);cursor:pointer}
-.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-h1{font-size:24px;line-height:1.35;margin:0;text-wrap:balance}
-.hero p{color:var(--muted);max-width:56ch}
-.hero .meta{font-size:13px}
-.banner{display:flex;flex-wrap:wrap;align-items:center;gap:0 12px;background:var(--gold-soft);border-radius:12px;padding-inline:14px;padding-block:2px;margin-block-end:14px;font-size:14px}
-.linkbtn{font:inherit;font-size:14px;font-weight:700;min-height:44px;padding-inline:4px;border:0;background:transparent;color:var(--ink);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+/* ── الهيدر الأصفر ── */
+.hero{background:var(--y);color:#111;padding-bottom:58px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset-inline-end:-90px;bottom:-130px;width:320px;height:320px;border:28px solid rgba(17,17,17,.07);border-radius:50%}
+.tape{height:8px;background:repeating-linear-gradient(-45deg,#111 0 12px,transparent 12px 24px)}
+.brand{display:flex;align-items:center;gap:10px;padding-top:18px;position:relative;z-index:1}
+.mark{width:38px;height:38px;border-radius:11px;background:#111;color:var(--y);display:grid;place-items:center;font:800 22px/1 Changa,sans-serif}
+.brand b{font:800 22px/1 Changa,sans-serif}
+.langbtn{margin-inline-start:auto;border:1.5px solid rgba(17,17,17,.55);background:transparent;color:#111;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600;cursor:pointer}
+.homebtn{display:none;align-items:center;gap:4px;margin-inline-start:auto;border:1.5px solid rgba(17,17,17,.55);color:#111;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600;text-decoration:none}
+.inapp .homebtn{display:inline-flex}
+.inapp .homebtn+.langbtn{margin-inline-start:8px}
+.inapp .stores{display:none}
+.eyebrow{margin:30px 0 6px;font-weight:700;font-size:13px;opacity:.8;position:relative;z-index:1}
+.hero h1{font-weight:800;font-size:clamp(38px,9.5vw,62px);line-height:1.08;margin:0 0 14px;text-wrap:balance;position:relative;z-index:1}
+.hero h1 em{font-style:normal;background:#111;color:var(--y);padding:0 .22em;border-radius:.18em;display:inline-block;line-height:1.05;transform:rotate(-1.5deg)}
+.lead{font-size:16.5px;max-width:34em;margin:0 0 22px;opacity:.92;position:relative;z-index:1}
+.cta{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:1}
+.b-ink{background:#111;color:var(--y);border-radius:14px;padding:14px 22px;font-weight:700;text-decoration:none;font-size:16px;box-shadow:0 8px 20px rgba(17,17,17,.25)}
+.b-ghost{border:2px solid #111;color:#111;border-radius:14px;padding:12px 20px;font-weight:700;text-decoration:none}
 
-/* البطاقات */
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-block-end:14px}
-.card h2{font-size:18px;line-height:1.4;margin:0;display:flex;align-items:center;gap:10px}
-.n{width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:13px;font-weight:700;display:grid;place-items:center;flex:none;line-height:1}
-.done .n{background:var(--gold);color:var(--gold-ink)}
-.done .n b{display:none}
-.done .n::after{content:"✓";font-size:14px}
-.sub{color:var(--muted);font-size:13px;margin-block:2px 12px}
-.card>.grid,.card>fieldset{margin-block-start:12px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 12px;align-items:start}
-.full{grid-column:1/-1}
-.f{display:flex;flex-direction:column;gap:6px;min-width:0}
-fieldset{border:0;margin:0;padding:0;min-width:0}
-legend{padding:0;margin:0 0 6px}
-.lbl,.f>label{font-size:14px;font-weight:700;line-height:1.4}
-.lbl small,.f>label small{font-size:12px;font-weight:400;color:var(--muted);margin-inline-start:4px;white-space:nowrap}
+/* ── تذكرة الأرقام ── */
+.ticket{background:var(--card);border-radius:18px;box-shadow:var(--sh);margin-top:-38px;position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden}
+.fact{padding:16px 10px;text-align:center;position:relative}
+.fact+.fact::before{content:"";position:absolute;inset-inline-start:0;top:14px;bottom:14px;border-inline-start:1px dashed var(--ln)}
+.fact b{display:block;font-family:Changa,sans-serif;font-weight:800;font-size:20px;line-height:1.1;white-space:nowrap}
+.fact span{display:block;font-size:11.5px;color:var(--mu);margin-top:4px;line-height:1.4}
 
-/* الحقول */
-input,select,textarea{font:inherit;font-size:16px;min-height:44px}
-input[type=text],input[type=tel],select,textarea{color:var(--ink);background:var(--field);border:1.5px solid var(--ctl);border-radius:10px;padding-block:8px;padding-inline:11px;width:100%;min-width:0}
-select{cursor:pointer}
-textarea{min-height:88px;resize:vertical;line-height:1.55}
-input::placeholder,textarea::placeholder{color:var(--muted);opacity:1}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--focus);outline-offset:1px}
-#root[dir="rtl"] #phone{text-align:right}
-#root[dir="ltr"] #phone{text-align:left}
-#phone{font-variant-numeric:tabular-nums;letter-spacing:.02em}
+/* ── الأقسام ── */
+.sec{padding-block:36px 0}
+.sec h2{font-weight:800;font-size:28px;margin:0 0 6px;line-height:1.15}
+.sub{color:var(--mu);margin:0 0 18px}
+.tag{display:inline-block;background:var(--y);color:#111;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:700;margin-bottom:10px}
 
-/* الشرائح */
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.f{background:var(--card);border:1px solid var(--ln);border-radius:16px;padding:14px}
+.f .ic{width:38px;height:38px;border-radius:11px;background:var(--y);color:#111;display:grid;place-items:center;margin-bottom:10px}
+.f .ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.f b{display:block;font-family:Changa,sans-serif;font-size:17px;font-weight:700;line-height:1.2;margin-bottom:4px}
+.f p{margin:0;font-size:13px;color:var(--mu);line-height:1.5}
+@media (min-width:600px){.feat{grid-template-columns:repeat(3,1fr)}}
+
+/* ── تطبيق رزق ── */
+.rizq{margin-top:36px;background:#111;color:#F3F0E6;border-radius:24px;padding:26px 20px 30px;overflow:hidden;position:relative}
+.rizq h2{color:#fff}
+.rizq .sub{color:#CFCABB}
+.rizq .note{color:#CFCABB;font-size:13px;margin:12px 0 0}
+.rz{display:grid;gap:26px;align-items:center}
+@media (min-width:600px){.rz{grid-template-columns:1.1fr .9fr}}
+.stores{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.stores a{display:inline-flex;align-items:center;gap:9px;background:#fff;color:#111;border-radius:12px;padding:8px 14px;font-weight:700;text-decoration:none;font-size:14px;line-height:1.15}
+.stores a svg{width:20px;height:20px;flex:none}
+.stores a small{display:block;font-weight:500;font-size:10px;color:#666}
+.phonewrap{display:grid;place-items:center;position:relative;padding-top:30px}
+.phone{width:232px;background:#000;border-radius:34px;padding:10px;box-shadow:0 30px 60px rgba(0,0,0,.55),0 0 0 2px #333;transform:rotate(-3deg)}
+.scr{background:#F4F3EE;border-radius:26px;overflow:hidden;color:#111;font-size:11px;height:430px;display:flex;flex-direction:column}
+.sb{display:flex;justify-content:space-between;padding:8px 16px 0;font-size:10px;font-weight:700}
+.ah{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;font-weight:800;font-family:Changa,sans-serif;font-size:15px}
+.ah i{width:26px;height:26px;border-radius:8px;background:var(--y);display:grid;place-items:center;font-style:normal;font-size:13px}
+.job{margin:6px 10px;background:#fff;border-radius:14px;padding:10px;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.job .nw{display:inline-block;background:var(--y);color:#111;font-weight:800;font-size:9.5px;border-radius:6px;padding:1px 6px}
+.job b{display:block;font-size:12.5px;margin-top:6px}
+.job small{display:block;color:#666;font-size:10px;margin-top:2px}
+.job .ac{display:flex;gap:6px;margin-top:8px}
+.job .ac span{flex:1;text-align:center;border-radius:8px;padding:6px;font-weight:700;font-size:10.5px;background:#EEE}
+.job .ac span:first-child{background:#111;color:var(--y)}
+.mini{margin:0 10px 6px;background:#fff;border-radius:12px;padding:8px 10px;color:#444;display:flex;justify-content:space-between;font-size:10px}
+.stat{margin:2px 10px 0;background:#111;color:#fff;border-radius:12px;padding:10px 12px}
+.stat small{display:block;color:#BBB;font-size:9.5px}
+.stat b{display:block;font-family:Changa,sans-serif;font-size:17px;margin:2px 0 6px;line-height:1.1}
+.stat b span{font-size:10px;font-family:"IBM Plex Sans Arabic",sans-serif;font-weight:500;color:#BBB}
+.bars{display:flex;gap:4px;align-items:flex-end;height:32px}
+.bars i{flex:1;background:var(--y);border-radius:3px 3px 0 0;opacity:.55}
+.bars i:last-child{opacity:1}
+.tabs{margin-top:auto;display:flex;justify-content:space-around;padding:8px 6px 10px;border-top:1px solid #E5E3DA;font-size:9px;font-weight:700;color:#777}
+.tabs span:first-child{color:#111}
+.toast{position:absolute;top:0;left:50%;transform:translateX(-50%);background:#fff;color:#111;border-radius:999px;padding:8px 14px;font-weight:700;font-size:12px;box-shadow:0 10px 30px rgba(0,0,0,.35);white-space:nowrap;animation:float 3s ease-in-out infinite;z-index:2}
+@keyframes float{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-6px)}}
+
+/* ── كيف تبدأ ── */
+.steps{list-style:none;margin:0;padding:0}
+.steps li{display:grid;grid-template-columns:40px 1fr;gap:12px;padding-bottom:18px;position:relative}
+.steps li::before{content:"";position:absolute;inset-inline-start:19px;top:44px;bottom:0;border-inline-start:2px dashed var(--ln)}
+.steps li:last-child::before{display:none}
+.steps .n{width:40px;height:40px;border-radius:50%;background:var(--y);color:#111;display:grid;place-items:center;font:800 18px Changa,sans-serif;position:relative;z-index:1}
+.steps b{display:block;font-family:Changa,sans-serif;font-size:18px;font-weight:700;line-height:1.2;margin-top:6px}
+.steps p{margin:2px 0 0;color:var(--mu);font-size:14px}
+
+/* ── النموذج ── */
+.form{margin-top:36px;background:var(--card);border:1px solid var(--ln);border-radius:24px;overflow:hidden;box-shadow:var(--sh)}
+.fh{padding:22px 20px 0}
+.fh h2{margin:0 0 4px}
+.prog{display:flex;gap:6px;margin-top:14px}
+.prog i{flex:1;height:6px;border-radius:3px;background:var(--ln)}
+.prog i.on{background:var(--y)}
+.prog i.done{background:var(--tx)}
+.stepnames{display:flex;justify-content:space-between;font-size:11.5px;color:var(--mu);margin-top:6px;font-weight:600}
+.stepnames span.on{color:var(--tx)}
+.pane{padding:20px;display:none}
+.pane.on{display:block}
+.pane h3{margin:22px 0 10px;font-size:20px;font-weight:800}
+.fld{margin-bottom:18px}
+.fld>label,.fld>.lb{display:block;font-weight:700;font-size:14px;margin-bottom:8px}
+.hint{display:block;font-weight:400;color:var(--mu);font-size:12.5px;margin-top:2px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--ln);border-radius:12px;background:var(--card);color:var(--tx)}
+textarea{min-height:80px;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid rgba(245,197,24,.65);outline-offset:1px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips.tight{gap:6px}
-.chips.tight .chip>span{padding-inline:12px}
-.chip{position:relative;display:inline-flex;min-width:0}
-.chip>input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;pointer-events:none}
-.chip>span{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--ctl);background:var(--field);color:var(--ink);cursor:pointer;font-size:15px;line-height:1.3;user-select:none}
-.chip>input:checked+span{background:var(--gold);border-color:var(--gold);color:var(--gold-ink);font-weight:700}
-fieldset.bad .chip>input:not(:checked)+span,.bad>.chips .chip>input:not(:checked)+span{border-color:var(--err)}
-.emo{font-size:17px;line-height:1}
-button:focus-visible,a:focus-visible,.chip>input:focus-visible+span,.tickw>input:focus-visible+.box{outline:3px solid var(--focus);outline-offset:2px}
+.chip{border:1.5px solid var(--ln);background:var(--card);color:var(--tx);border-radius:999px;padding:9px 14px;font-size:14px;font-weight:500;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip.on{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+.chip.on::before{content:"✓";color:var(--y);font-weight:800}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{border:2px solid var(--ln);border-radius:16px;padding:14px;cursor:pointer;background:var(--card);text-align:start;color:var(--tx);font-size:14px}
+.opt.on{border-color:var(--y);background:var(--soft);box-shadow:inset 0 0 0 1px var(--y)}
+.opt i{font-style:normal;font-size:24px;display:block;margin-bottom:6px}
+.opt b{display:block;font-family:Changa,sans-serif;font-size:17px;line-height:1.2}
+.opt small{color:var(--mu)}
+.err{color:var(--err);font-size:13px;margin-top:6px;display:none;font-weight:600}
+.fld.bad .err{display:block}
+.fld.bad input{border-color:var(--err)}
+.nav{display:flex;gap:10px;padding:0 20px 20px;align-items:center}
+.nav .sp{flex:1}
+.btn{font-weight:700;border:0;border-radius:14px;padding:14px 20px;cursor:pointer;font-size:16px;color:var(--tx);background:var(--soft)}
+.btn.y{background:var(--y);color:#111;box-shadow:0 8px 20px rgba(245,197,24,.35)}
+.btn.g{background:var(--soft);color:var(--tx);border:1.5px solid var(--ln)}
+.btn:disabled{opacity:.6;cursor:default}
 
-/* الأخطاء */
-.msg{display:flex;align-items:flex-start;gap:6px;font-size:12.5px;line-height:1.45;color:var(--err);font-weight:500;margin-block-start:6px}
-.msg::before{content:"!";flex:none;width:16px;height:16px;margin-block-start:1px;border-radius:50%;background:var(--err);color:var(--card);font-size:11px;font-weight:700;display:grid;place-items:center;line-height:1}
-.f>.msg,.f>input+.msg{margin-block-start:0}
+.svcblk{border:1.5px solid var(--ln);border-radius:16px;padding:14px;margin-bottom:12px;background:var(--soft)}
+.svcblk h4{margin:0 0 8px;font-size:17px;display:flex;align-items:center;gap:8px}
+.svcblk h4 small{font-family:"IBM Plex Sans Arabic",sans-serif;font-weight:400;color:var(--mu);font-size:12.5px;margin-inline-start:auto}
+.sug{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.sug button{font-size:13px;border:1px dashed var(--mu);background:transparent;color:var(--tx);border-radius:999px;padding:5px 11px;cursor:pointer}
+.sug button:disabled{opacity:.35;cursor:default;text-decoration:line-through}
+.row{display:grid;grid-template-columns:1fr 124px 28px;gap:6px;margin-bottom:8px;align-items:center;background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:8px}
+.row input[data-f="name"]{grid-column:1/-1;font-weight:600}
+.row input,.row select{padding:10px 10px;font-size:14px;border-radius:9px;background:var(--soft)}
+.row .x{border:0;background:transparent;color:var(--mu);font-size:22px;cursor:pointer;padding:0;line-height:1;width:28px;height:28px}
+.addrow{font-size:13px;font-weight:700;color:var(--tx);background:transparent;border:0;cursor:pointer;padding:6px 0;text-decoration:underline}
+.oth{margin-bottom:10px}
 
-/* الخدمات */
-.empty{color:var(--muted);font-size:14px;margin-block-start:14px;padding-block:14px;padding-inline:12px;border-radius:12px;background:var(--field);text-align:center}
-.cat{border-block-start:1px solid var(--line);margin-block-start:16px;padding-block-start:12px}
-.cat h3{margin:0 0 4px;font-size:16px;line-height:1.4;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-.cat h3 .hn{display:inline-flex;align-items:center;gap:8px}
-.cat h3 small{font-weight:400;color:var(--muted);font-size:12.5px;white-space:nowrap}
-.cat>.msg{margin-block:0 6px}
-.otherf{margin-block:6px 8px}
-.svc{display:grid;grid-template-columns:44px minmax(0,1fr) 108px;column-gap:6px;align-items:center;padding-block:2px;padding-inline:4px;border-radius:10px;margin-block-start:2px}
-.svc.on{background:var(--gold-soft)}
-.svc.custom{row-gap:6px;padding-block:6px}
-.tickw{position:relative;grid-column:1;grid-row:1;width:44px;height:44px;display:grid;place-items:center;cursor:pointer}
-.tickw>input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
-.box{width:24px;height:24px;border-radius:7px;border:1.5px solid var(--ctl);background:var(--card);color:var(--gold-ink);display:grid;place-items:center;pointer-events:none}
-.box svg{width:16px;height:16px;opacity:0}
-.tickw>input:checked+.box{background:var(--gold);border-color:var(--gold)}
-.tickw>input:checked+.box svg{opacity:1}
-.txt{grid-column:2;grid-row:1;display:flex;flex-direction:column;justify-content:center;min-height:44px;min-width:0;padding-block:4px;line-height:1.35;overflow-wrap:anywhere;cursor:pointer}
-.t-en{display:none}
-#root[lang="en"] .t-en{display:block}
-#root[lang="en"] .t-ar{font-size:12px;color:var(--muted)}
-#root[lang="ar"] .svc.on .t-ar,#root[lang="en"] .svc.on .t-en{font-weight:700}
-.money{position:relative;display:block;min-width:0}
-.money>input[type=text]{padding-inline-start:8px;padding-inline-end:46px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums;background:var(--card)}
-.money>input[type=text]::placeholder{font-weight:400}
-.cur{position:absolute;inset-inline-end:10px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--muted);pointer-events:none;line-height:1}
-.svc>.money{grid-column:3;grid-row:1}
-/* طريقة السعر: خفيفة تحت اسم الخدمة */
-.unitw{grid-column:2/4;grid-row:2;justify-self:start;position:relative;display:flex;min-width:0;max-width:100%;margin-block-start:-10px}
-.unitw::after{content:"▾";position:absolute;inset-inline-end:6px;top:50%;transform:translateY(-50%);font-size:12px;line-height:1;color:var(--muted);pointer-events:none}
-select.unit{appearance:none;-webkit-appearance:none;width:auto;max-width:100%;min-width:0;border:0;border-radius:8px;background:transparent;color:var(--muted);padding-block:0;padding-inline:4px 22px}
-.svc.custom .unitw{margin-block-start:0}
-.svc.custom .cname{grid-column:1/3;grid-row:1;background:var(--card)}
-.del{grid-column:1;grid-row:2;width:44px;height:44px;display:grid;place-items:center;padding:0;border:1.5px solid var(--ctl);border-radius:10px;background:var(--card);color:var(--muted);cursor:pointer}
-.del svg{width:18px;height:18px}
-.svc>.msg{grid-column:2/-1;grid-row:3;margin:0;padding-block-end:6px}
-.add{font:inherit;font-size:15px;font-weight:700;width:100%;min-height:44px;margin-block-start:8px;border:1.5px dashed var(--ctl);border-radius:12px;background:transparent;color:var(--ink);cursor:pointer}
-.visitline{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-block-start:8px}
-.visitline .money{width:130px}
-#cityOther{margin-block-start:8px}
+.sum{border:1.5px dashed var(--ln);border-radius:16px;padding:6px 16px;background:var(--soft)}
+.sum dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 14px;padding:12px 0}
+.sum dt{color:var(--mu);font-size:13px}
+.sum dd{margin:0;font-weight:600;font-size:14px;overflow-wrap:anywhere}
+.sum .sv{border-top:1px dashed var(--ln);padding:10px 0}
+.sum .sv b{font-family:Changa,sans-serif;display:block;margin-bottom:4px;font-size:16px}
+.sum .sv div{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:2px 0}
+.sum .sv div span:last-child{font-weight:700;white-space:nowrap}
+.agree{font-size:12.5px;color:var(--mu);margin:14px 0 0}
+.fail{display:none;background:var(--soft);border:1.5px solid var(--err);border-radius:14px;padding:12px 14px;margin:0 20px 16px;font-size:14px}
+.fail.on{display:block}
+.fail a{display:inline-block;margin-top:8px;background:#25D366;color:#fff;text-decoration:none;font-weight:700;border-radius:10px;padding:9px 14px}
 
-/* الإرسال والمراجعة */
-.send{display:flex;flex-direction:column;gap:10px;margin-block-start:4px}
-.missing{background:var(--err-soft);color:var(--err);border-radius:12px;padding-block:10px;padding-inline:14px;font-size:14px;font-weight:700;line-height:1.5;overflow-wrap:anywhere}
-.btn{font:inherit;font-weight:700;font-size:17px;border:0;border-radius:13px;min-height:52px;padding-block:10px;padding-inline:18px;cursor:pointer;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;width:100%}
-.btn.main{background:var(--gold);color:var(--gold-ink)}
-.btn.ghost{background:transparent;border:1.5px solid var(--ctl);color:var(--ink);font-size:15px;min-height:44px;padding-block:6px;padding-inline:12px}
-.btn.sm{width:auto;display:inline-flex}
-.btnrow{display:flex;gap:8px}
-.btnrow .btn{flex:1}
-.note{font-size:13px;color:var(--muted);text-align:center}
-.review{display:flex;flex-direction:column;gap:10px;margin-block:6px 0;border-color:var(--ctl)}
-.review h2:focus{outline:none}
-.review .sub{margin:0}
-.pv{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--field);border:1.5px solid var(--line);border-radius:10px;padding-block:10px;padding-inline:12px;font-size:15px;line-height:1.7;-webkit-user-select:text;user-select:text}
-.status{font-size:13.5px;color:var(--ok);text-align:center;min-height:1.4em;font-weight:500}
-.status.err{color:var(--ink)}
-.after{display:flex;flex-direction:column;gap:8px;padding-block:12px;padding-inline:14px;border-radius:12px;background:var(--gold-soft)}
-.done{display:flex;flex-direction:column;gap:10px;padding-block:16px;padding-inline:16px;border-radius:12px;background:var(--gold-soft);text-align:center}
-.done .big{font-size:20px;font-weight:700;margin:0}
-.done .ref{font-size:15px;margin:0}
-.done .ref b{font-size:22px;font-variant-numeric:tabular-nums}
-.done p{margin:0}
-.done .btn{text-decoration:none}
-.fbnote{margin:0;font-weight:700}
-.hp{position:absolute;inset-inline-start:-9999px;width:1px;height:1px;overflow:hidden}
-.appcard{border-color:var(--gold)}
-.appcard h2 .n{background:var(--gold);color:var(--ink)}
-.appcard .lbl{display:block;margin:16px 0 8px;font-size:15px}
-.steps{margin:0;padding-inline-start:22px;display:flex;flex-direction:column;gap:8px}
-.steps li{font-weight:700}
-.steps li span{font-weight:400;color:var(--muted);display:block;font-size:13.5px;margin-top:2px}
-.stores{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
-.stores a{flex:1;min-width:150px;display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding-inline:14px;border-radius:12px;background:var(--ink);color:var(--card);font-weight:700;text-decoration:none}
-.stores a:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
-.feats{margin:10px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
-.feats li{display:flex;gap:8px;align-items:flex-start;font-weight:700}
-.feats li i{font-style:normal;flex:none}
-.after .big{font-size:16px;font-weight:700}
-.num{font-size:18px;font-weight:700;font-variant-numeric:tabular-nums;unicode-bidi:isolate;white-space:nowrap}
-.after .status{text-align:start;min-height:0}
-.after .linkbtn{align-self:flex-start}
+.done{padding:30px 20px 26px;text-align:center;display:none}
+.done.on{display:block}
+.stamp{display:inline-block;border:4px double var(--ok);color:var(--ok);border-radius:14px;padding:6px 22px;font:800 30px/1.15 Changa,sans-serif;transform:rotate(-5deg);margin:6px 0 20px}
+.ref{font:800 50px/1 Changa,sans-serif}
+.ref small{display:block;font:600 13px/1.4 "IBM Plex Sans Arabic",sans-serif;color:var(--mu);margin-top:6px}
+.done p{margin:14px 0 0}
+.nextl{text-align:start;margin:20px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.nextl li{display:flex;gap:10px;align-items:flex-start;background:var(--soft);border-radius:12px;padding:12px;font-size:14px}
+.nextl li i{font-style:normal;font-size:18px;flex:none}
+.done .stores{justify-content:center}
+.done .stores a{background:var(--tx);color:var(--bg)}
+.done .stores a small{color:inherit;opacity:.7}
+.wa{display:inline-block;margin-top:14px;background:#25D366;color:#fff;text-decoration:none;font-weight:700;border-radius:12px;padding:12px 18px}
+.again{display:block;margin:18px auto 0;background:transparent;border:0;color:var(--mu);text-decoration:underline;cursor:pointer;font-size:13px}
 
-@media (max-width:520px){
-  .grid>*{grid-column:1/-1}
-  .grid>.half{grid-column:auto;display:grid;grid-template-rows:1fr auto;align-self:stretch}
-  .grid>.half>label{align-self:end}
-  h1{font-size:22px}
-}
-@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
-
-/* لون الخطأ يجي بعد كل قواعد الحقول */
-.svc input.bad,.svc select.bad,.money>input.bad,input.bad,select.bad,textarea.bad{border-color:var(--err);background:var(--err-soft)}
-
-/* ── مقدمة الانضمام ── */
-.joinhero{background:var(--ink);color:#FFF9E8;border-radius:18px;padding:22px 18px 18px;margin-bottom:16px;position:relative;overflow:hidden}
-.joinhero::before{content:"";position:absolute;inset:auto -60px -90px auto;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(245,197,24,.35),rgba(245,197,24,0) 70%)}
-.joinhero>*{position:relative}
-.jh-tag{display:inline-block;background:rgba(245,197,24,.16);color:var(--gold);border:1px solid rgba(245,197,24,.4);border-radius:999px;padding:3px 12px;font-size:12px;font-weight:700;letter-spacing:.02em}
-.joinhero h2{color:#fff;font-size:26px;line-height:1.25;margin:12px 0 8px;text-wrap:balance}
-.jh-top p{margin:0;color:#D9D2BC;font-size:15px;line-height:1.6}
-.jh-vals{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
-.jh-val{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:12px 10px;display:flex;flex-direction:column;gap:4px;min-width:0}
-.jh-val i{font-style:normal;font-size:24px;line-height:1}
-.jh-val b{color:var(--gold);font-size:14px;line-height:1.3}
-.jh-val span{color:#D9D2BC;font-size:12px;line-height:1.45}
-.jh-app{margin-top:16px;background:#fff;color:var(--ink);border-radius:14px;padding:14px}
-.jh-appt{display:flex;gap:10px;align-items:center}
-.jh-ic{width:44px;height:44px;border-radius:12px;background:var(--gold);display:grid;place-items:center;font-size:22px;flex:none}
-.jh-appt b{display:block;font-size:15px}
-.jh-appt small{display:block;color:#6B685C;font-size:12.5px;margin-top:2px}
-.jh-app .stores{margin:12px 0 4px}
-.jh-app .stores a{background:var(--ink);color:#fff}
-.jh-feats{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;margin-top:10px}
-.jh-feats span{display:flex;gap:6px;align-items:center;font-size:12.5px;font-weight:700;color:#3a3628}
-.jh-feats i{font-style:normal;font-size:16px}
-.jh-feats em{font-style:normal}
-.jh-steps{margin-top:16px}
-.jh-h{margin:0 0 8px;color:var(--gold);font-weight:700;font-size:13px;letter-spacing:.04em}
-.jh-steps ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
-.jh-steps li{display:flex;gap:10px;align-items:flex-start;color:#F3EED9;font-size:14px;line-height:1.5}
-.jh-steps li b{flex:none;width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-size:13px;margin-top:1px}
-.jh-cta{display:block;text-align:center;text-decoration:none;margin-top:14px;font-size:16px;padding:12px}
-@media (max-width:420px){ .jh-vals{grid-template-columns:1fr 1fr} .jh-val:last-child{grid-column:1/-1;flex-direction:row;align-items:center;gap:10px} .jh-val:last-child b{white-space:nowrap;flex:none} .jh-val:last-child span{display:inline} .joinhero h2{font-size:23px} }
+.foot{padding:40px 16px 44px;text-align:center;color:var(--mu);font-size:13px}
+.foot a{color:var(--tx);font-weight:600}
+.hp{position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0}
+@media (max-width:380px){.row{grid-template-columns:1fr 112px 24px}.fact b{font-size:17px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
-<style>img{max-width:100%}</style>
 </head>
 <body>
 
 
-<div class="wrap" id="root" dir="rtl" lang="ar">
-  <header class="hero">
-    <div class="toprow">
-      <span class="logo"><i aria-hidden="true">خ</i><span data-t="brand">خافت</span></span>
-      <div class="lang" role="group" aria-label="اللغة" data-ta="langGroup">
-        <button type="button" id="langAr" data-lang="ar" lang="ar" aria-pressed="true">عربي</button>
-        <button type="button" id="langEn" data-lang="en" lang="en" aria-pressed="false">English</button>
-      </div>
-    </div>
-    <h1 data-t="h1">انضم لخافت كفني أو مقدم خدمة</h1>
-    <p data-t="lead">اكتب خدماتك وأسعارك، وبالأخير ينفتح واتساب برسالة جاهزة، اضغط إرسال. نراجعها ونتواصل معك.</p>
-    <p class="meta" data-t="meta">ياخذ دقايق · يوصلنا على واتساب</p>
-  </header>
+<header class="hero">
+  <div class="tape"></div>
+  <div class="in">
+    <div class="brand"><span class="mark">خ</span><b data-i="brand">خافِت</b><a class="homebtn" href="index.html#stay" data-i="home">الرئيسية</a><button type="button" class="langbtn" id="langBtn">English</button></div>
+    <p class="eyebrow" data-i="eyebrow">انضمام الفنيين ومقدمي الخدمات</p>
+    <h1><span data-i="h1a">طلبات صيانة</span> <em data-i="h1em">جاهزة</em><br><span data-i="h1b">على جوالك.</span></h1>
+    <p class="lead" data-i="lead">خافت يجيب لك عملاء الخبر والدمام والظهران، ورزق يرتّب لك الشغل من الطلب إلى الفاتورة. سجّل الحين وابدأ تستقبل الطلبات.</p>
+    <div class="cta"><a class="b-ink" href="#apply" data-i="ctaApply">قدّم طلب الانضمام</a><a class="b-ghost" href="#how" data-i="ctaHow">كيف يشتغل؟</a></div>
+  </div>
+</header>
 
-  <div class="banner" id="draftNote" role="status" hidden>
-    <span data-t="draft">رجعنا لك اللي كتبته آخر مرة.</span>
-    <button type="button" class="linkbtn" id="resetBtn" data-t="restart">ابدأ من جديد</button>
+<main class="in">
+  <div class="ticket" aria-label="ملخص">
+    <div class="fact"><b data-i="f1v">3 مدن</b><span data-i="f1l">الخبر والدمام والظهران</span></div>
+    <div class="fact"><b data-i="f2v">دفع مقدّم</b><span data-i="f2l">العميل يدفع أجرة اليد قبل الشغل</span></div>
+    <div class="fact"><b data-i="f3v">أسعارك</b><span data-i="f3l">أنت تحدد خدماتك وأسعارك ومدنك</span></div>
   </div>
 
-  <section class="joinhero" id="appCard" aria-labelledby="h5s">
-    <div class="jh-top">
-      <span class="jh-tag" data-t="heroTag">شبكة خافت للفنيين ومقدمي الخدمات</span>
-      <h2 id="h5s" data-t="heroH">خلّ طلبات الصيانة تجيك، بدل ما تدوّر عليها.</h2>
-      <p data-t="heroP">العملاء يحجزون من تطبيق خافت في الخبر والدمام والظهران، والطلب يوصلك جاهزًا بالخدمة والعنوان والموعد.</p>
+  <section class="sec" id="why">
+    <span class="tag" data-i="whyTag">لماذا خافت</span>
+    <h2 data-i="whyH">وش تحصل مع خافت</h2>
+    <p class="sub" data-i="whyP">نجيب العميل، وأنت تجيب الخبرة.</p>
+    <div class="feat">
+      <div class="f"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h6"/></svg></span><b data-i="w1">طلبات مرتبة</b><p data-i="w1p">كل طلب يوصلك بالخدمة والعنوان والموعد، بدون مكالمات ولا تفاوض.</p></div>
+      <div class="f"><span class="ic"><svg viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V5l8-3 8 3z"/><path d="m9 12 2 2 4-4"/></svg></span><b data-i="w2">مدفوع قبل ما تبدأ</b><p data-i="w2p">العميل يدفع أجرة اليد داخل التطبيق، وأنت تركّز على الشغل.</p></div>
+      <div class="f"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h9M19 6h1M4 12h3M13 12h7M4 18h11M21 18h-1"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg></span><b data-i="w3">تحكم كامل</b><p data-i="w3p">تختار خدماتك وأسعارك ومدنك، وتقبل اللي يناسبك.</p></div>
+      <div class="f"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 3h14v18l-2.5-1.5L14 21l-2-1.5L10 21l-2.5-1.5L5 21z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><b data-i="w4">فاتورة بضغطة</b><p data-i="w4p">خدمات وقطع في فاتورة مرتبة تطبعها أو ترسلها للعميل.</p></div>
+      <div class="f"><span class="ic"><svg viewBox="0 0 24 24"><path d="m21 8-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span><b data-i="w5">مستودعك في جيبك</b><p data-i="w5p">أصنافك وكمياتك، وطلب شراء PDF جاهز للمحل.</p></div>
+      <div class="f"><span class="ic"><svg viewBox="0 0 24 24"><path d="m12 3 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 9.8l6.5-.9z"/></svg></span><b data-i="w6">سمعتك تكبر</b><p data-i="w6p">تقييمات العملاء تبني اسمك مع كل طلب.</p></div>
     </div>
-    <div class="jh-vals">
-      <div class="jh-val"><i aria-hidden="true">📲</i><b data-t="v1">طلبات جاهزة</b><span data-t="v1s">تقبلها من جوالك وتروح للموقع مباشرة</span></div>
-      <div class="jh-val"><i aria-hidden="true">💳</i><b data-t="v2">دفع قبل الشغل</b><span data-t="v2s">العميل يدفع أجرة اليد داخل التطبيق قبل ما تبدأ</span></div>
-      <div class="jh-val"><i aria-hidden="true">🏷️</i><b data-t="v3">أسعارك أنت</b><span data-t="v3s">تحدد خدماتك وأسعارك ومدنك، وترفض اللي ما يناسبك</span></div>
+  </section>
+
+  <section class="rizq" id="rizq">
+    <div class="rz">
+      <div>
+        <span class="tag" data-i="rzTag">تطبيق رزق</span>
+        <h2 data-i="rzH">مكتبك كله في جيبك</h2>
+        <p class="sub" data-i="rzP">تستقبل الطلب، تضغط «في الطريق» و«وصلت»، تسجّل القطع، وتطلع الفاتورة. وتشوف دخلك وتقييماتك ومسار يومك على الخريطة.</p>
+        <div class="stores">
+          <a href="https://play.google.com/store/apps/details?id=com.khafet.partners" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6 3v18l15-9z" fill="currentColor"/></svg><span><small data-i="getOn">حمّله من</small>Google Play</span></a>
+          <a href="https://apps.apple.com/sa/app/id6791782517" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M16.5 12.6c0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.9-.8-1.5 0-2.9.9-3.6 2.2-1.6 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.8 2.2 1.1 0 1.5-.7 2.9-.7 1.3 0 1.7.7 2.9.7 1.2 0 2-1.1 2.7-2.2.9-1.2 1.2-2.4 1.2-2.5-.1 0-2.5-.9-2.5-3.6zM14.4 6.1c.6-.8 1-1.8.9-2.9-.9 0-2 .6-2.6 1.4-.6.7-1.1 1.7-1 2.8 1 .1 2.1-.5 2.7-1.3z" fill="currentColor"/></svg><span><small data-i="getOn2">حمّله من</small>App Store</span></a>
+        </div>
+        <p class="note" data-i="rzLangs">التطبيق بالعربي والإنجليزي والأردو والهندي والنيبالي.</p>
+      </div>
+      <div class="phonewrap" aria-hidden="true">
+        <div class="toast" data-i="phToast">🔔 طلب جديد قريب منك</div>
+        <div class="phone"><div class="scr">
+          <div class="sb"><span>4:12</span><span>▮▮▮ 92%</span></div>
+          <div class="ah"><span data-i="phApp">رزق</span><i>🔔</i></div>
+          <div class="job"><span class="nw" data-i="phNew">طلب جديد</span><b data-i="phSvc">تغيير سيفون أوتوماتيك</b><small data-i="phLoc">📍 الخبر · الراكة</small><small data-i="phTime">🕓 اليوم 4:15 م · 60 ر.س مدفوع</small><div class="ac"><span data-i="phAccept">قبول</span><span data-i="phDetails">التفاصيل</span></div></div>
+          <div class="mini"><span data-i="phR1">تركيب مروحة سقف · الدمام</span><span>6:00</span></div>
+          <div class="mini"><span data-i="phR2">تنظيف سبلت · الظهران</span><span data-i="phTomorrow">غدًا</span></div>
+          <div class="stat"><small data-i="phInc">دخلك هذا الأسبوع</small><b>1,240 <span data-i="phSar">ر.س</span></b><div class="bars"><i style="height:40%"></i><i style="height:65%"></i><i style="height:30%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:72%"></i><i style="height:100%"></i></div></div>
+          <div class="tabs"><span data-i="phT1">الطلبات</span><span data-i="phT2">المستودع</span><span data-i="phT3">دخلي</span><span data-i="phT4">حسابي</span></div>
+        </div></div>
+      </div>
     </div>
-    <div class="jh-app">
-      <div class="jh-appt"><span class="jh-ic" aria-hidden="true">🤝</span><div><b data-t="appH">تطبيق رزق · شغلك كله من جوالك</b><small data-t="appSub">طلبات، فواتير، مستودع، وتقييماتك في مكان واحد.</small></div></div>
+  </section>
+
+  <section class="sec" id="how">
+    <span class="tag" data-i="howTag">4 خطوات</span>
+    <h2 data-i="howH">كيف تبدأ</h2>
+    <p class="sub" data-i="howP">من النموذج إلى أول طلب.</p>
+    <ol class="steps">
+      <li><span class="n">1</span><div><b data-i="s1">عبّ النموذج</b><p data-i="s1p">خدماتك وأسعارك ومدنك، ياخذ دقيقتين.</p></div></li>
+      <li><span class="n">2</span><div><b data-i="s2">نتواصل معك</b><p data-i="s2p">نراجع طلبك ونعتمد حسابك.</p></div></li>
+      <li><span class="n">3</span><div><b data-i="s3">حمّل رزق وسجّل</b><p data-i="s3p">برقم جوالك. فني تختار «فنيين خافت»، ومؤسسة تختار «مزودين خافت».</p></div></li>
+      <li><span class="n">4</span><div><b data-i="s4">استقبل أول طلب</b><p data-i="s4p">الطلبات توصلك بإشعار، وتقبلها من جوالك.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="form" id="apply">
+    <div class="fh" id="fh">
+      <span class="tag" data-i="fTag">طلب الانضمام</span>
+      <h2 data-i="fH">سجّل خدماتك</h2>
+      <p class="sub" data-i="fP">دقيقتين، وبياناتك ما يشوفها أحد غير إدارة خافت.</p>
+      <div class="prog" id="prog"><i class="on"></i><i></i><i></i></div>
+      <div class="stepnames" id="stepnames"><span class="on" data-i="st1">عنك</span><span data-i="st2">خدماتك وأسعارك</span><span data-i="st3">الضمان وأرسل</span></div>
+    </div>
+
+    <input class="hp" id="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <div class="pane on" id="p1">
+      <div class="fld"><span class="lb" data-i="typeQ">أنت؟</span>
+        <div class="seg">
+          <button type="button" class="opt on" id="optTech"><i>🧰</i><b data-i="tTech">فني مستقل</b><small data-i="tTechS">أشتغل بنفسي</small></button>
+          <button type="button" class="opt" id="optCo"><i>🏢</i><b data-i="tCo">مؤسسة أو شركة</b><small data-i="tCoS">عندي فريق</small></button>
+        </div>
+      </div>
+      <div class="fld" id="fName"><label for="name" data-i="name">الاسم</label><input id="name" autocomplete="name" data-ip="namePh" placeholder="اسمك الثنائي"><div class="err" data-i="eName">اكتب اسمك</div></div>
+      <div class="two" id="coFields" hidden>
+        <div class="fld" id="fCompany"><label for="company" data-i="company">اسم المؤسسة</label><input id="company" autocomplete="organization"><div class="err" data-i="eCompany">اكتب اسم المؤسسة</div></div>
+        <div class="fld"><label for="team" data-i="team">عدد الفنيين</label><select id="team"><option value="1">1</option><option value="2-3">2 · 3</option><option value="4-6">4 · 6</option><option value="7-10">7 · 10</option><option value="10+" data-i="team10">أكثر من 10</option></select></div>
+      </div>
+      <div class="fld" id="fPhone"><label for="phone" data-i="phone">رقم الجوال</label><input id="phone" type="tel" inputmode="tel" dir="ltr" autocomplete="tel" placeholder="05xxxxxxxx"><span class="hint" data-i="phoneH">نتواصل معك عليه بواتساب أو اتصال.</span><div class="err" data-i="ePhone">رقم الجوال لازم يكون سعودي 05xxxxxxxx</div></div>
+      <div class="fld" id="fCities"><span class="lb" data-i="cities">المدن اللي تخدمها <span class="hint" data-i="citiesH">اختر كل اللي يناسبك</span></span><div class="chips" id="cityChips"></div><input id="cityOther" style="margin-top:8px" data-ip="cityOtherPh" placeholder="مدينة أخرى (اختياري)"><div class="err" data-i="eCity">اختر مدينة واحدة على الأقل</div></div>
+    </div>
+
+    <div class="pane" id="p2">
+      <div class="fld" id="fCats"><span class="lb" data-i="catsQ">تخصصاتك <span class="hint" data-i="catsH">اختر تخصص أو أكثر، وبعدها حدد خدماتك وأسعارك</span></span><div class="chips" id="catChips"></div><div class="err" data-i="eCat">اختر تخصصًا واحدًا على الأقل</div></div>
+      <div id="svcBlocks"></div>
+    </div>
+
+    <div class="pane" id="p3">
+      <div class="fld" id="fWar"><span class="lb" data-i="warranty">ضمان الشغل <span class="hint" data-i="warrantyH">كم مدة الضمان اللي تعطيها على شغلك؟</span></span><div class="chips" id="warChips"></div><div class="err" data-i="eWar">اختر مدة الضمان</div></div>
+      <div class="fld"><label for="notes" data-i="notes">ملاحظات (اختياري)</label><textarea id="notes" data-ip="notesPh" placeholder="مثال: أشتغل بعد العصر فقط"></textarea></div>
+      <h3 data-i="revH">ملخص طلبك</h3>
+      <div class="sum" id="sum"></div>
+      <p class="agree" data-i="agree">بالإرسال توافق أن خافت تتواصل معك على رقمك وتراجع بياناتك.</p>
+    </div>
+
+    <div class="fail" id="fail"><span id="failMsg"></span><br><a id="failWa" href="#" target="_blank" rel="noopener" data-i="waBtn">أرسل بواتساب</a></div>
+
+    <div class="nav" id="nav">
+      <button type="button" class="btn g" id="back" data-i="back" hidden>رجوع</button>
+      <span class="sp"></span>
+      <button type="button" class="btn y" id="next" data-i="next">التالي</button>
+    </div>
+
+    <div class="done" id="done">
+      <div class="stamp" data-i="stamp">وصلنا طلبك</div>
+      <div class="ref"><span id="refNo">#0</span><small data-i="refLbl">رقم طلبك، احفظه</small></div>
+      <p id="doneMsg"></p>
+      <ul class="nextl">
+        <li><i>📲</i><span data-i="n1">حمّل رزق من المتجر وخلّه جاهز.</span></li>
+        <li><i>📸</i><span data-i="n2">أرسل لنا صور من أعمالك على واتساب، تسرّع القبول.</span></li>
+        <li><i>✅</i><span data-i="n3">لما نعتمد حسابك، سجّل في رزق بنفس رقم الجوال.</span></li>
+      </ul>
       <div class="stores">
-        <a href="https://play.google.com/store/apps/details?id=com.khafet.partners" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> <span data-t="appPlay">قوقل بلاي</span></a>
-        <a href="https://apps.apple.com/sa/app/id6791782517" target="_blank" rel="noopener"><span data-t="appApple">آب ستور</span></a>
+        <a href="https://play.google.com/store/apps/details?id=com.khafet.partners" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6 3v18l15-9z" fill="currentColor"/></svg><span><small data-i="getOn3">حمّله من</small>Google Play</span></a>
+        <a href="https://apps.apple.com/sa/app/id6791782517" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M16.5 12.6c0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.9-.8-1.5 0-2.9.9-3.6 2.2-1.6 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.8 2.2 1.1 0 1.5-.7 2.9-.7 1.3 0 1.7.7 2.9.7 1.2 0 2-1.1 2.7-2.2.9-1.2 1.2-2.4 1.2-2.5-.1 0-2.5-.9-2.5-3.6zM14.4 6.1c.6-.8 1-1.8.9-2.9-.9 0-2 .6-2.6 1.4-.6.7-1.1 1.7-1 2.8 1 .1 2.1-.5 2.7-1.3z" fill="currentColor"/></svg><span><small data-i="getOn4">حمّله من</small>App Store</span></a>
       </div>
-      <div class="jh-feats">
-        <span><i aria-hidden="true">🔔</i><em data-t="appF1">الطلبات بإشعار</em></span>
-        <span><i aria-hidden="true">🚗</i><em data-t="appF2">في الطريق ووصلت</em></span>
-        <span><i aria-hidden="true">🧾</i><em data-t="appF3">فاتورة تطبعها وترسلها</em></span>
-        <span><i aria-hidden="true">📦</i><em data-t="appF4">مستودع وطلب شراء PDF</em></span>
-        <span><i aria-hidden="true">📊</i><em data-t="appF5">دخلك وتقييماتك ومسار يومك</em></span>
-        <span><i aria-hidden="true">🌐</i><em data-t="appF6">عربي وإنجليزي وأردو وهندي ونيبالي</em></span>
-      </div>
-    </div>
-    <div class="jh-steps">
-      <p class="jh-h" data-t="appHow">كيف تبدأ</p>
-      <ol>
-        <li><b>1</b><span data-t="s1">عبّ النموذج تحت بخدماتك وأسعارك، ياخذ دقايق.</span></li>
-        <li><b>2</b><span data-t="s2">نراجع طلبك ونتواصل معك ونعتمد حسابك.</span></li>
-        <li><b>3</b><span data-t="s3">حمّل رزق وسجّل برقم جوالك: فني تختار «فنيين خافت»، ومؤسسة تختار «مزودين خافت».</span></li>
-        <li><b>4</b><span data-t="s4">تبدأ تستقبل الطلبات.</span></li>
-      </ol>
-      <a class="btn main jh-cta" href="#card1" data-t="ctaStart">ابدأ النموذج الآن</a>
+      <a class="wa" id="waPhotos" href="#" target="_blank" rel="noopener" data-i="photosBtn">📸 أرسل صور أعمالك</a>
+      <button type="button" class="again" id="again" data-i="again">تعبئة طلب آخر</button>
     </div>
   </section>
+</main>
 
-  <section class="card" id="card1" aria-labelledby="h1s">
-    <h2 id="h1s"><span class="n" aria-hidden="true"><b>1</b></span><span data-t="c1">وش تشتغل؟</span></h2>
-    <p class="sub" data-t="c1sub">اختر كل الأقسام اللي تشتغلها.</p>
-    <div class="chips" id="catChips" role="group" aria-labelledby="h1s"></div>
-    <p class="msg" id="m_cats" hidden></p>
-  </section>
-
-  <section class="card" id="card2" aria-labelledby="h2s">
-    <h2 id="h2s"><span class="n" aria-hidden="true"><b>2</b></span><span data-t="c2">خدماتك وأسعارك</span></h2>
-    <p class="sub" data-t="c2sub">اكتب سعرك جنب كل خدمة تسويها، واترك الباقي فاضي.</p>
-    <fieldset class="f full" id="fs_mat">
-      <legend class="lbl" data-t="mat">أسعارك تشمل المواد؟</legend>
-      <div class="chips" role="radiogroup" aria-required="true">
-        <label class="chip"><input type="radio" name="mat" id="mat0" value="أجرة يد فقط، المواد على العميل" aria-describedby="m_mat"><span data-t="mat0">أجرة يد فقط</span></label>
-        <label class="chip"><input type="radio" name="mat" id="mat1" value="شامل المواد" aria-describedby="m_mat"><span data-t="mat1">شامل المواد</span></label>
-        <label class="chip"><input type="radio" name="mat" id="mat2" value="حسب الخدمة" aria-describedby="m_mat"><span data-t="mat2">حسب الخدمة</span></label>
-      </div>
-      <p class="msg" id="m_mat" hidden></p>
-    </fieldset>
-    <p class="empty" id="svcEmpty" data-t="svcEmpty">اختر قسمك من فوق، وتطلع خدماته هنا.</p>
-    <div id="cats"></div>
-  </section>
-
-  <section class="card" id="card3" aria-labelledby="h3s">
-    <h2 id="h3s"><span class="n" aria-hidden="true"><b>3</b></span><span data-t="c3">تفاصيل الشغل</span></h2>
-    <div class="grid">
-      <fieldset class="f full" id="fs_war">
-        <legend class="lbl" data-t="war">كم الضمان على شغلك؟</legend>
-        <div class="chips" role="radiogroup" aria-required="true">
-          <label class="chip"><input type="radio" name="war" id="war0" value="بدون ضمان" aria-describedby="m_war"><span data-t="war0">بدون ضمان</span></label>
-          <label class="chip"><input type="radio" name="war" id="war1" value="شهر" aria-describedby="m_war"><span data-t="war1">شهر</span></label>
-          <label class="chip"><input type="radio" name="war" id="war2" value="3 شهور" aria-describedby="m_war"><span data-t="war2">3 شهور</span></label>
-          <label class="chip"><input type="radio" name="war" id="war3" value="6 شهور" aria-describedby="m_war"><span data-t="war3">6 شهور</span></label>
-          <label class="chip"><input type="radio" name="war" id="war4" value="سنة" aria-describedby="m_war"><span data-t="war4">سنة</span></label>
-        </div>
-        <p class="msg" id="m_war" hidden></p>
-      </fieldset>
-      <fieldset class="f full" id="fs_visit">
-        <legend class="lbl" data-t="visit">المعاينة مجانية أو بسعر؟</legend>
-        <div class="chips" role="radiogroup" aria-required="true">
-          <label class="chip"><input type="radio" name="visit" id="visit0" value="مجانية" aria-describedby="m_visit"><span data-t="visit0">مجانية</span></label>
-          <label class="chip"><input type="radio" name="visit" id="visit1" value="بسعر" aria-describedby="m_visit"><span data-t="visit1">بسعر</span></label>
-        </div>
-        <p class="msg" id="m_visit" hidden></p>
-        <div class="visitline" id="visitLine" hidden>
-          <label class="money"><input type="text" id="visitPrice" inputmode="decimal" enterkeyhint="done" maxlength="14" autocomplete="off" placeholder="كم؟" data-tp="kam" aria-label="سعر المعاينة بالريال" data-ta="visitPriceA" aria-required="true" aria-describedby="m_visitPrice"><span class="cur" aria-hidden="true" data-t="sar">ريال</span></label>
-          <label class="chip"><input type="checkbox" id="visitDeduct" value="تنخصم إذا تم الشغل"><span data-t="deduct">تنخصم إذا تم الشغل</span></label>
-        </div>
-        <p class="msg" id="m_visitPrice" hidden></p>
-      </fieldset>
-      <fieldset class="f full" id="fs_time">
-        <legend class="lbl"><span data-t="times">متى تشتغل؟</span> <small data-t="opt">اختياري</small></legend>
-        <div class="chips" role="group">
-          <label class="chip"><input type="checkbox" name="time" id="time0" value="الصباح"><span data-t="time0">الصباح</span></label>
-          <label class="chip"><input type="checkbox" name="time" id="time1" value="العصر"><span data-t="time1">العصر</span></label>
-          <label class="chip"><input type="checkbox" name="time" id="time2" value="الليل"><span data-t="time2">الليل</span></label>
-        </div>
-      </fieldset>
-      <fieldset class="f full" id="fs_extra">
-        <legend class="lbl"><span data-t="extra">الجمعة والمستعجل</span> <small data-t="opt">اختياري</small></legend>
-        <div class="chips" role="group">
-          <label class="chip"><input type="checkbox" id="fri" value="نعم"><span data-t="fri">أشتغل الجمعة</span></label>
-          <label class="chip"><input type="checkbox" id="urgent" value="نعم"><span data-t="urgent">أقبل الطلبات المستعجلة</span></label>
-        </div>
-      </fieldset>
-      <div class="f full">
-        <label for="notes"><span data-t="notes">ملاحظات</span> <small data-t="opt">اختياري</small></label>
-        <textarea id="notes" maxlength="300" placeholder="مثال: أشتغل على المكيفات المركزية بالفلل" data-tp="notesPh"></textarea>
-      </div>
-    </div>
-  </section>
-
-  <section class="card" id="card4" aria-labelledby="h4s">
-    <h2 id="h4s"><span class="n" aria-hidden="true"><b>4</b></span><span data-t="c4">بياناتك</span></h2>
-    <p class="sub" data-t="c4sub">عشان نتواصل معك.</p>
-    <div class="grid">
-      <div class="f">
-        <label for="name" data-t="name">اسمك الكامل</label>
-        <input type="text" id="name" maxlength="60" autocomplete="name" enterkeyhint="next" aria-required="true" aria-describedby="m_name">
-        <p class="msg" id="m_name" hidden></p>
-      </div>
-      <div class="f">
-        <label for="phone" data-t="phone">جوالك (واتساب)</label>
-        <input type="tel" id="phone" inputmode="tel" dir="ltr" maxlength="20" placeholder="05xxxxxxxx" autocomplete="tel" enterkeyhint="done" aria-required="true" aria-describedby="m_phone">
-        <p class="msg" id="m_phone" hidden></p>
-      </div>
-      <fieldset class="f full" id="fs_city">
-        <legend class="lbl" data-t="cities">المدن اللي تشتغل فيها</legend>
-        <div class="chips" role="group">
-          <label class="chip"><input type="checkbox" name="city" id="city0" value="الخبر" aria-describedby="m_city"><span data-t="city0">الخبر</span></label>
-          <label class="chip"><input type="checkbox" name="city" id="city1" value="الدمام" aria-describedby="m_city"><span data-t="city1">الدمام</span></label>
-          <label class="chip"><input type="checkbox" name="city" id="city2" value="الظهران" aria-describedby="m_city"><span data-t="city2">الظهران</span></label>
-          <label class="chip"><input type="checkbox" name="city" id="city3" value="القطيف" aria-describedby="m_city"><span data-t="city3">القطيف</span></label>
-          <label class="chip"><input type="checkbox" name="city" id="city4" value="الجبيل" aria-describedby="m_city"><span data-t="city4">الجبيل</span></label>
-          <label class="chip"><input type="checkbox" name="city" id="city5" value="الأحساء" aria-describedby="m_city"><span data-t="city5">الأحساء</span></label>
-          <label class="chip"><input type="checkbox" name="city" id="city6" value="مدينة ثانية" aria-describedby="m_city"><span data-t="city6">مدينة ثانية</span></label>
-        </div>
-        <p class="msg" id="m_city" hidden></p>
-        <input type="text" id="cityOther" maxlength="30" placeholder="اسم المدينة" data-tp="cityOtherPh" aria-label="اسم المدينة" data-ta="cityOtherPh" aria-required="true" aria-describedby="m_cityOther" hidden>
-        <p class="msg" id="m_cityOther" hidden></p>
-      </fieldset>
-      <fieldset class="f full" id="fs_team">
-        <legend class="lbl"><span data-t="team">كم فني بفريقك؟</span> <small data-t="teamHint">اختياري، احسب نفسك</small></legend>
-        <div class="chips tight" role="radiogroup">
-          <label class="chip"><input type="radio" name="team" id="tm0" value="فني واحد"><span data-t="team1">أنا بس</span></label>
-          <label class="chip"><input type="radio" name="team" id="tm1" value="من 2 إلى 3 فنيين"><span data-t="team2">2 إلى 3</span></label>
-          <label class="chip"><input type="radio" name="team" id="tm2" value="من 4 إلى 10 فنيين"><span data-t="team3">4 إلى 10</span></label>
-          <label class="chip"><input type="radio" name="team" id="tm3" value="أكثر من 10 فنيين"><span data-t="team4">فوق 10</span></label>
-        </div>
-      </fieldset>
-      <div class="f half">
-        <label for="exp"><span data-t="exp">الخبرة</span> <small data-t="opt">اختياري</small></label>
-        <select id="exp">
-          <option value="" data-t="choose">اختر</option>
-          <option value="أقل من سنة" data-t="exp1">أقل من سنة</option>
-          <option value="1 إلى 3 سنوات" data-t="exp2">1 إلى 3 سنوات</option>
-          <option value="4 إلى 10 سنوات" data-t="exp3">4 إلى 10 سنوات</option>
-          <option value="أكثر من 10 سنوات" data-t="exp4">أكثر من 10 سنوات</option>
-        </select>
-      </div>
-      <div class="f half">
-        <label for="company"><span data-t="company">اسم المؤسسة</span> <small data-t="opt">اختياري</small></label>
-        <input type="text" id="company" maxlength="60" autocomplete="organization">
-      </div>
-      <fieldset class="f full" id="fs_doc">
-        <legend class="lbl"><span data-t="doc">وش الوثيقة اللي تشتغل فيها؟</span> <small data-t="opt">اختياري</small></legend>
-        <div class="chips" role="radiogroup">
-          <label class="chip"><input type="radio" name="doc" id="doc0" value="سجل تجاري"><span data-t="doc0">سجل تجاري</span></label>
-          <label class="chip"><input type="radio" name="doc" id="doc1" value="وثيقة عمل حر"><span data-t="doc1">وثيقة عمل حر</span></label>
-          <label class="chip"><input type="radio" name="doc" id="doc2" value="تابع لمؤسسة"><span data-t="doc2">تابع لمؤسسة</span></label>
-          <label class="chip"><input type="radio" name="doc" id="doc3" value="ما عندي"><span data-t="doc3">ما عندي</span></label>
-        </div>
-      </fieldset>
-      <fieldset class="f full" id="fs_eq">
-        <legend class="lbl"><span data-t="equip">عندك؟</span> <small data-t="opt">اختياري</small></legend>
-        <div class="chips" role="group">
-          <label class="chip"><input type="checkbox" name="eq" id="eq0" value="سيارة"><span data-t="eq0">سيارة</span></label>
-          <label class="chip"><input type="checkbox" name="eq" id="eq1" value="عدة شغل كاملة"><span data-t="eq1">عدة شغل كاملة</span></label>
-        </div>
-      </fieldset>
-    </div>
-  </section>
-
-  <div class="hp" aria-hidden="true"><label>Website <input id="hpWebsite" type="text" tabindex="-1" autocomplete="off"></label></div>
-  <section class="send" aria-label="الإرسال" data-ta="sendArea">
-    <p class="missing" id="missing" role="alert" hidden></p>
-    <button type="button" class="btn main" id="reviewBtn" data-t="review">راجع رسالتك وأرسل</button>
-    <p class="note" data-t="privacy">النموذج ما يطلب رقم إقامة ولا حساب بنكي.</p>
-
-    <section class="card review" id="review" aria-labelledby="rvH" hidden>
-      <h2 id="rvH" tabindex="-1" data-t="rvH">هذي رسالتك لخافت</h2>
-      <p class="sub" id="rvSub" data-t="rvSub">راجعه، وإذا كل شي تمام اضغط «أرسل الطلب».</p>
-      <div class="done" id="done" hidden>
-        <p class="big" data-t="doneH">✅ وصل طلبك</p>
-        <p class="ref"><span data-t="doneRef">رقم طلبك:</span> <b id="doneNo" dir="ltr"></b></p>
-        <p data-t="d2">نراجعه ونتواصل معك على جوالك.</p>
-        <p data-t="d3">عندك صور من شغلك؟ أرسلها لنا على واتساب.</p>
-        <a id="photosWa" class="btn ghost" href="https://wa.me/966590497866" target="_blank" rel="noopener" data-t="sendPhotos">أرسل الصور على واتساب</a>
-        <button type="button" class="linkbtn" id="newForm2" data-t="newForm">نموذج جديد لمقدم خدمة ثاني</button>
-      </div>
-      <button type="button" class="btn main" id="sendBtn" data-t="send">أرسل الطلب</button>
-      <p class="status" id="sendStatus" role="status"></p>
-      <p class="fbnote" id="fbNote" data-t="fbNote" hidden>أو أرسله على واتساب:</p>
-      <div class="after" id="after" hidden>
-        <p class="big" data-t="a1">باقي خطوة: اضغط زر الإرسال ➤ في واتساب.</p>
-        <p id="aCopied" data-t="a2" hidden>وانتسخت الرسالة احتياط.</p>
-        <p><span data-t="a3">ما انفتح واتساب؟ الصق الرسالة في محادثة على</span> <span class="num" id="waNum" dir="ltr">+966 59 049 7866</span></p>
-        <div><button type="button" class="btn ghost sm" id="copyNum" data-t="copyNum">انسخ الرقم</button></div>
-        <p class="status" id="numStatus" role="status"></p>
-        <p data-t="a4">عندك صور من شغلك؟ أرسلها بنفس المحادثة.</p>
-        <p data-t="a5">نراجع رسالتك ونتواصل معك.</p>
-        <button type="button" class="linkbtn" id="newForm" data-t="newForm">نموذج جديد لمقدم خدمة ثاني</button>
-      </div>
-      <a id="sendWa" class="btn main wa" href="https://wa.me/966590497866" target="_blank" rel="noopener" data-t="openWa" hidden>افتح واتساب وأرسل</a>
-      <div class="pv" id="preview" dir="rtl" lang="ar"></div>
-      <p class="note" id="longNote" data-t="long" hidden>رسالتك طويلة، إذا وصلت ناقصة انسخها والصقها في واتساب.</p>
-      <a id="sendWa2" class="btn main wa" href="https://wa.me/966590497866" target="_blank" rel="noopener" data-t="openWa" hidden>افتح واتساب وأرسل</a>
-      <div class="btnrow" id="rvBtns">
-        <button type="button" class="btn ghost" id="copyMsg" data-t="copy">انسخ الرسالة</button>
-        <button type="button" class="btn ghost" id="editBtn" data-t="edit">عدّل</button>
-      </div>
-      <p class="status" id="copyStatus" role="status"></p>
-    </section>
-  </section>
-</div>
+<footer class="foot"><span data-i="foot">مؤسسة خافت للسباكة والكهرباء · الخبر</span> · <a href="https://wa.me/966590497866" target="_blank" rel="noopener" data-i="footWa">واتساب خافت</a></footer>
 
 <script>
 (function(){
-'use strict';
-
-var WA = '966590497866';
-/* الطلب يوصل مباشرة لقاعدة بيانات خافت (لوحة المؤسسة في رزق)، وواتساب احتياط لو فشل الإرسال */
-var SB_URL = 'https://zulogtqxbuqxmdmjpzqj.supabase.co';
-var SB_KEY = 'sb_publishable_ssggqTzT4GG4sreXV1LObQ_C3yiYhaG';
-var KEY = 'khafet_join_v2';
-var INSPECT = 'بعد المعاينة';
-
-/* النصوص: [عربي، English] */
-var T0 = {
-  brand:['خافت','Khafet'],
-  langGroup:['اللغة','Language'],
-  h1:['انضم لخافت كفني أو مقدم خدمة','Join Khafet as a technician or service provider'],
-  lead:['اكتب خدماتك وأسعارك واضغط إرسال، ويوصلنا طلبك مباشرة. نراجعه ونتواصل معك.','Type your services and prices and tap send. Your request reaches us directly. We review it and contact you.'],
-  meta:['ياخذ دقايق','Takes a few minutes'],
-  draft:['رجعنا لك اللي كتبته آخر مرة.','We brought back what you typed last time.'],
-  restart:['ابدأ من جديد','Start over'],
-  restartSure:['متأكد؟ امسح الكل','Sure? Clear everything'],
-
-  c1:['وش تشتغل؟','What work do you do?'],
-  c1sub:['اختر كل الأقسام اللي تشتغلها.','Pick every category you work in.'],
-  cat_ac:['تكييف وتبريد','AC and cooling'], cat_paint:['دهان','Painting'], cat_plumb:['سباكة','Plumbing'],
-  cat_elec:['كهرباء','Electrical'], cat_carp:['نجارة','Carpentry'], cat_appl:['أجهزة منزلية','Home appliances'],
-  cat_clean:['تنظيف','Cleaning'], cat_insul:['عزل','Insulation'], cat_pest:['مكافحة حشرات','Pest control'],
-  cat_gen:['أعمال عامة','General work'], cat_other:['غيرها','Other'],
-
-  c2:['خدماتك وأسعارك','Your services and prices'],
-  c2sub:['اكتب سعرك جنب كل خدمة تسويها، واترك الباقي فاضي.','Type your price next to each service you do, leave the rest empty.'],
-  svcEmpty:['اختر قسمك من فوق، وتطلع خدماته هنا.','Pick your category above and its services show here.'],
-  mat:['أسعارك تشمل المواد؟','Do your prices include materials?'],
-  mat0:['أجرة يد فقط','Labor only'], mat1:['شامل المواد','Materials included'], mat2:['حسب الخدمة','Depends on the service'],
-  otherName:['اسم القسم','Category name'],
-  otherPh:['مثال: غرف تبريد','Example: cold rooms'],
-  addSvc:['+ أضف خدمة ثانية','+ Add another service'],
-  addSvcOther:['+ أضف خدمة','+ Add a service'],
-  svcNamePh:['اسم الخدمة','Service name'],
-  del:['حذف الخدمة','Delete service'],
-  pricePh:['سعرك','Price'],
-  priceFrom:['يبدأ من','From'],
-  sar:['ريال','SAR'],
-  priceAria:['سعر {name} بالريال','Price of {name} in SAR'],
-  unitAria:['طريقة حساب السعر','How the price is counted'],
-  count1:['خدمة وحدة','1 service'], count2:['خدمتين','2 services'],
-  countFew:['{n} خدمات','{n} services'], countMany:['{n} خدمة','{n} services'],
-  u_job:['للخدمة','Per job'], u_piece:['لكل قطعة','Per piece'], u_ac:['لكل مكيف','Per AC unit'], u_appl:['لكل جهاز','Per appliance'],
-  u_m2:['لكل متر مربع','Per square metre'], u_m:['لكل متر طولي','Per metre (length)'], u_room:['لكل غرفة','Per room'],
-  u_day:['لكل يوم','Per day'], u_hour:['لكل ساعة','Per hour'], u_insp:['بعد المعاينة','After inspection'],
-
-  c3:['تفاصيل الشغل','Work details'],
-  war:['كم الضمان على شغلك؟','How long is your warranty?'],
-  war0:['بدون ضمان','No warranty'], war1:['شهر','1 month'], war2:['3 شهور','3 months'], war3:['6 شهور','6 months'], war4:['سنة','1 year'],
-  visit:['المعاينة مجانية أو بسعر؟','Is the inspection visit free or paid?'],
-  visit0:['مجانية','Free'], visit1:['بسعر','Paid'],
-  kam:['كم؟','How much?'],
-  visitPriceA:['سعر المعاينة بالريال','Inspection price in SAR'],
-  deduct:['تنخصم إذا تم الشغل','Deducted if the job goes ahead'],
-  times:['متى تشتغل؟','When do you work?'],
-  time0:['الصباح','Morning'], time1:['العصر','Afternoon'], time2:['الليل','Night'],
-  extra:['الجمعة والمستعجل','Fridays and urgent jobs'], opt:['اختياري','Optional'],
-  fri:['أشتغل الجمعة','I work Fridays'], urgent:['أقبل الطلبات المستعجلة','I take urgent orders'],
-  notes:['ملاحظات','Notes'],
-  notesPh:['مثال: أشتغل على المكيفات المركزية بالفلل','Example: I work on central AC in villas'],
-
-  c4:['بياناتك','Your details'], c4sub:['عشان نتواصل معك.','So we can contact you.'],
-  name:['اسمك الكامل','Your full name'],
-  phone:['جوالك (واتساب)','Your mobile (WhatsApp)'],
-  cities:['المدن اللي تشتغل فيها','Cities you work in'],
-  city0:['الخبر','Al Khobar'], city1:['الدمام','Dammam'], city2:['الظهران','Dhahran'], city3:['القطيف','Qatif'],
-  city4:['الجبيل','Jubail'], city5:['الأحساء','Al Ahsa'], city6:['مدينة ثانية','Another city'],
-  cityOtherPh:['اسم المدينة','City name'],
-  team:['كم فني بفريقك؟','Technicians in your team'], teamHint:['اختياري، احسب نفسك','Optional, count yourself'],
-  choose:['اختر','Choose'],
-  team1:['أنا بس','Just me'], team2:['2 إلى 3','2 to 3'], team3:['4 إلى 10','4 to 10'], team4:['فوق 10','Over 10'],
-  exp:['الخبرة','Experience'],
-  exp1:['أقل من سنة','Under 1 year'], exp2:['1 إلى 3 سنوات','1 to 3 years'], exp3:['4 إلى 10 سنوات','4 to 10 years'], exp4:['أكثر من 10 سنوات','Over 10 years'],
-  company:['اسم المؤسسة','Company name'],
-  doc:['وش الوثيقة اللي تشتغل فيها؟','What document do you work under?'],
-  doc0:['سجل تجاري','Commercial registration'], doc1:['وثيقة عمل حر','Freelance permit'], doc2:['تابع لمؤسسة','Under a company'], doc3:['ما عندي','None'],
-  equip:['عندك؟','Do you have?'],
-  eq0:['سيارة','A car'], eq1:['عدة شغل كاملة','A full tool kit'],
-
-  heroTag:['شبكة خافت للفنيين ومقدمي الخدمات','The Khafet network for technicians and providers'],
-  heroH:['خلّ طلبات الصيانة تجيك، بدل ما تدوّر عليها.','Let maintenance jobs come to you, instead of chasing them.'],
-  heroP:['العملاء يحجزون من تطبيق خافت في الخبر والدمام والظهران، والطلب يوصلك جاهزًا بالخدمة والعنوان والموعد.','Customers book in the Khafet app across Al Khobar, Dammam and Dhahran, and the job reaches you ready: service, address and time.'],
-  v1:['طلبات جاهزة','Ready jobs'], v1s:['تقبلها من جوالك وتروح للموقع مباشرة','Accept on your phone and head straight to the site'],
-  v2:['دفع قبل الشغل','Paid before you start'], v2s:['العميل يدفع أجرة اليد داخل التطبيق قبل ما تبدأ','The customer pays labor in the app before you begin'],
-  v3:['أسعارك أنت','Your own prices'], v3s:['تحدد خدماتك وأسعارك ومدنك، وترفض اللي ما يناسبك','Set your services, prices and cities, and decline what does not suit you'],
-  s1:['عبّ النموذج تحت بخدماتك وأسعارك، ياخذ دقايق.','Fill the form below with your services and prices, it takes minutes.'],
-  s2:['نراجع طلبك ونتواصل معك ونعتمد حسابك.','We review your request, contact you and approve your account.'],
-  s3:['حمّل رزق وسجّل برقم جوالك: فني تختار «فنيين خافت»، ومؤسسة تختار «مزودين خافت».','Download Rizq and register with your mobile: technicians pick “Khafet technicians”, companies pick “Khafet providers”.'],
-  s4:['تبدأ تستقبل الطلبات.','Start receiving jobs.'],
-  ctaStart:['ابدأ النموذج الآن','Start the form now'],
-  appH:['تطبيق رزق · شغلك كله من جوالك','The Rizq app · all your work from your phone'],
-  appSub:['طلبات، فواتير، مستودع، وتقييماتك في مكان واحد.','Jobs, invoices, stock and your ratings in one place.'],
-  whyH:['ليش تنضم لخافت','Why join Khafet'],
-  why1:['العملاء يحجزون من تطبيق خافت، والطلب يوصلك جاهز: الخدمة والعنوان والموعد.','Customers book in the Khafet app and the job reaches you ready: service, address and time.'],
-  why2:['العميل يدفع أجرة اليد داخل التطبيق قبل ما تبدأ، وقطع الغيار قبل التركيب.','The customer pays labor in the app before you start, and parts before installation.'],
-  why3:['أنت تحدد خدماتك وأسعارك ومدنك، وتقبل الطلب أو ترفضه.','You set your services, prices and cities, and accept or decline each job.'],
-  appPlay:['قوقل بلاي','Google Play'],
-  appApple:['آب ستور','App Store'],
-  appHow:['كيف تبدأ','How to start'],
-  appS1:['حمّل «رزق» وافتحه واختر لغتك.','Download Rizq, open it and pick your language.'],
-  appS2:['إذا أنت فني: اضغط «فنيين خافت»، سجّل برقم جوالك وكلمة مرور، واختر جهتك «خافت 001» من القائمة.','If you are a technician: tap “Khafet technicians”, register with your mobile and a password, then pick “خافت 001” from the list.'],
-  appS3:['إذا عندك مؤسسة وفريق: اضغط «مزودين خافت»، سجّل مؤسستك ومدنك، ويطلع لك كود تضيف فيه فنيينك.','If you have a company and a team: tap “Khafet providers”, register your company and cities, and you get a code to add your technicians.'],
-  appS4:['نعتمد حسابك من عندنا، وتبدأ تستقبل الطلبات.','We approve your account, then jobs start coming to you.'],
-  appWhat:['وش فيه التطبيق','What the app gives you'],
-  appF1:['الطلبات بإشعار','Jobs by notification'],
-  appF2:['في الطريق ووصلت','On my way and arrived'],
-  appF3:['فاتورة تطبعها وترسلها','Invoice to print or send'],
-  appF4:['مستودع وطلب شراء PDF','Stock and PDF purchase orders'],
-  appF5:['دخلك وتقييماتك ومسار يومك','Your income, ratings and day route'],
-  appF6:['عربي وإنجليزي وأردو وهندي ونيبالي','Arabic, English, Urdu, Hindi and Nepali'],
-  appNote:['تقدر تحمّله الحين وتسجّل، ونعتمدك بعد ما نراجع طلبك.','You can download and register now, and we approve you after we review your request.'],
-
-  sendArea:['الإرسال','Send'],
-  review:['راجع طلبك وأرسل','Review your request and send'],
-  privacy:['النموذج ما يطلب رقم إقامة ولا حساب بنكي.','This form never asks for an iqama number or a bank account.'],
-  missing:['ناقص: ','Missing: '],
-  andMore:['، و {n} غيرها',', and {n} more'],
-  listSep:['، ',', '],
-
-  e_cats:['اختر قسم واحد على الأقل','Pick at least one category'],
-  e_otherName:['اكتب اسم القسم','Type the category name'],
-  e_mat:['اختر وش يشمل سعرك','Pick what your price includes'],
-  e_needPrice:['اكتب السعر، أو اختر «بعد المعاينة»، أو شيل الصح','Type the price, pick “After inspection”, or untick it'],
-  e_needPriceC:['اكتب السعر، أو اختر «بعد المعاينة»، أو احذف الخدمة','Type the price, pick “After inspection”, or delete the service'],
-  e_bad:['اكتب رقم واحد، مثل 150','Type one number, like 150'],
-  e_range:['اكتب رقم واحد. يتغير السعر؟ اختر «بعد المعاينة» واكتب أقل سعر','Type one number. Price varies? Pick “After inspection” and type the lowest price'],
-  e_out:['السعر لازم يكون من 1 إلى 20000','The price must be from 1 to 20000'],
-  e_svcName:['اكتب اسم الخدمة','Type the service name'],
-  e_dup:['الخدمة مكررة','This service is listed twice'],
-  e_dupAbove:['هذي الخدمة موجودة فوق، اكتب سعرك جنبها','This service is listed above, type your price next to it'],
-  e_catMin:['اكتب سعر خدمة وحدة على الأقل، أو شيل القسم','Price at least one service, or remove this category'],
-  e_catMinOther:['أضف خدمة وحدة على الأقل، أو شيل القسم','Add at least one service, or remove this category'],
-  e_war:['اختر مدة الضمان، أو «بدون ضمان»','Pick the warranty, or “No warranty”'],
-  e_visit:['اختر: مجانية أو بسعر','Pick free or paid'],
-  e_visitPrice:['اكتب سعر المعاينة','Type the inspection price'],
-  e_visitBad:['اكتب رقم واحد، مثل 50','Type one number, like 50'],
-  e_visitOut:['السعر لازم يكون من 1 إلى 5000','The price must be from 1 to 5000'],
-  e_name:['اكتب اسمك الكامل','Type your full name'],
-  e_phone:['اكتب رقم جوال سعودي، مثل 05xxxxxxxx','Type a Saudi mobile number, like 05xxxxxxxx'],
-  e_city:['اختر مدينة وحدة على الأقل','Pick at least one city'],
-  e_cityOther:['اكتب اسم المدينة','Type the city name'],
-
-  s_cats:['الأقسام','Categories'], s_otherName:['اسم القسم','Category name'], s_mat:['المواد','Materials'],
-  s_price:['سعر {name}','Price of {name}'], s_svcName:['اسم خدمة','Service name'], s_anySvc:['خدمة','a service'],
-  s_dup:['خدمة مكررة','Repeated service'], s_catMin:['خدمات {name}','{name} services'],
-  s_war:['الضمان','Warranty'], s_visit:['المعاينة','Inspection visit'], s_visitPrice:['سعر المعاينة','Inspection price'],
-  s_name:['الاسم','Name'], s_phone:['الجوال','Mobile'],
-  s_city:['المدن','Cities'], s_cityOther:['اسم المدينة','City name'],
-
-  rvH:['هذا طلبك لخافت','This is your request to Khafet'],
-  rvSub:['راجعه، وإذا كل شي تمام اضغط «أرسل الطلب».','Check it, and if all is good tap “Send request”.'],
-  send:['أرسل الطلب','Send request'],
-  sending:['جاري الإرسال…','Sending…'],
-  e_send:['ما قدرنا نرسل الحين. أرسله على واتساب بدالها من الزر تحت.','We could not send it now. Send it on WhatsApp instead with the button below.'],
-  e_tooMany:['وصلنا أكثر من طلب من هذا الرقم اليوم. لو تبي تعدل شي أرسله على واتساب.','We already got requests from this number today. To change something, send it on WhatsApp.'],
-  e_invalid:['تأكد من الاسم ورقم الجوال.','Check your name and mobile number.'],
-  fbNote:['أو أرسله على واتساب:','Or send it on WhatsApp:'],
-  doneH:['✅ وصل طلبك','✅ Request received'],
-  doneRef:['رقم طلبك:','Your request number:'],
-  d2:['نراجعه ونتواصل معك على جوالك.','We review it and contact you on your mobile.'],
-  d3:['عندك صور من شغلك؟ أرسلها لنا على واتساب.','Have photos of your work? Send them to us on WhatsApp.'],
-  sendPhotos:['أرسل الصور على واتساب','Send photos on WhatsApp'],
-  long:['رسالتك طويلة، إذا وصلت ناقصة انسخها والصقها في واتساب.','Your message is long. If it arrives cut, copy it and paste it in WhatsApp.'],
-  openWa:['افتح واتساب وأرسل','Open WhatsApp and send'],
-  copy:['انسخ الرسالة','Copy message'],
-  edit:['عدّل','Edit'],
-  copied:['انتسخت الرسالة','Message copied'],
-  copyFail:['النص محدد، اضغط عليه مطولًا واختر نسخ','The text is selected. Long press it and pick Copy'],
-  a1:['باقي خطوة: اضغط زر الإرسال ➤ في واتساب.','One step left: tap the send button ➤ in WhatsApp.'],
-  a2:['وانتسخت الرسالة احتياط.','The message was also copied, just in case.'],
-  a3:['ما انفتح واتساب؟ الصق الرسالة في محادثة على','WhatsApp did not open? Paste the message in a chat with'],
-  copyNum:['انسخ الرقم','Copy number'],
-  numCopied:['انتسخ الرقم','Number copied'],
-  numFail:['الرقم محدد، اضغط عليه مطولًا واختر نسخ','The number is selected. Long press it and pick Copy'],
-  a4:['عندك صور من شغلك؟ أرسلها بنفس المحادثة.','Have photos of your work? Send them in the same chat.'],
-  a5:['نراجع رسالتك ونتواصل معك.','We review your message and contact you.'],
-  newForm:['نموذج جديد لمقدم خدمة ثاني','New form for another provider']
+var SB='https://zulogtqxbuqxmdmjpzqj.supabase.co', KEY='sb_publishable_ssggqTzT4GG4sreXV1LObQ_C3yiYhaG', WA='966590497866';
+var L='ar';
+var T={
+brand:['خافِت','Khafet'], eyebrow:['انضمام الفنيين ومقدمي الخدمات','Technician and provider onboarding'],
+h1a:['طلبات صيانة','Maintenance jobs,'], h1em:['جاهزة','ready,'], h1b:['على جوالك.','on your phone.'],
+lead:['خافت يجيب لك عملاء الخبر والدمام والظهران، ورزق يرتّب لك الشغل من الطلب إلى الفاتورة. سجّل الحين وابدأ تستقبل الطلبات.','Khafet brings you customers across Al Khobar, Dammam and Dhahran, and Rizq organizes your work from the job to the invoice. Register now and start receiving jobs.'],
+ctaApply:['قدّم طلب الانضمام','Apply to join'], ctaHow:['كيف يشتغل؟','How it works'],
+f1v:['3 مدن','3 cities'], f1l:['الخبر والدمام والظهران','Al Khobar, Dammam and Dhahran'],
+f2v:['دفع مقدّم','Paid upfront'], f2l:['العميل يدفع أجرة اليد قبل الشغل','Customers pay labor before the work'],
+f3v:['أسعارك','Your prices'], f3l:['أنت تحدد خدماتك وأسعارك ومدنك','You set your services, prices and cities'],
+whyTag:['لماذا خافت','Why Khafet'], whyH:['وش تحصل مع خافت','What you get with Khafet'], whyP:['نجيب العميل، وأنت تجيب الخبرة.','We bring the customer, you bring the skill.'],
+w1:['طلبات مرتبة','Organized jobs'], w1p:['كل طلب يوصلك بالخدمة والعنوان والموعد، بدون مكالمات ولا تفاوض.','Every job arrives with the service, address and time. No calls, no haggling.'],
+w2:['مدفوع قبل ما تبدأ','Paid before you start'], w2p:['العميل يدفع أجرة اليد داخل التطبيق، وأنت تركّز على الشغل.','The customer pays labor inside the app, you focus on the work.'],
+w3:['تحكم كامل','Full control'], w3p:['تختار خدماتك وأسعارك ومدنك، وتقبل اللي يناسبك.','Choose your services, prices and cities, and accept what suits you.'],
+w4:['فاتورة بضغطة','One tap invoice'], w4p:['خدمات وقطع في فاتورة مرتبة تطبعها أو ترسلها للعميل.','Services and parts in a clean invoice to print or send.'],
+w5:['مستودعك في جيبك','Your stock in your pocket'], w5p:['أصنافك وكمياتك، وطلب شراء PDF جاهز للمحل.','Your items and quantities, plus a ready PDF purchase order.'],
+w6:['سمعتك تكبر','Your reputation grows'], w6p:['تقييمات العملاء تبني اسمك مع كل طلب.','Customer ratings build your name with every job.'],
+rzTag:['تطبيق رزق','The Rizq app'], rzH:['مكتبك كله في جيبك','Your whole office in your pocket'],
+rzP:['تستقبل الطلب، تضغط «في الطريق» و«وصلت»، تسجّل القطع، وتطلع الفاتورة. وتشوف دخلك وتقييماتك ومسار يومك على الخريطة.','Receive the job, tap On my way and Arrived, log the parts and issue the invoice. See your income, ratings and day route on the map.'],
+getOn:['حمّله من','Get it on'], getOn2:['حمّله من','Download on the'], getOn3:['حمّله من','Get it on'], getOn4:['حمّله من','Download on the'],
+rzLangs:['التطبيق بالعربي والإنجليزي والأردو والهندي والنيبالي.','The app speaks Arabic, English, Urdu, Hindi and Nepali.'],
+phToast:['🔔 طلب جديد قريب منك','🔔 New job near you'], phApp:['رزق','Rizq'], phNew:['طلب جديد','New job'], phSvc:['تغيير سيفون أوتوماتيك','Replace automatic flush'], phLoc:['📍 الخبر · الراكة','📍 Al Khobar · Al Rakah'], phTime:['🕓 اليوم 4:15 م · 60 ر.س مدفوع','🕓 Today 4:15 PM · 60 SAR paid'], phAccept:['قبول','Accept'], phDetails:['التفاصيل','Details'], phR1:['تركيب مروحة سقف · الدمام','Ceiling fan · Dammam'], phR2:['تنظيف سبلت · الظهران','Split AC cleaning · Dhahran'], phTomorrow:['غدًا','Tomorrow'], phInc:['دخلك هذا الأسبوع','Your income this week'], phSar:['ر.س','SAR'], phT1:['الطلبات','Jobs'], phT2:['المستودع','Stock'], phT3:['دخلي','Income'], phT4:['حسابي','Account'],
+howTag:['4 خطوات','4 steps'], howH:['كيف تبدأ','How to start'], howP:['من النموذج إلى أول طلب.','From the form to your first job.'],
+s1:['عبّ النموذج','Fill the form'], s1p:['خدماتك وأسعارك ومدنك، ياخذ دقيقتين.','Your services, prices and cities. Takes two minutes.'],
+s2:['نتواصل معك','We contact you'], s2p:['نراجع طلبك ونعتمد حسابك.','We review your request and approve your account.'],
+s3:['حمّل رزق وسجّل','Download Rizq and sign in'], s3p:['برقم جوالك. فني تختار «فنيين خافت»، ومؤسسة تختار «مزودين خافت».','With your mobile number. Technicians pick “Khafet technicians”, companies pick “Khafet providers”.'],
+s4:['استقبل أول طلب','Get your first job'], s4p:['الطلبات توصلك بإشعار، وتقبلها من جوالك.','Jobs arrive as notifications, accept them on your phone.'],
+fTag:['طلب الانضمام','Join request'], fH:['سجّل خدماتك','Register your services'], fP:['دقيقتين، وبياناتك ما يشوفها أحد غير إدارة خافت.','Two minutes. Only Khafet management sees your details.'],
+st1:['عنك','About you'], st2:['خدماتك وأسعارك','Services and prices'], st3:['الضمان وأرسل','Warranty and send'],
+typeQ:['أنت؟','You are'], tTech:['فني مستقل','Independent technician'], tTechS:['أشتغل بنفسي','I work on my own'], tCo:['مؤسسة أو شركة','Company'], tCoS:['عندي فريق','I have a team'],
+name:['الاسم','Name'], namePh:['اسمك الثنائي','Your full name'], eName:['اكتب اسمك','Enter your name'],
+company:['اسم المؤسسة','Company name'], eCompany:['اكتب اسم المؤسسة','Enter the company name'], team:['عدد الفنيين','Number of technicians'], team10:['أكثر من 10','More than 10'],
+phone:['رقم الجوال','Mobile number'], phoneH:['نتواصل معك عليه بواتساب أو اتصال.','We contact you on it by WhatsApp or call.'], ePhone:['رقم الجوال لازم يكون سعودي 05xxxxxxxx','Enter a Saudi mobile number 05xxxxxxxx'],
+cities:['المدن اللي تخدمها','Cities you serve'], citiesH:['اختر كل اللي يناسبك','Pick all that apply'], cityOtherPh:['مدينة أخرى (اختياري)','Another city (optional)'], eCity:['اختر مدينة واحدة على الأقل','Pick at least one city'],
+catsQ:['تخصصاتك','Your specialties'], catsH:['اختر تخصص أو أكثر، وبعدها حدد خدماتك وأسعارك','Pick one or more, then set your services and prices'], eCat:['اختر تخصصًا واحدًا على الأقل','Pick at least one specialty'],
+sugH:['اضغط خدمة لإضافتها وحط سعرك، أو اكتب خدمة غير موجودة.','Tap a service to add it and set your price, or type one that is not listed.'],
+addSvc:['+ خدمة أخرى','+ Another service'], svcPh:['اسم الخدمة','Service name'], pricePh:['السعر','Price'], othCatPh:['اسم التخصص','Specialty name'], nSvc:['خدمة','services'],
+uJob:['للخدمة','per job'], uHour:['للساعة','per hour'], uMeter:['للمتر','per meter'], uPiece:['للقطعة','per piece'], uInspect:['بعد المعاينة','after inspection'],
+warranty:['ضمان الشغل','Work warranty'], warrantyH:['كم مدة الضمان اللي تعطيها على شغلك؟','How long do you guarantee your work?'], eWar:['اختر مدة الضمان','Pick a warranty period'],
+notes:['ملاحظات (اختياري)','Notes (optional)'], notesPh:['مثال: أشتغل بعد العصر فقط','Example: I only work afternoons'],
+revH:['ملخص طلبك','Your request summary'], agree:['بالإرسال توافق أن خافت تتواصل معك على رقمك وتراجع بياناتك.','By sending you agree that Khafet contacts you on your number and reviews your details.'],
+back:['رجوع','Back'], next:['التالي','Next'], send:['أرسل الطلب','Send request'], sending:['جاري الإرسال…','Sending…'],
+waBtn:['أرسل بواتساب','Send on WhatsApp'],
+errTooMany:['أرسلت 3 طلبات اليوم من هذا الرقم. نتواصل معك قريبًا.','3 requests were already sent today from this number. We will contact you soon.'],
+errBusy:['الضغط عالي الحين، جرّب بعد شوي.','We are busy right now, try again shortly.'],
+errBig:['الطلب كبير، قلّل عدد الخدمات أو النص.','The request is too large, reduce the services or the text.'],
+errInvalid:['راجع الاسم ورقم الجوال.','Check the name and mobile number.'],
+errNet:['ما قدرنا نرسل الطلب. أرسله لنا على واتساب:','We could not send the request. Send it to us on WhatsApp:'],
+stamp:['وصلنا طلبك','Request received'], refLbl:['رقم طلبك، احفظه','Your request number, keep it'],
+doneMsg:['شكرًا {name}! نراجع طلبك ونتواصل معك على {phone}.','Thank you {name}! We will review your request and contact you on {phone}.'],
+n1:['حمّل رزق من المتجر وخلّه جاهز.','Download Rizq from the store and keep it ready.'], n2:['أرسل لنا صور من أعمالك على واتساب، تسرّع القبول.','Send us photos of your work on WhatsApp, it speeds up approval.'], n3:['لما نعتمد حسابك، سجّل في رزق بنفس رقم الجوال.','Once we approve your account, sign in to Rizq with the same mobile number.'],
+photosBtn:['📸 أرسل صور أعمالك','📸 Send photos of your work'], again:['تعبئة طلب آخر','Fill another request'],
+waPhotos:['طلب انضمام خافت رقم {ref}. هذي صور من أعمالي:','Khafet join request #{ref}. Here are photos of my work:'],
+waFallback:['طلب انضمام خافت','Khafet join request'],
+foot:['مؤسسة خافت للسباكة والكهرباء · الخبر','Khafet Plumbing and Electrical Est. · Al Khobar'], footWa:['واتساب خافت','Khafet WhatsApp'],
+sType:['النوع','Type'], sName:['الاسم','Name'], sCompany:['المؤسسة','Company'], sTeam:['الفريق','Team'], sPhone:['الجوال','Mobile'], sCities:['المدن','Cities'], sWar:['الضمان','Warranty'], sNotes:['ملاحظات','Notes'], sar:['ر.س','SAR'], noPrice:['بدون سعر','no price'], noSvcs:['ما أضفت خدمات، نحددها معك عند التواصل.','No services added, we will set them with you when we talk.']
 };
-var T = {};
-Object.keys(T0).forEach(function(k){ T[k] = {ar:T0[k][0], en:T0[k][1]}; });
-
-var lang = 'ar';
-function t(key, params){
-  var e = T[key], s = e ? e[lang] : key;
-  if (params) Object.keys(params).forEach(function(p){ s = s.split('{' + p + '}').join(params[p]); });
-  return s;
+T.home=['الرئيسية','Home'];
+/* داخل تطبيق رزق: بدون روابط المتاجر، ونصوص «سجّل» بدل «حمّل» */
+var INAPP=document.documentElement.classList.contains('inapp');
+if(INAPP){
+  T.s3=['سجّل في رزق','Sign in to Rizq'];
+  T.s3p=['بنفس رقم جوالك: فني تختار «فنيين خافت»، ومؤسسة تختار «مزودين خافت».','With the same mobile number: technicians pick “Khafet technicians”, companies pick “Khafet providers”.'];
+  T.n1=['خلّ إشعارات رزق مفعّلة عشان توصلك الطلبات.','Keep Rizq notifications on so jobs reach you.'];
+  T.n3=['لما نعتمد حسابك، ارجع للرئيسية وسجّل بنفس رقم الجوال.','Once we approve your account, go back home and sign in with the same mobile number.'];
 }
-
-/* طرق السعر بالترتيب. القيمة عربية دائمًا، والنص يتغير حسب اللغة */
-var UNITS = [
-  ['للخدمة','u_job'], ['لكل قطعة','u_piece'], ['لكل متر مربع','u_m2'], ['لكل متر طولي','u_m'],
-  ['لكل غرفة','u_room'], ['لكل يوم','u_day'], ['لكل ساعة','u_hour'], [INSPECT,'u_insp']
+var CITIES=[{k:'khobar',ar:'الخبر',en:'Al Khobar'},{k:'dammam',ar:'الدمام',en:'Dammam'},{k:'dhahran',ar:'الظهران',en:'Dhahran'},{k:'qatif',ar:'القطيف',en:'Qatif'},{k:'jubail',ar:'الجبيل',en:'Jubail'}];
+var WARS=[{k:'none',ar:'بدون ضمان',en:'No warranty'},{k:'week',ar:'أسبوع',en:'One week'},{k:'month',ar:'شهر',en:'One month'},{k:'3m',ar:'3 أشهر',en:'3 months'},{k:'6m',ar:'6 أشهر',en:'6 months'},{k:'year',ar:'سنة',en:'One year'}];
+var UNITS=[['job','uJob'],['hour','uHour'],['meter','uMeter'],['piece','uPiece'],['inspect','uInspect']];
+var CATS=[
+{id:'plumb',ar:'سباكة',en:'Plumbing',ic:'🔧',s:[['تسليك مجاري','Drain unblocking'],['تغيير سيفون','Replace flush'],['تركيب خلاط','Install mixer tap'],['تغيير محبس','Replace valve'],['تركيب سخان','Install water heater'],['إصلاح تسريب','Fix a leak'],['تركيب مغسلة','Install a sink'],['تركيب كرسي حمام','Install a toilet']]},
+{id:'elec',ar:'كهرباء',en:'Electrical',ic:'💡',s:[['تغيير لمبة','Replace bulb'],['تركيب مروحة','Install ceiling fan'],['تركيب بريزة أو مفتاح','Install socket or switch'],['إصلاح قاطع','Fix breaker'],['تركيب ثريا','Install chandelier'],['تمديد كهرباء','Wiring'],['تركيب سخان كهرباء','Install electric heater']]},
+{id:'ac',ar:'تكييف',en:'Air conditioning',ic:'❄️',s:[['تنظيف سبلت','Split AC cleaning'],['تنظيف شباك','Window AC cleaning'],['تعبئة فريون','Refrigerant top up'],['تركيب سبلت','Install split AC'],['فك ونقل مكيف','Uninstall and move AC'],['صيانة دورية','Regular maintenance']]},
+{id:'paint',ar:'دهان',en:'Painting',ic:'🎨',s:[['دهان غرفة','Paint a room'],['دهان شقة كاملة','Paint a whole apartment'],['معجون وترميم','Filler and repair'],['دهان أبواب','Paint doors'],['ورق جدران','Wallpaper']]},
+{id:'wood',ar:'نجارة',en:'Carpentry',ic:'🪚',s:[['تركيب باب','Install a door'],['إصلاح خزانة','Repair a cabinet'],['تركيب رفوف','Install shelves'],['تركيب مطبخ','Install a kitchen'],['إصلاح قفل','Fix a lock']]},
+{id:'appl',ar:'أجهزة منزلية',en:'Appliances',ic:'🧺',s:[['إصلاح غسالة','Washing machine repair'],['إصلاح ثلاجة','Fridge repair'],['إصلاح فرن','Oven repair'],['إصلاح نشافة','Dryer repair'],['تركيب غسالة صحون','Install dishwasher']]},
+{id:'clean',ar:'تنظيف',en:'Cleaning',ic:'🧽',s:[['تنظيف شقة','Apartment cleaning'],['تنظيف كنب وسجاد','Sofa and carpet cleaning'],['تنظيف خزانات مياه','Water tank cleaning'],['تنظيف واجهات','Facade cleaning'],['مكافحة حشرات','Pest control']]},
+{id:'garage',ar:'أبواب كراج',en:'Garage doors',ic:'🚪',s:[['صيانة باب كراج','Garage door service'],['تركيب موتور','Install motor'],['برمجة ريموت','Program remote'],['تغيير سبرنج','Replace spring']]},
+{id:'other',ar:'أخرى',en:'Other',ic:'➕',s:[['تركيب تلفزيون','Mount a TV'],['تركيب ستائر','Install curtains'],['تعليق مرايا ولوحات','Hang mirrors and frames'],['نقل عفش','Furniture moving']]}
 ];
-function unitKey(cat, u){
-  if (u === 'لكل قطعة' && cat === 'ac') return 'u_ac';
-  if (u === 'لكل قطعة' && cat === 'appl') return 'u_appl';
-  for (var i = 0; i < UNITS.length; i++) if (UNITS[i][0] === u) return UNITS[i][1];
-  return 'u_job';
+var S={type:'tech',cities:{},cats:{},warranty:'',step:1,ref:null};
+var $=function(id){return document.getElementById(id);};
+function t(k){var v=T[k];return v?(L==='en'?v[1]:v[0]):k;}
+function nm(o){return L==='en'?o.en:o.ar;}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function unitLabel(u){for(var i=0;i<UNITS.length;i++)if(UNITS[i][0]===u)return t(UNITS[i][1]);return '';}
+function unitAr(u){var m={job:'للخدمة',hour:'للساعة',meter:'للمتر',piece:'للقطعة',inspect:''};return m[u]||'';}
+function warOf(k){for(var i=0;i<WARS.length;i++)if(WARS[i].k===k)return WARS[i];return null;}
+
+/* ── اللغة ── */
+function applyLang(){
+  document.documentElement.lang=L; document.documentElement.dir=L==='en'?'ltr':'rtl';
+  var els=document.querySelectorAll('[data-i]');
+  for(var i=0;i<els.length;i++){var el=els[i];el.textContent=t(el.getAttribute('data-i'));}
+  var ph=document.querySelectorAll('[data-ip]');
+  for(var j=0;j<ph.length;j++){ph[j].placeholder=t(ph[j].getAttribute('data-ip'));}
+  $('langBtn').textContent=L==='en'?'العربية':'English';
+  $('next').textContent=S.step===3?t('send'):t('next');
+  renderChips(); renderSvc(); if(S.step===3)renderSum();
+  try{localStorage.setItem('khafet_join_lang',L);}catch(e){}
 }
-function isUnit(u){ return UNITS.some(function(x){ return x[0] === u; }); }
-
-/* الأقسام بترتيب الشرائح. كل خدمة: [الكود أو null، الاسم كما في الكتالوج، طريقة السعر، English] */
-var CATS = [
-  {id:'ac', emoji:'❄️', s:[
-    ['ac1','تنظيف مكيف سبليت','لكل قطعة','Split AC cleaning'],
-    ['ac2','تعبئة فريون','لكل قطعة','Freon refill'],
-    [null,'تنظيف مكيف شباك','لكل قطعة','Window AC cleaning'],
-    [null,'تركيب مكيف سبليت','لكل قطعة','Split AC installation'],
-    [null,'فك مكيف سبليت','لكل قطعة','Split AC removal'],
-    [null,'كشف عطل مكيف','للخدمة','AC fault check'],
-    [null,'صيانة مكيف مركزي',INSPECT,'Central AC maintenance']]},
-  {id:'paint', emoji:'🎨', s:[
-    ['pt1','دهان غرفة','لكل غرفة','Paint a room'],
-    ['pt2','ترميم وتلميس دهان','للخدمة','Touch up paint'],
-    ['pt3','معالجة تشققات ورطوبة',INSPECT,'Cracks and damp repair'],
-    [null,'دهان جدران','لكل متر مربع','Wall painting'],
-    [null,'دهان واجهة خارجية','لكل متر مربع','Exterior painting'],
-    [null,'ورق جدران','لكل متر مربع','Wallpaper']]},
-  {id:'plumb', emoji:'🔧', s:[
-    ['p1','تغيير شطّاف','لكل قطعة','Bidet spray change'],
-    ['p2','تسليك مجاري/بالوعة','للخدمة','Unclog drain'],
-    ['p3','تغيير خلاط ماء','لكل قطعة','Water mixer change'],
-    ['p4','إصلاح تسريب مياه','للخدمة','Water leak repair'],
-    ['pleak','كشف تسريب المياه بالأجهزة','للخدمة','Leak detection with devices'],
-    ['p5','تركيب/إصلاح سخان','لكل قطعة','Water heater install or repair'],
-    ['p6','إصلاح سيفون الحمام','للخدمة','Toilet flush repair'],
-    [null,'تغيير محبس زاوية','لكل قطعة','Angle valve change'],
-    [null,'تركيب كرسي حمام','لكل قطعة','Toilet installation']]},
-  {id:'elec', emoji:'⚡', s:[
-    ['e1','تغيير لمبة/إضاءة','لكل قطعة','Light change'],
-    ['e2','تركيب ثريا','لكل قطعة','Chandelier installation'],
-    ['e3','إصلاح قصر/انقطاع','للخدمة','Short circuit or outage repair'],
-    ['e4','تغيير مفتاح/بريزة','لكل قطعة','Switch or socket change'],
-    ['e5','تركيب مروحة سقف','لكل قطعة','Ceiling fan installation'],
-    ['e6','فحص لوحة الكهرباء','للخدمة','Power panel check']]},
-  {id:'carp', emoji:'🔨', s:[
-    ['c1','إصلاح باب/مفصلات','للخدمة','Door or hinge repair'],
-    ['c2','إصلاح دولاب/مطبخ','للخدمة','Cabinet or kitchen repair'],
-    ['c3','إصلاح نافذة/شيش','للخدمة','Window repair'],
-    ['c4','تركيب/تجميع أثاث','لكل قطعة','Furniture assembly'],
-    [null,'تغيير قفل باب','لكل قطعة','Door lock change'],
-    [null,'تركيب ستارة','لكل قطعة','Curtain installation']]},
-  {id:'appl', emoji:'🔌', s:[
-    ['a1','إصلاح غسالة','للخدمة','Washer repair'],
-    ['a2','إصلاح ثلاجة','للخدمة','Fridge repair'],
-    ['a3','إصلاح غسالة صحون','للخدمة','Dishwasher repair'],
-    ['a4','إصلاح فرن/بوتاجاز','للخدمة','Oven or stove repair']]},
-  {id:'clean', emoji:'🧽', s:[
-    ['cl1','تنظيف عام للمنزل','للخدمة','General home cleaning'],
-    ['cl2','تنظيف كنب وسجاد','للخدمة','Sofa and carpet cleaning'],
-    ['cl3','تنظيف خزان المياه','للخدمة','Water tank cleaning'],
-    [null,'تنظيف فيلا','للخدمة','Villa cleaning']]},
-  {id:'insul', emoji:'🧱', isNew:true, s:[
-    [null,'عزل أسطح','لكل متر مربع','Roof insulation'],
-    [null,'عزل خزان','للخدمة','Tank insulation'],
-    [null,'معالجة تسريب سطح',INSPECT,'Roof leak repair']]},
-  {id:'pest', emoji:'🐜', isNew:true, s:[
-    [null,'رش شقة','للخدمة','Apartment pest spraying'],
-    [null,'رش فيلا','للخدمة','Villa pest spraying'],
-    [null,'مكافحة نمل أبيض',INSPECT,'Termite control']]},
-  {id:'gen', emoji:'🛠️', s:[
-    ['g1','تعليق/تركيب رفوف','لكل قطعة','Shelf mounting'],
-    ['g2','عزل تسرب بسيط','للخدمة','Simple leak sealing'],
-    ['g4','ترويبة بلاط/سيراميك','للخدمة','Tile grouting'],
-    [null,'تعليق تلفزيون','لكل قطعة','TV mounting'],
-    [null,'تعليق مراية أو لوحة','لكل قطعة','Mirror or frame hanging']]},
-  {id:'other', emoji:'➕', isNew:true, s:[]}
-];
-var CAT = {};
-CATS.forEach(function(c){ CAT[c.id] = c; });
-
-/* normalizers:start */
-/* أرقام عربية وفارسية وهندية ونيبالية وبنغالية إلى 0 إلى 9 */
-var DIGIT_ZEROS = [0x0660, 0x06F0, 0x0966, 0x09E6];
-function west(s){
-  return String(s == null ? '' : s).replace(/[\u0660-\u0669\u06F0-\u06F9\u0966-\u096F\u09E6-\u09EF]/g, function(d){
-    var c = d.charCodeAt(0);
-    for (var i = DIGIT_ZEROS.length - 1; i >= 0; i--) if (c >= DIGIT_ZEROS[i]) return String(c - DIGIT_ZEROS[i]);
-    return d;
-  });
-}
-
-/* علامات ما تنشاف: اتجاه النص، مسافات صفرية، الشرطة الناعمة */
-var INVIS = /[\u00AD\u061C\u200B-\u200F\u202A-\u202E\u2060-\u2064\u2066-\u2069\uFEFF]/g;
-/* كل أشكال الشرطة */
-var DASHES = '\\-\\u2010-\\u2015\\u2043\\u2212\\u2E3A\\u2E3B\\uFE58\\uFE63\\uFF0D';
-var RX_RANGE = new RegExp('(\\d)\\s*[' + DASHES + ']\\s*(?=\\d)', 'g');
-var RX_JOINED = (function(){
-  try { return new RegExp('([\\p{L}\\p{M}\\d])[' + DASHES + '](?=[\\p{L}\\d])', 'gu'); }
-  catch (e) {
-    var L = 'A-Za-z0-9\\u00C0-\\u024F\\u0370-\\u03FF\\u0400-\\u04FF\\u0600-\\u06FF\\u0750-\\u077F\\u08A0-\\u08FF\\u0900-\\u0DFF\\uFB50-\\uFDFF\\uFE70-\\uFEFC';
-    return new RegExp('([' + L + '])[' + DASHES + '](?=[' + L + '])', 'g');
-  }
+$('langBtn').onclick=function(){L=L==='en'?'ar':'en';applyLang();};
+(function pickLang(){
+  var q=/[?&]lang=(en|ar)/.exec(location.search); if(q){L=q[1];return;}
+  if(INAPP){ try{var a=localStorage.getItem('khafet_techlang');if(a){L=a==='ar'?'ar':'en';return;}}catch(e){} }
+  try{var s=localStorage.getItem('khafet_join_lang');if(s==='en'||s==='ar'){L=s;return;}}catch(e){}
+  var nl=(navigator.language||'').toLowerCase();
+  if(/^(hi|ne|bn|ur|fil|tl|si|ta|ml|te)/.test(nl))L='en';
 })();
-var RX_DASH = new RegExp('\\s*[' + DASHES + ']\\s*', 'g');
 
-/* يرجع {empty} أو {ok,n} أو {range} أو {bad} أو {out} */
-function parsePrice(raw, max){
-  var s = west(raw).replace(INVIS, '').trim();
-  s = s.replace(/ريال|ر\.س|\uFDFC|SAR|SR/gi, '').trim();
-  s = s.replace(/(\d)[,\u066C\u060C](?=\d{3}(?!\d))/g, '$1');
-  s = s.replace(/\u066B/g, '.').replace(/[,\u060C](?=\d{1,2}$)/, '.');
-  if (!s) return {empty:true};
-  var tokens = s.match(/\d+(\.\d+)?/g) || [];
-  if (tokens.length >= 2) return {range:true};
-  if (tokens.length !== 1 || s !== tokens[0]) return {bad:true};
-  var dec = tokens[0].split('.')[1];
-  if (dec && dec.length > 2) return {bad:true};
-  var n = Number(tokens[0]);
-  if (!(n > 0) || n > max) return {out:true};
-  return {ok:true, n:String(n)};
-}
-
-/* يرجع الرقم بصيغة 05xxxxxxxx أو نص فاضي إذا غير صالح */
-function phone(p){
-  p = west(p).replace(/\D/g, '');
-  if (p.slice(0, 2) === '00') p = p.slice(2);
-  if (/^96605\d{8}$/.test(p)) p = p.slice(3);
-  if (/^9665\d{8}$/.test(p)) p = '0' + p.slice(3);
-  else if (/^5\d{8}$/.test(p)) p = '0' + p;
-  return /^05\d{8}$/.test(p) ? p : '';
-}
-
-/* ينظف أي نص كتبه المستخدم قبل ما يدخل الرسالة */
-function san(s){
-  s = west(s).replace(INVIS, '');
-  s = s.replace(/(^|\s)\u0640+(?=\s|$)/g, '$1-');  // تطويل لحاله يعتبر فاصل
-  s = s.replace(/\u0640/g, '');                     // تطويل داخل الكلمة ينشال
-  s = s.replace(RX_RANGE, '$1 إلى ');
-  s = s.replace(RX_JOINED, '$1 ');
-  s = s.replace(RX_DASH, '، ');
-  s = s.replace(/[*_~`#|\u2022\u00B7:]/g, ' ');
-  s = s.replace(/\r\n|\r|\n/g, '، ');
-  s = s.replace(/\s+/g, ' ');
-  s = s.replace(/\s*\u060C(\s*\u060C)*\s*/g, '، ');
-  return s.replace(/^[\s\u060C]+|[\s\u060C]+$/g, '');
-}
-/* normalizers:end */
-
-function $(id){ return document.getElementById(id); }
-function esc(s){
-  return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; });
-}
-function qa(sel, root){ return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
-function checkedValues(name){ return qa('#root input[name="' + name + '"]:checked').map(function(x){ return x.value; }); }
-function radioValue(name){ return checkedValues(name)[0] || ''; }
-function visible(el){ return !!(el && el.getClientRects().length); }
-
-/* الحالة */
-var sel = [];        // الأقسام المختارة بترتيب الشرائح
-var rows = {};       // القسم ← {s:[{on,price,unit}], c:[{id,name,price,unit}]}
-var otherName = '';
-var tried = false;   // صار فيه محاولة إرسال ناقصة
-var sentTap = false; // ضغط زر واتساب
-var uid = 0;
-var quiet = {};      // صفوف وأقسام انضافت بعد المحاولة: ما يطلع خطأها حتى يطلع منها أو يضغط إرسال
-var left = {};       // صفوف دخلها وطلع منها
-var visited = {};    // عناصر فيها التركيز الحين أو قبل شوي
-
-function newRows(id){
-  return {s: CAT[id].s.map(function(sg){ return {on:false, price:'', unit:sg[2]}; }), c: []};
-}
-function ensureRows(id){ return rows[id] || (rows[id] = newRows(id)); }
-function sortSel(){ sel = CATS.map(function(c){ return c.id; }).filter(function(id){ return sel.indexOf(id) > -1; }); }
-function catLabel(id){ return t('cat_' + id); }
-function normName(s){ return san(s).replace(/\s+/g, '').toLowerCase(); }
-function clip(s, n){
-  var a = Array.from(String(s));
-  return a.length > n ? a.slice(0, n - 1).join('') + '…' : a.join('');
-}
-
-var CHECK_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-var X_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>';
-
-/* شرائح الأقسام */
-$('catChips').innerHTML = CATS.map(function(c){
-  return '<label class="chip"><input type="checkbox" id="cat_' + c.id + '" value="' + c.id + '" aria-describedby="m_cats">' +
-    '<span><span class="emo" aria-hidden="true">' + c.emoji + '</span><span data-t="cat_' + c.id + '">' + esc(T['cat_' + c.id].ar) + '</span></span></label>';
-}).join('');
-
-/* بناء صفوف الخدمات */
-function unitOptions(cat, current){
-  return UNITS.map(function(u){
-    return '<option value="' + u[0] + '"' + (u[0] === current ? ' selected' : '') + '>' + esc(t(unitKey(cat, u[0]))) + '</option>';
-  }).join('');
-}
-function priceLabel(x){
-  if (x.kind === 's') { var sg = CAT[x.cat].s[x.i]; return lang === 'en' ? sg[3] : sg[1]; }
-  return san(x.r.name) || t('s_anySvc');
-}
-function priceBox(key, r){
-  return '<label class="money"><input type="text" class="price" id="pr_' + key + '" inputmode="decimal" enterkeyhint="next" maxlength="14" autocomplete="off"' +
-    ' value="' + esc(r.price) + '" placeholder="' + esc(t(r.unit === INSPECT ? 'priceFrom' : 'pricePh')) + '" aria-describedby="rm_' + key + '">' +
-    '<span class="cur" aria-hidden="true" data-t="sar">' + esc(t('sar')) + '</span></label>';
-}
-function unitHTML(id, key, r, hide){
-  return '<span class="unitw"' + (hide ? ' hidden' : '') + '><select class="unit" id="un_' + key + '" data-ta="unitAria" aria-label="' + esc(t('unitAria')) + '">' +
-    unitOptions(id, r.unit) + '</select></span>';
-}
-/* الصح بمربع 44 بكسل لحاله. الضغط على الاسم يودي لخانة السعر وما يشيل الصح */
-function sugRowHTML(id, i){
-  var sg = CAT[id].s[i], r = rows[id].s[i], key = id + '_s' + i;
-  return '<div class="svc' + (r.on ? ' on' : '') + '" data-cat="' + id + '" data-kind="s" data-i="' + i + '" id="row_' + key + '">' +
-    '<label class="tickw"><input type="checkbox" class="tick" id="tk_' + key + '" aria-labelledby="nm_' + key + '" aria-describedby="rm_' + key + '"' + (r.on ? ' checked' : '') + '>' +
-    '<span class="box" aria-hidden="true">' + CHECK_SVG + '</span></label>' +
-    '<label class="txt" id="nm_' + key + '" for="pr_' + key + '"><span class="t-en" lang="en">' + esc(sg[3]) + '</span><span class="t-ar" lang="ar">' + esc(sg[1]) + '</span></label>' +
-    priceBox(key, r) + unitHTML(id, key, r, !r.on) +
-    '<p class="msg" id="rm_' + key + '" hidden></p></div>';
-}
-function customRowHTML(id, r){
-  var key = id + '_c' + r.id;
-  return '<div class="svc custom on" data-cat="' + id + '" data-kind="c" data-id="' + r.id + '" id="row_' + key + '">' +
-    '<input type="text" class="cname" id="cn_' + key + '" maxlength="60" enterkeyhint="next" value="' + esc(r.name) + '"' +
-    ' placeholder="' + esc(t('svcNamePh')) + '" data-tp="svcNamePh" aria-label="' + esc(t('svcNamePh')) + '" data-ta="svcNamePh" aria-describedby="rm_' + key + '">' +
-    priceBox(key, r) +
-    '<button type="button" class="del" data-ta="del" aria-label="' + esc(t('del')) + '">' + X_SVG + '</button>' +
-    unitHTML(id, key, r, false) +
-    '<p class="msg" id="rm_' + key + '" hidden></p></div>';
-}
-function blockHTML(id){
-  var c = CAT[id], R = ensureRows(id), h = '';
-  h += '<div class="cat" id="blk_' + id + '" data-cat="' + id + '" role="group" aria-labelledby="bh_' + id + '" aria-describedby="cm_' + id + '">';
-  h += '<h3 id="bh_' + id + '"><span class="hn"><span class="emo" aria-hidden="true">' + c.emoji + '</span><span data-t="cat_' + id + '">' + esc(catLabel(id)) + '</span></span><small class="cnt"></small></h3>';
-  h += '<p class="msg" id="cm_' + id + '" hidden></p>';
-  if (id === 'other') {
-    h += '<div class="f otherf"><label for="otherName" data-t="otherName">' + esc(t('otherName')) + '</label>' +
-      '<input type="text" id="otherName" maxlength="30" value="' + esc(otherName) + '" placeholder="' + esc(t('otherPh')) + '" data-tp="otherPh" aria-required="true" aria-describedby="m_otherName">' +
-      '<p class="msg" id="m_otherName" hidden></p></div>';
-  }
-  c.s.forEach(function(sg, i){ h += sugRowHTML(id, i); });
-  h += '<div class="customs">' + R.c.map(function(r){ return customRowHTML(id, r); }).join('') + '</div>';
-  var addKey = id === 'other' ? 'addSvcOther' : 'addSvc';
-  h += '<button type="button" class="add" data-t="' + addKey + '">' + esc(t(addKey)) + '</button></div>';
-  return h;
-}
-function fromHTML(html){ var d = document.createElement('div'); d.innerHTML = html; return d.firstChild; }
-
-function showBlock(id){
-  if ($('blk_' + id)) return;
-  var box = $('cats'), idx = CATS.indexOf(CAT[id]), before = null;
-  qa('.cat', box).some(function(b){
-    if (CATS.indexOf(CAT[b.dataset.cat]) > idx) { before = b; return true; }
-    return false;
+/* ── الرقائق ── */
+function chips(el,items,sel,after){
+  el.innerHTML='';
+  items.forEach(function(it){
+    var b=document.createElement('button');b.type='button';b.className='chip'+(sel[it.k]?' on':'');
+    b.textContent=(it.ic?it.ic+' ':'')+nm(it);
+    b.onclick=function(){ if(sel[it.k])delete sel[it.k]; else sel[it.k]=true; if(after)after(it.k,!!sel[it.k]); chips(el,items,sel,after); };
+    el.appendChild(b);
   });
-  box.insertBefore(fromHTML(blockHTML(id)), before);
-  qa('#blk_' + id + ' .svc').forEach(function(el){ var x = rowOf(el); if (x) refreshRowText(x); });
-  updateCount(id);
 }
-
-/* يرجع وصف الصف من أي عنصر داخله، أو null إذا الصف انحذف */
-function rowOf(el){
-  var row = el && el.closest ? el.closest('.svc') : null;
-  if (!row) return null;
-  var R = rows[row.dataset.cat], x = {el:row, cat:row.dataset.cat, kind:row.dataset.kind};
-  if (!R) return null;
-  if (x.kind === 's') { x.i = +row.dataset.i; x.r = R.s[x.i]; }
-  else x.r = R.c.filter(function(r){ return String(r.id) === row.dataset.id; })[0];
-  if (!x.r) return null;
-  x.key = x.cat + (x.kind === 's' ? '_s' + x.i : '_c' + x.r.id);
-  return x;
-}
-function refreshRowText(x){
-  var p = $('pr_' + x.key);
-  p.placeholder = t(x.r.unit === INSPECT ? 'priceFrom' : 'pricePh');
-  p.setAttribute('aria-label', t('priceAria', {name: priceLabel(x)}));
-}
-function includedCount(id){
-  var R = rows[id];
-  return R.s.filter(function(r){ return r.on; }).length + R.c.length;
-}
-function countText(n){
-  if (!n) return '';
-  if (n === 1) return t('count1');
-  if (n === 2) return t('count2');
-  return t(n <= 10 || lang === 'en' ? 'countFew' : 'countMany', {n:n});
-}
-function updateCount(id){
-  var b = $('blk_' + id);
-  if (b) b.querySelector('.cnt').textContent = countText(includedCount(id));
-}
-function updateEnterHints(){
-  var list = qa('#cats .price').filter(visible);
-  list.forEach(function(el, i){ el.setAttribute('enterkeyhint', i === list.length - 1 ? 'done' : 'next'); });
-}
-
-/* رسائل الخطأ */
-function showMsg(m, key, params){
-  if (!m) return;
-  m.dataset.k = key;
-  m.dataset.p = params ? JSON.stringify(params) : '';
-  m.textContent = t(key, params);
-  m.hidden = false;
-}
-function hideMsg(m){
-  if (!m) return;
-  m.hidden = true;
-  m.textContent = '';
-  delete m.dataset.k;
-}
-function setBad(el, bad){
-  if (!el) return;
-  if (el.type !== 'radio' && el.type !== 'checkbox') el.classList.toggle('bad', bad);
-  el.setAttribute('aria-invalid', bad ? 'true' : 'false');
-}
-function rowPriceError(r, custom){
-  var p = parsePrice(r.price, 20000);
-  if (p.empty) return r.unit === INSPECT ? '' : (custom ? 'e_needPriceC' : 'e_needPrice');
-  if (p.range) return 'e_range';
-  if (p.bad) return 'e_bad';
-  if (p.out) return 'e_out';
-  return '';
-}
-
-/* شيل الصح يفضي الخانة ويحفظ السعر، ورجعة الصح ترجعه. typed: انحط الصح لأنه كتب سعر */
-function setTick(x, on, typed){
-  var pr = $('pr_' + x.key), unit = $('un_' + x.key), def = CAT[x.cat].s[x.i][2];
-  if (on && !x.r.on) {
-    if (!typed && x.r.memo) {
-      x.r.price = x.r.memo.price;
-      x.r.unit = x.r.memo.unit;
-      pr.value = x.r.price;
-      unit.value = x.r.unit;
-    }
-    x.r.memo = null;
-    x.r.auto = !!typed;
-    if (tried) quiet[x.el.id] = true;
-  } else if (!on && x.r.on) {
-    x.r.memo = x.r.price !== '' || x.r.unit !== def ? {price:x.r.price, unit:x.r.unit} : null;
-    x.r.price = '';
-    pr.value = '';
-    x.r.unit = def;
-    unit.value = def;
-    x.r.auto = false;
-    delete quiet[x.el.id];
-    delete left[x.el.id];
-    qa('.bad', x.el).forEach(function(c){ setBad(c, false); });
-    hideMsg($('rm_' + x.key));
-  }
-  x.r.on = on;
-  x.el.classList.toggle('on', on);
-  $('tk_' + x.key).checked = on;
-  unit.parentNode.hidden = !on;
-  refreshRowText(x);
-  updateCount(x.cat);
-}
-
-/* أحداث الخدمات: كلها تعدل الصفحة في مكانها بدون إعادة رسم */
-var catsBox = $('cats');
-
-catsBox.addEventListener('change', function(e){
-  var el = e.target, x = rowOf(el);
-  if (!x) return;
-  if (el.classList.contains('tick')) {
-    setTick(x, el.checked);
-    if (el.checked) $('pr_' + x.key).focus();
-  } else if (el.classList.contains('unit')) {
-    x.r.unit = el.value;
-    x.r.auto = false;
-    refreshRowText(x);
-  }
-});
-
-catsBox.addEventListener('input', function(e){
-  var el = e.target;
-  if (el.id === 'otherName') { otherName = el.value; setBad(el, false); hideMsg($('m_otherName')); return; }
-  var x = rowOf(el);
-  if (!x || !(el.classList.contains('price') || el.classList.contains('cname'))) return;
-  if (el.classList.contains('price')) {
-    x.r.price = el.value;
-    if (x.kind === 's') {
-      if (!x.r.on && el.value !== '') setTick(x, true, true);
-      // صح انحط من الكتابة وبعدين انمسح السعر: يرجع بدون صح
-      else if (x.r.on && x.r.auto && el.value === '' && x.r.unit === CAT[x.cat].s[x.i][2]) setTick(x, false);
-    }
-  } else {
-    x.r.name = el.value;
-    refreshRowText(x);
-  }
-  // وهو يكتب ما يطلع له خطأ، الخطأ يطلع لما يطلع من الصف
-  setBad(el, false);
-  hideMsg($('rm_' + x.key));
-});
-
-catsBox.addEventListener('keydown', function(e){
-  if (e.key !== 'Enter' || e.isComposing) return;
-  var el = e.target;
-  if (el.classList.contains('price')) {
-    e.preventDefault();
-    var list = qa('#cats .price').filter(visible), i = list.indexOf(el);
-    if (i > -1 && i < list.length - 1) list[i + 1].focus(); else el.blur();
-  } else if (el.classList.contains('cname')) {
-    e.preventDefault();
-    el.closest('.svc').querySelector('.price').focus();
-  }
-});
-
-catsBox.addEventListener('click', function(e){
-  var add = e.target.closest('.add'), del = e.target.closest('.del');
-  if (add) {
-    var blk = add.closest('.cat'), id = blk.dataset.cat, r = {id: ++uid, name:'', price:'', unit:'للخدمة'};
-    rows[id].c.push(r);
-    var rowEl = fromHTML(customRowHTML(id, r));
-    blk.querySelector('.customs').appendChild(rowEl);
-    refreshRowText(rowOf(rowEl));
-    if (tried) quiet[rowEl.id] = true;
-    rowEl.querySelector('.cname').focus();
-    updateCount(id);
-    updateEnterHints();
-    changed();
-  } else if (del) {
-    var x = rowOf(del);
-    if (!x) return;
-    var list = rows[x.cat].c, prev = x.el.previousElementSibling, block = x.el.closest('.cat');
-    // التركيز يطلع من الصف قبل ما تنشال بياناته
-    (prev && prev.querySelector('.cname') ? prev.querySelector('.cname') : block.querySelector('.add')).focus();
-    list.splice(list.indexOf(x.r), 1);
-    delete quiet[x.el.id];
-    delete left[x.el.id];
-    delete visited[x.el.id];
-    x.el.remove();
-    updateCount(x.cat);
-    updateEnterHints();
-    changed();
-  }
-});
-
-/* اختيار الأقسام: الشي الوحيد اللي يرسم قسم من جديد */
-$('catChips').addEventListener('change', function(e){
-  var id = e.target.value;
-  if (e.target.checked) {
-    if (sel.indexOf(id) < 0) sel.push(id);
-    sortSel();
-    if (tried) quiet['blk_' + id] = true;
-    showBlock(id);
-  } else {
-    sel = sel.filter(function(x){ return x !== id; });
-    var b = $('blk_' + id);
-    if (b) b.remove();
-  }
-  $('svcEmpty').hidden = sel.length > 0;
-  updateEnterHints();
-});
-
-/* الحقول الثابتة */
-function syncReveals(){
-  $('visitLine').hidden = radioValue('visit') !== 'بسعر';
-  $('cityOther').hidden = !$('city6').checked;
-}
-function clearOwn(el){
-  if (!el || el.closest('#cats')) return;
-  setBad(el, false);
-  var fs = el.closest('fieldset');
-  if ((el.type === 'radio' || el.type === 'checkbox') && fs) {
-    fs.classList.remove('bad');
-    qa('input[aria-invalid]', fs).forEach(function(i){ if (i.type === el.type) i.setAttribute('aria-invalid', 'false'); });
-  }
-  if (el.closest('#catChips')) $('card1').classList.remove('bad');
-  var d = el.getAttribute('aria-describedby');
-  if (d) hideMsg($(d));
-}
-$('root').addEventListener('change', function(e){
-  var el = e.target;
-  // change حق خانات الكتابة يجي وقت ما يطلع منها، يعني وسط الضغطة الجاية. الكتابة يغطيها input
-  if (el.type !== 'radio' && el.type !== 'checkbox' && el.tagName !== 'SELECT') return;
-  if (el.name === 'visit' || el.id === 'city6') {
-    syncReveals();
-    if (el.checked && el.value === 'بسعر') $('visitPrice').focus();
-    if (el.id === 'city6' && el.checked) $('cityOther').focus();
-  }
-  clearOwn(el);
-  changed();
-});
-$('root').addEventListener('input', function(e){
-  var el = e.target;
-  if (el.type === 'radio' || el.type === 'checkbox' || el.tagName === 'SELECT') return; // يغطيها change
-  clearOwn(el);
-  changed();
-});
-
-/* إذا طلع من صف أو خانة نفحصها، بس بعد ما تخلص الضغطة عشان ما تتحرك الصفحة تحت الإصبع */
-var pointerDown = false, downAt = 0, leaveTimer = null;
-document.addEventListener('pointerdown', function(){ pointerDown = true; downAt = Date.now(); }, true);
-document.addEventListener('pointerup', function(){ pointerDown = false; }, true);
-document.addEventListener('pointercancel', function(){ pointerDown = false; }, true);
-$('root').addEventListener('focusin', function(e){
-  var el = e.target;
-  if (!el.closest) return;
-  var holder = el.closest('#cats .svc') || (/^(INPUT|SELECT|TEXTAREA)$/.test(el.tagName) && el.id ? el : null);
-  var blk = el.closest('#cats .cat');
-  if (holder) visited[holder.id] = holder;
-  if (blk) visited[blk.id] = blk;
-});
-$('root').addEventListener('focusout', function(){
-  clearTimeout(leaveTimer);
-  leaveTimer = setTimeout(flushLeft, 350);
-});
-function flushLeft(){
-  if (pointerDown && Date.now() - downAt < 2500) { leaveTimer = setTimeout(flushLeft, 200); return; }
-  var act = document.activeElement, any = false;
-  Object.keys(visited).forEach(function(k){
-    var el = visited[k];
-    if (el.isConnected && act && el.contains(act)) return;
-    delete visited[k];
-    delete quiet[k];
-    if (el.classList.contains('svc')) {
-      left[k] = true;
-      var b = el.closest('.cat');
-      if (b) delete quiet[b.id];
-    }
-    any = true;
+function single(el,items,key,after){
+  el.innerHTML='';
+  items.forEach(function(it){
+    var b=document.createElement('button');b.type='button';b.className='chip'+(S[key]===it.k?' on':'');
+    b.textContent=nm(it);
+    b.onclick=function(){S[key]=it.k;if(after)after(it.k);single(el,items,key,after);};
+    el.appendChild(b);
   });
-  if (any) validate({});
 }
-$('visitPrice').addEventListener('keydown', function(e){
-  if (e.key === 'Enter' && !e.isComposing) { e.preventDefault(); this.blur(); }
-});
-$('name').addEventListener('keydown', function(e){
-  if (e.key === 'Enter' && !e.isComposing) { e.preventDefault(); $('phone').focus(); }
-});
-$('phone').addEventListener('keydown', function(e){
-  if (e.key === 'Enter' && !e.isComposing) { e.preventDefault(); this.blur(); }
-});
+function renderChips(){
+  chips($('cityChips'),CITIES,S.cities,function(){$('fCities').classList.remove('bad');});
+  single($('warChips'),WARS,'warranty',function(){$('fWar').classList.remove('bad');renderSum();});
+  chips($('catChips'),CATS.map(function(c){return {k:c.id,ar:c.ar,en:c.en,ic:c.ic};}),S.cats,function(k,on){
+    if(on&&S.cats[k]===true)S.cats[k]={rows:[],name:''};
+    $('fCats').classList.remove('bad'); renderSvc();
+  });
+}
 
-/* التحقق: يجمع الأخطاء بدون ما يلمس الصفحة */
-function collect(){
-  var E = [];
-  function push(o){ o.ctrls = o.ctrls || []; E.push(o); }
+/* ── النوع ── */
+function setType(tp){S.type=tp;$('optTech').classList.toggle('on',tp==='tech');$('optCo').classList.toggle('on',tp==='co');$('coFields').hidden=tp!=='co';}
+$('optTech').onclick=function(){setType('tech');};
+$('optCo').onclick=function(){setType('co');};
 
-  var catInputs = qa('#catChips input');
-  if (!sel.length) push({card:1, key:'e_cats', short:t('s_cats'), ctrls:catInputs, group:$('card1'), box:$('catChips'), msg:$('m_cats')});
-
-  if (sel.indexOf('other') > -1 && !san(otherName)) {
-    push({card:2, key:'e_otherName', short:t('s_otherName'), ctrls:[$('otherName')], msg:$('m_otherName'), bk:'blk_other'});
-  }
-
-  if (!radioValue('mat')) push({card:2, key:'e_mat', short:t('s_mat'), ctrls:qa('input[name="mat"]'), group:$('fs_mat'), msg:$('m_mat')});
-
-  sel.forEach(function(id){
-    var R = rows[id], valid = 0, rowErrs = 0, bk = 'blk_' + id;
-    var sug = Object.create(null), seen = Object.create(null);
-    CAT[id].s.forEach(function(sg, i){
-      sug[normName(sg[1])] = i;
-      sug[normName(sg[3])] = i;
-      var r = R.s[i];
-      if (!r.on) return;
-      var pe = rowPriceError(r), key = id + '_s' + i;
-      if (pe) {
-        rowErrs++;
-        push({card:2, key:pe, short:t('s_price', {name: lang === 'en' ? sg[3] : sg[1]}), ctrls:[$('pr_' + key)], msg:$('rm_' + key), rk:'row_' + key, bk:bk});
-      } else valid++;
+/* ── الخدمات ── */
+function renderSvc(){
+  var box=$('svcBlocks');box.innerHTML='';
+  CATS.forEach(function(c){
+    var st=S.cats[c.id]; if(!st)return; if(st===true){st=S.cats[c.id]={rows:[],name:''};}
+    var blk=document.createElement('div');blk.className='svcblk';
+    var have={};st.rows.forEach(function(r){have[r.name]=1;});
+    var h='<h4><span>'+c.ic+'</span>'+esc(nm(c))+'<small>'+st.rows.length+' '+t('nSvc')+'</small></h4>';
+    if(c.id==='other')h+='<div class="oth"><input class="othName" data-cat="other" placeholder="'+esc(t('othCatPh'))+'" value="'+esc(st.name||'')+'"></div>';
+    h+='<p class="hint" style="margin:0 0 8px">'+esc(t('sugH'))+'</p><div class="sug">';
+    c.s.forEach(function(s,i){var label=L==='en'?s[1]:s[0];h+='<button type="button" data-cat="'+c.id+'" data-sug="'+i+'" '+(have[s[0]]?'disabled':'')+'>+ '+esc(label)+'</button>';});
+    h+='</div><div class="rows">';
+    st.rows.forEach(function(r,i){
+      h+='<div class="row"><input data-cat="'+c.id+'" data-i2="'+i+'" data-f="name" placeholder="'+esc(t('svcPh'))+'" value="'+esc(r.name)+'">'
+        +'<input data-cat="'+c.id+'" data-i2="'+i+'" data-f="price" type="number" min="0" inputmode="numeric" dir="ltr" placeholder="'+esc(t('pricePh'))+'" value="'+esc(r.price)+'" '+(r.unit==='inspect'?'disabled':'')+'>'
+        +'<select data-cat="'+c.id+'" data-i2="'+i+'" data-f="unit">'+UNITS.map(function(u){return '<option value="'+u[0]+'" '+(r.unit===u[0]?'selected':'')+'>'+esc(t(u[1]))+'</option>';}).join('')+'</select>'
+        +'<button type="button" class="x" data-cat="'+c.id+'" data-del="'+i+'" aria-label="حذف">×</button></div>';
     });
-    R.c.forEach(function(r){
-      var key = id + '_c' + r.id, rk = 'row_' + key, nm = san(r.name), nk = normName(r.name), bad = false;
-      if (!nm) {
-        push({card:2, key:'e_svcName', short:t('s_svcName'), ctrls:[$('cn_' + key)], msg:$('rm_' + key), rk:rk, bk:bk});
-        bad = true;
-      } else if (nk in seen || nk in sug) {
-        // موجودة بالقائمة فوق وما عليها صح: نوديه لها بدل ما نقول مكررة
-        var above = !(nk in seen) && !R.s[sug[nk]].on;
-        push({card:2, key: above ? 'e_dupAbove' : 'e_dup', short:t('s_dup'), ctrls:[$('cn_' + key)], msg:$('rm_' + key), rk:rk, bk:bk});
-        bad = true;
-      } else seen[nk] = true;
-      var pe = rowPriceError(r, true);
-      if (pe) {
-        push({card:2, key:pe, short:t('s_price', {name: clip(nm || t('s_anySvc'), 30)}), ctrls:[$('pr_' + key)], msg:$('rm_' + key), rk:rk, bk:bk});
-        bad = true;
-      }
-      if (bad) rowErrs++; else valid++;
-    });
-    if (!valid && !rowErrs) {
-      var blk = $('blk_' + id), other = id === 'other' ? san(otherName) : '';
-      push({card:2, key: id === 'other' ? 'e_catMinOther' : 'e_catMin', short:t('s_catMin', {name: other ? clip(other, 30) : catLabel(id)}),
-        box:blk, msg:$('cm_' + id), bk:bk, focus: blk && (blk.querySelector('.price') || blk.querySelector('.add'))});
-    }
+    h+='</div><button type="button" class="addrow" data-cat="'+c.id+'" data-add="1">'+esc(t('addSvc'))+'</button>';
+    blk.innerHTML=h; box.appendChild(blk);
   });
+}
+$('svcBlocks').addEventListener('click',function(e){
+  var b=e.target.closest('button'); if(!b)return; var cid=b.getAttribute('data-cat'); var c=CATS.find(function(x){return x.id===cid;}); var st=S.cats[cid]; if(!c||!st)return;
+  if(b.hasAttribute('data-sug')){var s=c.s[+b.getAttribute('data-sug')];st.rows.push({name:s[0],name_en:s[1],price:'',unit:'job',code:'مقترح'});renderSvc();focusRow(cid,st.rows.length-1,'price');}
+  else if(b.hasAttribute('data-add')){st.rows.push({name:'',price:'',unit:'job',code:'جديد'});renderSvc();focusRow(cid,st.rows.length-1,'name');}
+  else if(b.hasAttribute('data-del')){st.rows.splice(+b.getAttribute('data-del'),1);renderSvc();}
+});
+$('svcBlocks').addEventListener('input',function(e){
+  var el=e.target; var cid=el.getAttribute('data-cat'); var st=S.cats[cid]; if(!st)return;
+  if(el.classList.contains('othName')){st.name=el.value;return;}
+  var r=st.rows[+el.getAttribute('data-i2')]; if(!r)return; var f=el.getAttribute('data-f');
+  if(f==='unit'){r.unit=el.value;var pi=el.parentNode.querySelector('[data-f="price"]');pi.disabled=r.unit==='inspect';if(pi.disabled){pi.value='';r.price='';}}
+  else r[f]=el.value;
+});
+function focusRow(cid,i,f){var el=$('svcBlocks').querySelector('[data-cat="'+cid+'"][data-i2="'+i+'"][data-f="'+f+'"]');if(el)el.focus();}
 
-  if (!radioValue('war')) push({card:3, key:'e_war', short:t('s_war'), ctrls:qa('input[name="war"]'), group:$('fs_war'), msg:$('m_war')});
-  var visit = radioValue('visit');
-  if (!visit) push({card:3, key:'e_visit', short:t('s_visit'), ctrls:qa('input[name="visit"]'), group:$('fs_visit'), msg:$('m_visit')});
-  else if (visit === 'بسعر') {
-    var vp = parsePrice($('visitPrice').value, 5000);
-    if (!vp.ok) push({card:3, key: vp.empty ? 'e_visitPrice' : (vp.out ? 'e_visitOut' : 'e_visitBad'), short:t('s_visitPrice'), ctrls:[$('visitPrice')], msg:$('m_visitPrice')});
+/* ── الجوال ── */
+function normPhone(v){var d=String(v||'').replace(/\D/g,'');if(d.indexOf('00966')===0)d=d.slice(5);if(d.indexOf('966')===0)d=d.slice(3);if(/^5\d{8}$/.test(d))d='0'+d;return d;}
+function validPhone(v){return /^05\d{8}$/.test(normPhone(v));}
+
+/* ── التحقق والتنقل ── */
+function bad(id,on){$(id).classList.toggle('bad',on);return on;}
+function validate(step){
+  var ok=true;
+  if(step===1){
+    if(bad('fName',$('name').value.trim().length<2))ok=false;
+    if(bad('fCompany',S.type==='co'&&$('company').value.trim().length<2))ok=false;
+    if(bad('fPhone',!validPhone($('phone').value)))ok=false;
+    if(bad('fCities',!Object.keys(S.cities).length&&!$('cityOther').value.trim()))ok=false;
   }
+  if(step===2){ if(bad('fCats',!Object.keys(S.cats).length))ok=false; }
+  if(step===3){ if(bad('fWar',!S.warranty))ok=false; }
+  if(!ok){var b=document.querySelector('.pane.on .fld.bad');if(b)b.scrollIntoView({block:'center'});}
+  return ok;
+}
+function go(n){
+  S.step=n;
+  for(var i=1;i<=3;i++){$('p'+i).classList.toggle('on',i===n);}
+  var bars=$('prog').children, names=$('stepnames').children;
+  for(var k=0;k<3;k++){bars[k].className=k+1<n?'done':(k+1===n?'on':'');names[k].className=k+1===n?'on':'';}
+  $('back').hidden=n===1; $('next').textContent=n===3?t('send'):t('next'); $('fail').classList.remove('on');
+  if(n===3)renderSum();
+  $('fh').scrollIntoView({block:'start'});
+}
+$('back').onclick=function(){if(S.step>1)go(S.step-1);};
+$('next').onclick=function(){ if(S.step<3){ if(validate(S.step))go(S.step+1); } else if(validate(3)) send(); };
+['name','company','phone'].forEach(function(id){$(id).addEventListener('input',function(){$('f'+id.charAt(0).toUpperCase()+id.slice(1)).classList.remove('bad');});});
+$('cityOther').addEventListener('input',function(){$('fCities').classList.remove('bad');});
+$('notes').addEventListener('input',function(){if(S.step===3)renderSum();});
 
-  if (!san($('name').value)) push({card:4, key:'e_name', short:t('s_name'), ctrls:[$('name')], msg:$('m_name')});
-  if (!phone($('phone').value)) push({card:4, key:'e_phone', short:t('s_phone'), ctrls:[$('phone')], msg:$('m_phone')});
-  if (!checkedValues('city').length) push({card:4, key:'e_city', short:t('s_city'), ctrls:qa('input[name="city"]'), group:$('fs_city'), msg:$('m_city')});
-  if ($('city6').checked && !san($('cityOther').value)) push({card:4, key:'e_cityOther', short:t('s_cityOther'), ctrls:[$('cityOther')], msg:$('m_cityOther')});
-
-  /* ترتيب الأخطاء حسب مكانها بالصفحة */
-  function anchor(o){ return o.ctrls[0] || o.box || o.group || o.msg; }
-  return E.sort(function(a, b){
-    var pa = anchor(a), pb = anchor(b);
-    if (!pa || !pb || pa === pb) return 0;
-    return pa.compareDocumentPosition(pb) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1;
+/* ── الحمولة ── */
+function selNames(items,sel){return items.filter(function(i){return sel[i.k];}).map(function(i){return i.ar;});}
+function selNamesL(items,sel){return items.filter(function(i){return sel[i.k];}).map(function(i){return nm(i);});}
+function catsPayload(){
+  return CATS.filter(function(c){return S.cats[c.id];}).map(function(c){
+    var st=S.cats[c.id]; var isOther=c.id==='other'; var name=isOther&&(st.name||'').trim()?st.name.trim():c.ar;
+    return {id:c.id,name:name,name_en:c.en,isNew:isOther,services:st.rows.filter(function(r){return r.name.trim();}).map(function(r){
+      var ins=r.unit==='inspect'; var p=(!ins&&r.price!==''&&!isNaN(+r.price))?+r.price:null;
+      return {name:r.name.trim(),name_en:r.name_en||'',price:p,unit:unitAr(r.unit),inspect:ins,code:r.code||'جديد'};
+    })};
   });
-}
-
-var CHECKED_CTRLS = '#catChips input, #otherName, input[name="mat"], #cats .price, #cats .cname, input[name="war"], input[name="visit"], #visitPrice, #name, #phone, input[name="city"], #cityOther';
-
-/* متى يبان الخطأ جنب الخانة:
-   عند الإرسال: كل الأخطاء.
-   قبل أول محاولة: بس الصفوف اللي دخلها وطلع منها.
-   بعد المحاولة: كل شي، إلا اللي انضاف بعدها ولسا ما طلع منه.
-   والخانة اللي فيها التركيز ما يطلع لها خطأ جديد وهو فيها. */
-function mayShow(o, all, shown){
-  if (all) return true;
-  if (o.bk && quiet[o.bk]) return false;
-  if (o.rk) { if (quiet[o.rk] || (!tried && !left[o.rk])) return false; }
-  else if (!tried) return false;
-  var holder = o.rk ? $(o.rk) : (o.ctrls.length === 1 ? o.ctrls[0] : null), act = document.activeElement;
-  if (holder && act && holder.contains(act) && !(o.msg && shown[o.msg.id] === o.key)) return false;
-  return true;
-}
-
-function validate(opts){
-  opts = opts || {};
-  if (opts.all) quiet = {};
-  var E = collect(), shown = {}, keep = {};
-  qa('#root .msg').forEach(function(m){ if (!m.hidden && m.dataset.k) shown[m.id] = m.dataset.k; });
-  qa('#root .bad').forEach(function(el){ el.classList.remove('bad'); });
-  qa(CHECKED_CTRLS).forEach(function(el){ el.setAttribute('aria-invalid', 'false'); });
-  E.forEach(function(o){
-    if (!mayShow(o, opts.all, shown)) return;
-    o.ctrls.forEach(function(c){ setBad(c, true); });
-    if (o.group) o.group.classList.add('bad');
-    if (o.msg && !keep[o.msg.id]) keep[o.msg.id] = o.key;
-  });
-  qa('#root .msg').forEach(function(m){
-    var k = keep[m.id];
-    if (!k) { if (!m.hidden) hideMsg(m); }
-    else if (m.hidden || m.dataset.k !== k) showMsg(m, k);
-  });
-  renderMissing(E);
-  updateDone(E);
-  if (opts && opts.scroll && E.length) {
-    var first = E[0], target = first.box || first.group || first.ctrls[0] || first.msg;
-    var smooth = !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
-    target.scrollIntoView({behavior: smooth ? 'smooth' : 'auto', block:'center'});
-    var f = first.focus || first.ctrls[0];
-    if (f) setTimeout(function(){ try { f.focus({preventScroll:true}); } catch (x) {} }, 350);
-  }
-  return !E.length;
-}
-
-function renderMissing(E){
-  var box = $('missing');
-  if (!tried || !E.length) { box.hidden = true; box.textContent = ''; return; }
-  var names = [];
-  E.forEach(function(o){ if (names.indexOf(o.short) < 0) names.push(o.short); });
-  box.textContent = t('missing') + names.slice(0, 3).join(t('listSep')) + (names.length > 3 ? t('andMore', {n: names.length - 3}) : '');
-  box.hidden = false;
-}
-
-function updateDone(E){
-  E = E || collect();
-  [1, 2, 3, 4].forEach(function(n){
-    var ok = !E.some(function(o){ return o.card === n; });
-    if (n === 2 && !sel.length) ok = false;
-    $('card' + n).classList.toggle('done', ok);
-  });
-}
-
-/* رسالة واتساب: عربية دائمًا وبنفس الترتيب */
-function serviceLine(name, r, cat, code){
-  var p = parsePrice(r.price, 20000);
-  if (r.unit === INSPECT) return '• ' + name + (p.ok ? ' · يبدأ من ' + p.n + ' ريال' : '') + ' · ' + INSPECT + ' · #' + code;
-  return '• ' + name + ' · ' + (p.ok ? p.n : '') + ' ريال · ' + T[unitKey(cat, r.unit)].ar + ' · #' + code;
-}
-function message(){
-  var L = ['*نموذج انضمام مقدم خدمة · خافت*', 'السلام عليكم، هذي بياناتي وخدماتي وأسعاري.', '', '*البيانات*'];
-  L.push('الاسم: ' + san($('name').value));
-  L.push('الجوال: ' + phone($('phone').value));
-  var cities = checkedValues('city').filter(function(v){ return v !== 'مدينة ثانية'; });
-  if ($('city6').checked && san($('cityOther').value)) cities.push(san($('cityOther').value));
-  L.push('المدن: ' + cities.join('، '));
-  var team = radioValue('team');
-  if (team) L.push('الفريق: ' + team);
-  if ($('exp').value) L.push('الخبرة: ' + $('exp').value);
-  var company = san($('company').value);
-  if (company) L.push('المؤسسة: ' + company);
-  var doc = radioValue('doc');
-  if (doc) L.push('الوثيقة: ' + (doc === 'ما عندي' ? 'ما عنده' : doc));
-  var eq = checkedValues('eq');
-  if (eq.length) L.push('عنده: ' + eq.join('، '));
-  if (lang === 'en') L.push('لغة التعبئة: English');
-
-  L.push('', '*الخدمات والأسعار* (بالريال)', 'المواد: ' + radioValue('mat'));
-  var count = 0;
-  sel.forEach(function(id){
-    var c = CAT[id], R = rows[id], lines = [];
-    c.s.forEach(function(sg, i){ if (R.s[i].on) lines.push(serviceLine(sg[1], R.s[i], id, sg[0] || 'جديد')); });
-    R.c.forEach(function(r){ lines.push(serviceLine(san(r.name), r, id, 'جديد')); });
-    if (!lines.length) return;
-    L.push('*' + (id === 'other' ? san(otherName) : T['cat_' + id].ar) + '* #' + (c.isNew ? 'جديد' : id));
-    L = L.concat(lines);
-    count += lines.length;
-  });
-
-  var visit = radioValue('visit'), vp = parsePrice($('visitPrice').value, 5000);
-  var visitText = visit === 'بسعر' ? (vp.n || '') + ' ريال، ' + ($('visitDeduct').checked ? 'تنخصم إذا تم الشغل' : 'ما تنخصم') : visit;
-  L.push('', '*الشغل*', 'الضمان: ' + radioValue('war'), 'المعاينة: ' + visitText);
-  // الاختياري ينكتب بس إذا اختاره، عشان ما نقول «لا» عن شي ما جاوب عليه
-  var times = checkedValues('time');
-  if (times.length) L.push('الأوقات: ' + times.join('، '));
-  if ($('fri').checked) L.push('الجمعة: نعم');
-  if ($('urgent').checked) L.push('المستعجل: نعم');
-  var notes = san($('notes').value);
-  if (notes) L.push('ملاحظات: ' + notes);
-  L.push('', 'عدد الخدمات: ' + count, 'نسخة النموذج: 2');
-  return L.join('\n');
-}
-
-/* لوحة المراجعة */
-var review = $('review');
-
-function renderReview(){
-  var m = message(), href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(m);
-  $('preview').textContent = m;
-  qa('#review .wa').forEach(function(a){ a.href = href; });
-  $('longNote').hidden = !fbMode || m.length <= 3000; // عدد حروف الرسالة نفسها
-}
-
-/* الإرسال المباشر */
-var fbMode = false, sending = false, sentRef = null;
-function setFallback(on){
-  fbMode = !!on;
-  $('sendWa').hidden = !fbMode;
-  $('sendWa2').hidden = !fbMode;
-  $('fbNote').hidden = !fbMode;
-  if (!review.hidden) renderReview();
 }
 function payload(){
-  var cities = checkedValues('city').filter(function(v){ return v !== 'مدينة ثانية'; });
-  if ($('city6').checked && san($('cityOther').value)) cities.push(san($('cityOther').value));
-  var cats = [];
-  sel.forEach(function(id){
-    var c = CAT[id], R = rows[id], svcs = [];
-    function sv(code, name, r){
-      var p = parsePrice(r.price, 20000), insp = r.unit === INSPECT;
-      svcs.push({ code: code, name: name, price: p.ok ? Number(p.n) : null, unit: insp ? INSPECT : T[unitKey(id, r.unit)].ar, inspect: insp });
-    }
-    c.s.forEach(function(sg, i){ if (R.s[i].on) sv(sg[0] || 'جديد', sg[1], R.s[i]); });
-    R.c.forEach(function(r){ sv('جديد', san(r.name), r); });
-    if (!svcs.length) return;
-    cats.push({ id: c.isNew ? 'new' : id, name: id === 'other' ? san(otherName) : T['cat_' + id].ar, isNew: !!c.isNew, services: svcs });
-  });
-  var visit = radioValue('visit'), vp = parsePrice($('visitPrice').value, 5000);
+  var cities=selNames(CITIES,S.cities); var oc=$('cityOther').value.trim(); if(oc)cities.push(oc);
+  var notes=$('notes').value.trim(); var w=warOf(S.warranty);
   return {
-    v: 2, lang: lang, name: san($('name').value), phone: phone($('phone').value), cities: cities,
-    team: radioValue('team') || null, exp: $('exp').value || null, company: san($('company').value) || null,
-    doc: radioValue('doc') || null, equipment: checkedValues('eq'), materials: radioValue('mat'),
-    categories: cats, warranty: radioValue('war'),
-    visit: { type: visit, price: visit === 'بسعر' ? (vp.n || null) : null, deduct: visit === 'بسعر' ? !!$('visitDeduct').checked : null },
-    times: checkedValues('time'), friday: !!$('fri').checked, urgent: !!$('urgent').checked,
-    notes: san($('notes').value) || null,
-    website: $('hpWebsite').value || '',
-    message: message()
+    name:$('name').value.trim(), phone:normPhone($('phone').value), website:$('hp').value, lang:L,
+    type:S.type==='co'?'مؤسسة':'فني مستقل',
+    company:S.type==='co'?$('company').value.trim():'', team:S.type==='co'?$('team').value:'',
+    cities:cities, categories:catsPayload(),
+    warranty:w?w.ar:'', notes:notes, message:notes
   };
 }
-function showDone(ref){
-  sentRef = ref;
-  ['card1', 'card2', 'card3', 'card4', 'draftNote', 'reviewBtn', 'missing'].forEach(function(id){ if ($(id)) $(id).hidden = true; });
-  qa('#root .send > .note').forEach(function(el){ el.hidden = true; });
-  $('done').hidden = false;
-  $('rvH').hidden = true;
-  $('rvSub').hidden = true;
-  $('sendBtn').hidden = true;
-  $('sendStatus').textContent = '';
-  $('preview').hidden = true;
-  $('rvBtns').hidden = true;
-  $('longNote').hidden = true;
-  $('after').hidden = true;
-  fbMode = false; $('sendWa').hidden = true; $('sendWa2').hidden = true; $('fbNote').hidden = true;
-  $('doneNo').textContent = ref;
-  var who = san($('name').value);
-  $('photosWa').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent((lang === 'en' ? 'Photos of my work · Join request #' : 'صور شغلي · طلب انضمام رقم ') + ref + (who ? ' · ' + who : ''));
-  try { localStorage.removeItem(KEY); } catch (e) {}
-  window.scrollTo(0, 0);
+
+/* ── الملخص ── */
+function renderSum(){
+  var p=payload(); var rows=[];
+  function add(k,v){if(v)rows.push('<dt>'+t(k)+'</dt><dd>'+esc(v)+'</dd>');}
+  add('sType',S.type==='co'?t('tCo'):t('tTech')); add('sName',p.name); if(S.type==='co'){add('sCompany',p.company);add('sTeam',p.team);}
+  add('sPhone',p.phone); add('sCities',selNamesL(CITIES,S.cities).concat($('cityOther').value.trim()?[$('cityOther').value.trim()]:[]).join(L==='en'?', ':'، '));
+  var w=warOf(S.warranty); add('sWar',w?nm(w):''); add('sNotes',p.notes);
+  var h='<dl>'+rows.join('')+'</dl>';
+  p.categories.forEach(function(c){
+    var cd=CATS.find(function(x){return x.id===c.id;}); var title=c.id==='other'&&c.name!==cd.ar?c.name:nm(cd);
+    h+='<div class="sv"><b>'+cd.ic+' '+esc(title)+'</b>';
+    if(!c.services.length)h+='<div><span class="hint">'+t('noSvcs')+'</span></div>';
+    c.services.forEach(function(s){var row=S.cats[c.id].rows.find(function(r){return r.name.trim()===s.name;});var pr=s.inspect?t('uInspect'):(s.price==null?t('noPrice'):s.price+' '+t('sar')+' '+unitLabel(row?row.unit:'job'));h+='<div><span>'+esc(L==='en'&&s.name_en?s.name_en:s.name)+'</span><span>'+esc(pr)+'</span></div>';});
+    h+='</div>';
+  });
+  $('sum').innerHTML=h;
+}
+
+/* ── الإرسال ── */
+function waText(p){
+  var lines=[t('waFallback'),p.name,p.phone,p.cities.join('، ')];
+  p.categories.forEach(function(c){lines.push('• '+c.name+': '+c.services.map(function(s){return s.name+(s.price!=null?' '+s.price:'');}).join('، '));});
+  if(p.warranty)lines.push(t('sWar')+': '+p.warranty);
+  if(p.notes)lines.push(p.notes);
+  return 'https://wa.me/'+WA+'?text='+encodeURIComponent(lines.join('\n'));
+}
+function showFail(msg,p){$('failMsg').textContent=msg;$('failWa').href=p?waText(p):'#';$('failWa').hidden=!p;$('fail').classList.add('on');}
+function send(){
+  var p=payload(); var btn=$('next'); btn.disabled=true; btn.textContent=t('sending'); $('fail').classList.remove('on');
+  fetch(SB+'/rest/v1/rpc/submit_join_request',{method:'POST',headers:{apikey:KEY,Authorization:'Bearer '+KEY,'Content-Type':'application/json'},body:JSON.stringify({p:p})})
+  .then(function(r){return r.json();})
+  .then(function(j){
+    if(j&&j.ok){finish(j.ref,p);return;}
+    var e=j&&j.error;
+    if(e==='too_many')showFail(t('errTooMany'));
+    else if(e==='busy')showFail(t('errBusy'));
+    else if(e==='too_big')showFail(t('errBig'));
+    else if(e==='invalid'){showFail(t('errInvalid'));go(1);validate(1);}
+    else showFail(t('errNet'),p);
+  })
+  .catch(function(){showFail(t('errNet'),p);})
+  .then(function(){btn.disabled=false;btn.textContent=S.step===3?t('send'):t('next');});
+}
+function finish(ref,p){
+  S.ref=ref;
+  for(var i=1;i<=3;i++)$('p'+i).classList.remove('on');
+  $('nav').hidden=true; $('fh').hidden=true; $('done').classList.add('on');
+  $('refNo').textContent='#'+ref;
+  $('doneMsg').textContent=t('doneMsg').replace('{name}',p.name).replace('{phone}',p.phone);
+  $('waPhotos').href='https://wa.me/'+WA+'?text='+encodeURIComponent(t('waPhotos').replace('{ref}',ref));
   $('done').scrollIntoView({block:'start'});
 }
-$('sendBtn').addEventListener('click', function(){
-  if (sending) return;
-  if (!validate({all:true, scroll:true})) {
-    tried = true;
-    renderMissing(collect());
-    hideReview();
-    return;
-  }
-  sending = true;
-  $('sendBtn').disabled = true;
-  setStatus('sendStatus', 'sending');
-  var ctrl = null, timer = null;
-  try { ctrl = new AbortController(); timer = setTimeout(function(){ try { ctrl.abort(); } catch (e) {} }, 20000); } catch (e) {}
-  var done = function(){ if (timer) clearTimeout(timer); sending = false; $('sendBtn').disabled = false; };
-  var fail = function(key){ done(); setStatus('sendStatus', key || 'e_send', true); setFallback(true); };
-  try {
-    fetch(SB_URL + '/rest/v1/rpc/submit_join_request', {
-      method: 'POST',
-      headers: { apikey: SB_KEY, Authorization: 'Bearer ' + SB_KEY, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ p: payload() }),
-      signal: ctrl ? ctrl.signal : undefined
-    }).then(function(r){ return r.json(); }).then(function(j){
-      if (j && j.ok) { done(); showDone(j.ref); return; }
-      var e = j && j.error;
-      fail(e === 'too_many' ? 'e_tooMany' : e === 'invalid' ? 'e_invalid' : 'e_send');
-    }).catch(function(){ fail('e_send'); });
-  } catch (e) { fail('e_send'); }
-});
-function setAfter(on){
-  $('after').hidden = !on;
-  $('rvSub').hidden = on;
-  if (!on) { $('aCopied').hidden = true; setStatus('numStatus', ''); }
-}
-function hideReview(){
-  review.hidden = true;
-  setAfter(false);
-  setStatus('copyStatus', '');
-}
-function setStatus(id, key, isErr){
-  var el = $(id);
-  el.dataset.k = key || '';
-  el.textContent = key ? t(key) : '';
-  el.classList.toggle('err', !!isErr);
-}
+$('again').onclick=function(){location.reload();};
 
-function changed(){
-  save();
-  validate({});
-  if (!review.hidden) {
-    if (collect().length) { hideReview(); tried = true; validate({}); }
-    else renderReview();
-  }
-}
-
-$('reviewBtn').addEventListener('click', function(){
-  if (!validate({all:true, scroll:true})) {
-    tried = true;
-    renderMissing(collect());
-    hideReview();
-    return;
-  }
-  renderReview();
-  setStatus('copyStatus', '');
-  setStatus('sendStatus', '');
-  review.hidden = false;
-  review.scrollIntoView({block:'start'});
-  $('rvH').focus({preventScroll:true});
-});
-
-$('editBtn').addEventListener('click', function(){
-  hideReview();
-  $('card1').scrollIntoView({block:'start', behavior:'smooth'});
-});
-
-/* النسخ: الحافظة أولًا، وبعدها execCommand، وإذا فشل يبقى النص محدد */
-function copyText(text, select, okKey, failKey, statusId){
-  function fallback(){
-    var ok = false;
-    try { select(); ok = document.execCommand('copy'); } catch (e) { ok = false; }
-    if (ok) { setStatus(statusId, okKey); return; }
-    try { select(); } catch (e) {}
-    setStatus(statusId, failKey, true);
-  }
-  try {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function(){ setStatus(statusId, okKey); }, fallback);
-      return;
-    }
-  } catch (e) {}
-  fallback();
-}
-function selectNode(node){
-  var r = document.createRange(), s = window.getSelection();
-  r.selectNodeContents(node);
-  s.removeAllRanges();
-  s.addRange(r);
-}
-$('copyMsg').addEventListener('click', function(){
-  copyText(message(), function(){ selectNode($('preview')); }, 'copied', 'copyFail', 'copyStatus');
-});
-/* الرقم بالصيغة الدولية: يشتغل حتى لو واتساب الفني على رقم من بلد ثاني */
-$('copyNum').addEventListener('click', function(){
-  copyText('+' + WA, function(){ selectNode($('waNum')); }, 'numCopied', 'numFail', 'numStatus');
-});
-
-/* ضغط رابط واتساب: ما نمنع الفتح، ننسخ احتياط ونعرض الخطوة الباقية */
-qa('#review .wa').forEach(function(a){
-  a.addEventListener('click', function(){
-    sentTap = true;
-    var m = message();
-    setAfter(true);
-    try {
-      navigator.clipboard.writeText(m).then(function(){ $('aCopied').hidden = false; }, function(){});
-    } catch (e) {}
-    review.scrollIntoView({block:'start'});
-  });
-});
-$('newForm').addEventListener('click', resetAll);
-$('newForm2').addEventListener('click', function(){
-  try { localStorage.removeItem(KEY); } catch (e) {}
-  location.reload();
-});
-
-document.addEventListener('visibilitychange', function(){
-  if (document.visibilityState === 'hidden') save();
-  else if (sentTap && !review.hidden && !$('after').hidden) review.scrollIntoView({block:'start'});
-});
-window.addEventListener('pagehide', save);
-
-/* المسودة: محفوظة بهذا الجهاز فقط */
-function fieldEls(){
-  return qa('#root input[id], #root select[id], #root textarea[id]').filter(function(el){
-    return el.id !== 'preview' && !el.closest('#cats, #catChips');
-  });
-}
-function save(){
-  try {
-    var d = {v:2, lang:lang, sel:sel.slice(), otherName:otherName, rows:{}, f:{}};
-    Object.keys(rows).forEach(function(id){
-      var s = {};
-      CAT[id].s.forEach(function(sg, i){
-        var r = rows[id].s[i];
-        if (r.on) s[sg[1]] = {on:true, price:r.price, unit:r.unit};
-      });
-      d.rows[id] = {s:s, c:rows[id].c.map(function(r){ return {name:r.name, price:r.price, unit:r.unit}; })};
-    });
-    fieldEls().forEach(function(el){
-      if (el.type === 'radio' || el.type === 'checkbox') { if (el.checked) d.f[el.id] = true; }
-      else if (el.value) d.f[el.id] = el.value;
-    });
-    localStorage.setItem(KEY, JSON.stringify(d));
-  } catch (e) {}
-}
-
-/* يرجع true إذا فيه مسودة فيها شي */
-function restore(){
-  var d = null;
-  try { d = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return false; }
-  if (!d || d.v !== 2) return false;
-  try {
-    if (d.lang === 'ar' || d.lang === 'en') lang = d.lang;
-    var f = d.f || {};
-    fieldEls().forEach(function(el){
-      if (!Object.prototype.hasOwnProperty.call(f, el.id)) return;
-      var v = f[el.id];
-      if (el.type === 'radio' || el.type === 'checkbox') { el.checked = v === true; return; }
-      v = String(v);
-      if (el.tagName === 'SELECT' && !qa('option', el).some(function(o){ return o.value === v; })) return;
-      el.value = v;
-    });
-    otherName = typeof d.otherName === 'string' ? d.otherName : '';
-    sel = (Array.isArray(d.sel) ? d.sel : []).filter(function(id){ return !!CAT[id]; });
-    sortSel();
-    Object.keys(d.rows || {}).forEach(function(id){
-      if (!CAT[id]) return;
-      var src = d.rows[id] || {}, R = rows[id] = newRows(id);
-      Object.keys(src.s || {}).forEach(function(nm){
-        var v = src.s[nm] || {}, idx = -1, unit = isUnit(v.unit) ? v.unit : '', price = typeof v.price === 'string' ? v.price : '';
-        CAT[id].s.forEach(function(sg, i){ if (sg[1] === nm) idx = i; });
-        if (!v.on) return;
-        if (idx > -1) R.s[idx] = {on:true, price:price, unit:unit || CAT[id].s[idx][2]};
-        else R.c.push({id:++uid, name:nm, price:price, unit:unit || 'للخدمة'}); // خدمة انشالت من القائمة تصير خدمة مضافة
-      });
-      (Array.isArray(src.c) ? src.c : []).forEach(function(v){
-        if (!v || typeof v !== 'object') return;
-        R.c.push({id:++uid, name:String(v.name || ''), price:String(v.price || ''), unit:isUnit(v.unit) ? v.unit : 'للخدمة'});
-      });
-    });
-    sel.forEach(function(id){ ensureRows(id); $('cat_' + id).checked = true; });
-    return true;
-  } catch (e) { return false; }
-}
-/* الشريط يطلع بس إذا فيه شي مكتوب يبان قدامه */
-function hasVisibleContent(){
-  return sel.length > 0 || fieldEls().some(function(el){
-    if (!visible(el)) return false;
-    return el.type === 'radio' || el.type === 'checkbox' ? el.checked : !!el.value.trim();
-  });
-}
-
-/* ابدأ من جديد: ضغطتين */
-var armed = false, armTimer = null;
-function disarm(){
-  armed = false;
-  clearTimeout(armTimer);
-  var b = $('resetBtn');
-  b.dataset.t = 'restart';
-  b.textContent = t('restart');
-}
-$('resetBtn').addEventListener('click', function(){
-  if (!armed) {
-    armed = true;
-    this.dataset.t = 'restartSure';
-    this.textContent = t('restartSure');
-    armTimer = setTimeout(disarm, 5000);
-    return;
-  }
-  disarm();
-  resetAll();
-});
-
-function resetAll(){
-  try { localStorage.removeItem(KEY); } catch (e) {}
-  qa('#root input, #root select, #root textarea').forEach(function(el){
-    if (el.type === 'radio' || el.type === 'checkbox') el.checked = false;
-    else el.value = '';
-  });
-  sel = []; rows = {}; otherName = ''; tried = false; sentTap = false;
-  quiet = {}; left = {}; visited = {};
-  $('cats').innerHTML = '';
-  $('svcEmpty').hidden = false;
-  qa('#root .bad').forEach(function(el){ el.classList.remove('bad'); });
-  qa('#root [aria-invalid]').forEach(function(el){ el.setAttribute('aria-invalid', 'false'); });
-  qa('#root .msg').forEach(hideMsg);
-  syncReveals();
-  hideReview();
-  $('draftNote').hidden = true;
-  renderMissing([]);
-  updateDone();
-  window.scrollTo(0, 0);
-}
-
-/* اللغة */
-function applyLang(){
-  var dir = lang === 'ar' ? 'rtl' : 'ltr', root = $('root');
-  root.setAttribute('dir', dir);
-  root.setAttribute('lang', lang);
-  document.documentElement.setAttribute('dir', dir);
-  document.documentElement.setAttribute('lang', lang);
-  qa('[data-t]').forEach(function(el){ el.textContent = t(el.dataset.t); });
-  qa('[data-tp]').forEach(function(el){ el.setAttribute('placeholder', t(el.dataset.tp)); });
-  qa('[data-ta]').forEach(function(el){ el.setAttribute('aria-label', t(el.dataset.ta)); });
-  qa('#cats select.unit').forEach(function(s){
-    var cat = s.closest('.svc').dataset.cat;
-    qa('option', s).forEach(function(o){ o.textContent = t(unitKey(cat, o.value)); });
-  });
-  qa('#cats .svc').forEach(function(el){ var x = rowOf(el); if (x) refreshRowText(x); });
-  sel.forEach(updateCount);
-  qa('#root .msg[data-k]').forEach(function(m){ m.textContent = t(m.dataset.k, m.dataset.p ? JSON.parse(m.dataset.p) : null); });
-  qa('#root .status').forEach(function(el){ if (el.dataset.k) el.textContent = t(el.dataset.k); });
-  $('langAr').setAttribute('aria-pressed', String(lang === 'ar'));
-  $('langEn').setAttribute('aria-pressed', String(lang === 'en'));
-  if (tried) renderMissing(collect());
-  if (!review.hidden) renderReview();
-}
-qa('.lang button').forEach(function(b){
-  b.addEventListener('click', function(){
-    if (lang === b.dataset.lang) return;
-    lang = b.dataset.lang;
-    applyLang();
-    save();
-  });
-});
-function detectLang(){
-  var n = String(navigator.language || '').toLowerCase();
-  // العربي هو الأساس (حتى لو الجوال إنجليزي)، والإنجليزي لجوالات لغات العمالة الوافدة
-  if (/^(hi|ne|bn|ur|fil|tl|si|ta|ml|te)\b/.test(n)) return 'en';
-  return 'ar';
-}
-
-/* البداية */
-lang = detectLang();
-var hadDraft = restore();
-sel.forEach(showBlock);
-$('svcEmpty').hidden = sel.length > 0;
-syncReveals();
-applyLang();
-updateEnterHints();
-updateDone();
-if (hadDraft && hasVisibleContent()) $('draftNote').hidden = false;
+applyLang(); setType('tech');
 })();
 </script>
 
