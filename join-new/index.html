@@ -31,6 +31,10 @@ button{font-family:inherit}
 .mark{width:38px;height:38px;border-radius:11px;background:#111;color:var(--y);display:grid;place-items:center;font:800 22px/1 Changa,sans-serif}
 .brand b{font:800 22px/1 Changa,sans-serif}
 .langbtn{margin-inline-start:auto;border:1.5px solid rgba(17,17,17,.55);background:transparent;color:#111;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600;cursor:pointer}
+.homebtn{display:none;align-items:center;gap:4px;margin-inline-start:auto;border:1.5px solid rgba(17,17,17,.55);color:#111;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600;text-decoration:none}
+.inapp .homebtn{display:inline-flex}
+.inapp .homebtn+.langbtn{margin-inline-start:8px}
+.inapp .stores{display:none}
 .eyebrow{margin:30px 0 6px;font-weight:700;font-size:13px;opacity:.8;position:relative;z-index:1}
 .hero h1{font-weight:800;font-size:clamp(38px,9.5vw,62px);line-height:1.08;margin:0 0 14px;text-wrap:balance;position:relative;z-index:1}
 .hero h1 em{font-style:normal;background:#111;color:var(--y);padding:0 .22em;border-radius:.18em;display:inline-block;line-height:1.05;transform:rotate(-1.5deg)}
@@ -200,7 +204,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-vis
 <header class="hero">
   <div class="tape"></div>
   <div class="in">
-    <div class="brand"><span class="mark">خ</span><b data-i="brand">خافِت</b><button type="button" class="langbtn" id="langBtn">English</button></div>
+    <div class="brand"><span class="mark">خ</span><b data-i="brand">خافِت</b><a class="homebtn" href="index.html#stay" data-i="home">الرئيسية</a><button type="button" class="langbtn" id="langBtn">English</button></div>
     <p class="eyebrow" data-i="eyebrow">انضمام الفنيين ومقدمي الخدمات</p>
     <h1><span data-i="h1a">طلبات صيانة</span> <em data-i="h1em">جاهزة</em><br><span data-i="h1b">على جوالك.</span></h1>
     <p class="lead" data-i="lead">خافت يجيب لك عملاء الخبر والدمام والظهران، ورزق يرتّب لك الشغل من الطلب إلى الفاتورة. سجّل الحين وابدأ تستقبل الطلبات.</p>
@@ -396,6 +400,15 @@ waFallback:['طلب انضمام خافت','Khafet join request'],
 foot:['مؤسسة خافت للسباكة والكهرباء · الخبر','Khafet Plumbing and Electrical Est. · Al Khobar'], footWa:['واتساب خافت','Khafet WhatsApp'],
 sType:['النوع','Type'], sName:['الاسم','Name'], sCompany:['المؤسسة','Company'], sTeam:['الفريق','Team'], sPhone:['الجوال','Mobile'], sCities:['المدن','Cities'], sWar:['الضمان','Warranty'], sNotes:['ملاحظات','Notes'], sar:['ر.س','SAR'], noPrice:['بدون سعر','no price'], noSvcs:['ما أضفت خدمات، نحددها معك عند التواصل.','No services added, we will set them with you when we talk.']
 };
+T.home=['الرئيسية','Home'];
+/* داخل تطبيق رزق: بدون روابط المتاجر، ونصوص «سجّل» بدل «حمّل» */
+var INAPP=document.documentElement.classList.contains('inapp');
+if(INAPP){
+  T.s3=['سجّل في رزق','Sign in to Rizq'];
+  T.s3p=['بنفس رقم جوالك: فني تختار «فنيين خافت»، ومؤسسة تختار «مزودين خافت».','With the same mobile number: technicians pick “Khafet technicians”, companies pick “Khafet providers”.'];
+  T.n1=['خلّ إشعارات رزق مفعّلة عشان توصلك الطلبات.','Keep Rizq notifications on so jobs reach you.'];
+  T.n3=['لما نعتمد حسابك، ارجع للرئيسية وسجّل بنفس رقم الجوال.','Once we approve your account, go back home and sign in with the same mobile number.'];
+}
 var CITIES=[{k:'khobar',ar:'الخبر',en:'Al Khobar'},{k:'dammam',ar:'الدمام',en:'Dammam'},{k:'dhahran',ar:'الظهران',en:'Dhahran'},{k:'qatif',ar:'القطيف',en:'Qatif'},{k:'jubail',ar:'الجبيل',en:'Jubail'}];
 var WARS=[{k:'none',ar:'بدون ضمان',en:'No warranty'},{k:'week',ar:'أسبوع',en:'One week'},{k:'month',ar:'شهر',en:'One month'},{k:'3m',ar:'3 أشهر',en:'3 months'},{k:'6m',ar:'6 أشهر',en:'6 months'},{k:'year',ar:'سنة',en:'One year'}];
 var UNITS=[['job','uJob'],['hour','uHour'],['meter','uMeter'],['piece','uPiece'],['inspect','uInspect']];
@@ -434,6 +447,7 @@ function applyLang(){
 $('langBtn').onclick=function(){L=L==='en'?'ar':'en';applyLang();};
 (function pickLang(){
   var q=/[?&]lang=(en|ar)/.exec(location.search); if(q){L=q[1];return;}
+  if(INAPP){ try{var a=localStorage.getItem('khafet_techlang');if(a){L=a==='ar'?'ar':'en';return;}}catch(e){} }
   try{var s=localStorage.getItem('khafet_join_lang');if(s==='en'||s==='ar'){L=s;return;}}catch(e){}
   var nl=(navigator.language||'').toLowerCase();
   if(/^(hi|ne|bn|ur|fil|tl|si|ta|ml|te)/.test(nl))L='en';
