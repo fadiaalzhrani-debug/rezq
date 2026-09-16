@@ -196,6 +196,37 @@ select.unit{appearance:none;-webkit-appearance:none;width:auto;max-width:100%;mi
 
 /* لون الخطأ يجي بعد كل قواعد الحقول */
 .svc input.bad,.svc select.bad,.money>input.bad,input.bad,select.bad,textarea.bad{border-color:var(--err);background:var(--err-soft)}
+
+/* ── مقدمة الانضمام ── */
+.joinhero{background:var(--ink);color:#FFF9E8;border-radius:18px;padding:22px 18px 18px;margin-bottom:16px;position:relative;overflow:hidden}
+.joinhero::before{content:"";position:absolute;inset:auto -60px -90px auto;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(245,197,24,.35),rgba(245,197,24,0) 70%)}
+.joinhero>*{position:relative}
+.jh-tag{display:inline-block;background:rgba(245,197,24,.16);color:var(--gold);border:1px solid rgba(245,197,24,.4);border-radius:999px;padding:3px 12px;font-size:12px;font-weight:700;letter-spacing:.02em}
+.joinhero h2{color:#fff;font-size:26px;line-height:1.25;margin:12px 0 8px;text-wrap:balance}
+.jh-top p{margin:0;color:#D9D2BC;font-size:15px;line-height:1.6}
+.jh-vals{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.jh-val{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:12px 10px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.jh-val i{font-style:normal;font-size:24px;line-height:1}
+.jh-val b{color:var(--gold);font-size:14px;line-height:1.3}
+.jh-val span{color:#D9D2BC;font-size:12px;line-height:1.45}
+.jh-app{margin-top:16px;background:#fff;color:var(--ink);border-radius:14px;padding:14px}
+.jh-appt{display:flex;gap:10px;align-items:center}
+.jh-ic{width:44px;height:44px;border-radius:12px;background:var(--gold);display:grid;place-items:center;font-size:22px;flex:none}
+.jh-appt b{display:block;font-size:15px}
+.jh-appt small{display:block;color:#6B685C;font-size:12.5px;margin-top:2px}
+.jh-app .stores{margin:12px 0 4px}
+.jh-app .stores a{background:var(--ink);color:#fff}
+.jh-feats{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;margin-top:10px}
+.jh-feats span{display:flex;gap:6px;align-items:center;font-size:12.5px;font-weight:700;color:#3a3628}
+.jh-feats i{font-style:normal;font-size:16px}
+.jh-feats em{font-style:normal}
+.jh-steps{margin-top:16px}
+.jh-h{margin:0 0 8px;color:var(--gold);font-weight:700;font-size:13px;letter-spacing:.04em}
+.jh-steps ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.jh-steps li{display:flex;gap:10px;align-items:flex-start;color:#F3EED9;font-size:14px;line-height:1.5}
+.jh-steps li b{flex:none;width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-size:13px;margin-top:1px}
+.jh-cta{display:block;text-align:center;text-decoration:none;margin-top:14px;font-size:16px;padding:12px}
+@media (max-width:420px){ .jh-vals{grid-template-columns:1fr 1fr} .jh-val:last-child{grid-column:1/-1;flex-direction:row;align-items:center;gap:10px} .jh-val:last-child b{white-space:nowrap;flex:none} .jh-val:last-child span{display:inline} .joinhero h2{font-size:23px} }
 </style>
 <style>img{max-width:100%}</style>
 </head>
@@ -221,36 +252,42 @@ select.unit{appearance:none;-webkit-appearance:none;width:auto;max-width:100%;mi
     <button type="button" class="linkbtn" id="resetBtn" data-t="restart">ابدأ من جديد</button>
   </div>
 
-  <section class="card appcard" id="appCard" aria-labelledby="h5s">
-    <h2 id="h5s"><span class="n">📱</span><span data-t="appH">تطبيق رزق · شغلك من جوالك</span></h2>
-    <p class="sub" data-t="appSub">بعد ما نقبل طلبك، شغلك كله من تطبيق رزق: طلبات، فواتير، ومستودع.</p>
-    <p class="lbl" data-t="whyH">ليش تنضم لخافت</p>
-    <ul class="feats">
-      <li><i aria-hidden="true">📲</i><span data-t="why1">العملاء يحجزون من تطبيق خافت، والطلب يوصلك جاهز: الخدمة والعنوان والموعد.</span></li>
-      <li><i aria-hidden="true">💳</i><span data-t="why2">العميل يدفع أجرة اليد داخل التطبيق قبل ما تبدأ، وقطع الغيار قبل التركيب.</span></li>
-      <li><i aria-hidden="true">🏙️</i><span data-t="why3">أنت تحدد خدماتك وأسعارك ومدنك، وتقبل الطلب أو ترفضه.</span></li>
-    </ul>
-    <div class="stores">
-      <a href="https://play.google.com/store/apps/details?id=com.khafet.partners" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> <span data-t="appPlay">حمّله من قوقل بلاي</span></a>
-      <a href="https://apps.apple.com/sa/app/id6791782517" target="_blank" rel="noopener"><span data-t="appApple">حمّله من آب ستور</span></a>
+  <section class="joinhero" id="appCard" aria-labelledby="h5s">
+    <div class="jh-top">
+      <span class="jh-tag" data-t="heroTag">شبكة خافت للفنيين ومقدمي الخدمات</span>
+      <h2 id="h5s" data-t="heroH">خلّ طلبات الصيانة تجيك، بدل ما تدوّر عليها.</h2>
+      <p data-t="heroP">العملاء يحجزون من تطبيق خافت في الخبر والدمام والظهران، والطلب يوصلك جاهزًا بالخدمة والعنوان والموعد.</p>
     </div>
-    <p class="lbl" data-t="appHow">طريقة التسجيل</p>
-    <ol class="steps">
-      <li data-t="appS1">حمّل «رزق» وافتحه واختر لغتك.</li>
-      <li data-t="appS2">إذا أنت فني: اضغط «فنيين خافت»، سجّل برقم جوالك وكلمة مرور، واختر جهتك «خافت 001» من القائمة.</li>
-      <li data-t="appS3">إذا عندك مؤسسة وفريق: اضغط «مزودين خافت»، سجّل مؤسستك ومدنك، ويطلع لك كود تضيف فيه فنيينك.</li>
-      <li data-t="appS4">نعتمد حسابك من عندنا، وتبدأ تستقبل الطلبات.</li>
-    </ol>
-    <p class="lbl" data-t="appWhat">وش فيه التطبيق</p>
-    <ul class="feats">
-      <li><i aria-hidden="true">🔔</i><span data-t="appF1">الطلبات توصلك بإشعار وتقبلها من جوالك.</span></li>
-      <li><i aria-hidden="true">🚗</i><span data-t="appF2">«أنا في الطريق» و«وصلت» يتابعها العميل.</span></li>
-      <li><i aria-hidden="true">🧾</i><span data-t="appF3">فاتورة من التطبيق: خدمات وقطع، وتطبعها أو ترسلها للعميل.</span></li>
-      <li><i aria-hidden="true">📦</i><span data-t="appF4">مستودع بأصنافك وصورها والكميات، وطلب شراء جاهز PDF.</span></li>
-      <li><i aria-hidden="true">📊</i><span data-t="appF5">دخلك وتقييماتك ومسار يومك على الخريطة.</span></li>
-      <li><i aria-hidden="true">🌐</i><span data-t="appF6">التطبيق بعربي وإنجليزي وأردو وهندي ونيبالي.</span></li>
-    </ul>
-    <p class="note" data-t="appNote">تقدر تحمّله الحين وتسجّل، ونعتمدك بعد ما نراجع طلبك.</p>
+    <div class="jh-vals">
+      <div class="jh-val"><i aria-hidden="true">📲</i><b data-t="v1">طلبات جاهزة</b><span data-t="v1s">تقبلها من جوالك وتروح للموقع مباشرة</span></div>
+      <div class="jh-val"><i aria-hidden="true">💳</i><b data-t="v2">دفع قبل الشغل</b><span data-t="v2s">العميل يدفع أجرة اليد داخل التطبيق قبل ما تبدأ</span></div>
+      <div class="jh-val"><i aria-hidden="true">🏷️</i><b data-t="v3">أسعارك أنت</b><span data-t="v3s">تحدد خدماتك وأسعارك ومدنك، وترفض اللي ما يناسبك</span></div>
+    </div>
+    <div class="jh-app">
+      <div class="jh-appt"><span class="jh-ic" aria-hidden="true">🤝</span><div><b data-t="appH">تطبيق رزق · شغلك كله من جوالك</b><small data-t="appSub">طلبات، فواتير، مستودع، وتقييماتك في مكان واحد.</small></div></div>
+      <div class="stores">
+        <a href="https://play.google.com/store/apps/details?id=com.khafet.partners" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> <span data-t="appPlay">قوقل بلاي</span></a>
+        <a href="https://apps.apple.com/sa/app/id6791782517" target="_blank" rel="noopener"><span data-t="appApple">آب ستور</span></a>
+      </div>
+      <div class="jh-feats">
+        <span><i aria-hidden="true">🔔</i><em data-t="appF1">الطلبات بإشعار</em></span>
+        <span><i aria-hidden="true">🚗</i><em data-t="appF2">في الطريق ووصلت</em></span>
+        <span><i aria-hidden="true">🧾</i><em data-t="appF3">فاتورة تطبعها وترسلها</em></span>
+        <span><i aria-hidden="true">📦</i><em data-t="appF4">مستودع وطلب شراء PDF</em></span>
+        <span><i aria-hidden="true">📊</i><em data-t="appF5">دخلك وتقييماتك ومسار يومك</em></span>
+        <span><i aria-hidden="true">🌐</i><em data-t="appF6">عربي وإنجليزي وأردو وهندي ونيبالي</em></span>
+      </div>
+    </div>
+    <div class="jh-steps">
+      <p class="jh-h" data-t="appHow">كيف تبدأ</p>
+      <ol>
+        <li><b>1</b><span data-t="s1">عبّ النموذج تحت بخدماتك وأسعارك، ياخذ دقايق.</span></li>
+        <li><b>2</b><span data-t="s2">نراجع طلبك ونتواصل معك ونعتمد حسابك.</span></li>
+        <li><b>3</b><span data-t="s3">حمّل رزق وسجّل برقم جوالك: فني تختار «فنيين خافت»، ومؤسسة تختار «مزودين خافت».</span></li>
+        <li><b>4</b><span data-t="s4">تبدأ تستقبل الطلبات.</span></li>
+      </ol>
+      <a class="btn main jh-cta" href="#card1" data-t="ctaStart">ابدأ النموذج الآن</a>
+    </div>
   </section>
 
   <section class="card" id="card1" aria-labelledby="h1s">
@@ -523,26 +560,37 @@ var T0 = {
   equip:['عندك؟','Do you have?'],
   eq0:['سيارة','A car'], eq1:['عدة شغل كاملة','A full tool kit'],
 
-  appH:['تطبيق رزق · شغلك من جوالك','The Rizq app · your work from your phone'],
-  appSub:['بعد ما نقبل طلبك، شغلك كله من تطبيق رزق: طلبات، فواتير، ومستودع.','Once we accept you, you run everything from Rizq: jobs, invoices and stock.'],
+  heroTag:['شبكة خافت للفنيين ومقدمي الخدمات','The Khafet network for technicians and providers'],
+  heroH:['خلّ طلبات الصيانة تجيك، بدل ما تدوّر عليها.','Let maintenance jobs come to you, instead of chasing them.'],
+  heroP:['العملاء يحجزون من تطبيق خافت في الخبر والدمام والظهران، والطلب يوصلك جاهزًا بالخدمة والعنوان والموعد.','Customers book in the Khafet app across Al Khobar, Dammam and Dhahran, and the job reaches you ready: service, address and time.'],
+  v1:['طلبات جاهزة','Ready jobs'], v1s:['تقبلها من جوالك وتروح للموقع مباشرة','Accept on your phone and head straight to the site'],
+  v2:['دفع قبل الشغل','Paid before you start'], v2s:['العميل يدفع أجرة اليد داخل التطبيق قبل ما تبدأ','The customer pays labor in the app before you begin'],
+  v3:['أسعارك أنت','Your own prices'], v3s:['تحدد خدماتك وأسعارك ومدنك، وترفض اللي ما يناسبك','Set your services, prices and cities, and decline what does not suit you'],
+  s1:['عبّ النموذج تحت بخدماتك وأسعارك، ياخذ دقايق.','Fill the form below with your services and prices, it takes minutes.'],
+  s2:['نراجع طلبك ونتواصل معك ونعتمد حسابك.','We review your request, contact you and approve your account.'],
+  s3:['حمّل رزق وسجّل برقم جوالك: فني تختار «فنيين خافت»، ومؤسسة تختار «مزودين خافت».','Download Rizq and register with your mobile: technicians pick “Khafet technicians”, companies pick “Khafet providers”.'],
+  s4:['تبدأ تستقبل الطلبات.','Start receiving jobs.'],
+  ctaStart:['ابدأ النموذج الآن','Start the form now'],
+  appH:['تطبيق رزق · شغلك كله من جوالك','The Rizq app · all your work from your phone'],
+  appSub:['طلبات، فواتير، مستودع، وتقييماتك في مكان واحد.','Jobs, invoices, stock and your ratings in one place.'],
   whyH:['ليش تنضم لخافت','Why join Khafet'],
   why1:['العملاء يحجزون من تطبيق خافت، والطلب يوصلك جاهز: الخدمة والعنوان والموعد.','Customers book in the Khafet app and the job reaches you ready: service, address and time.'],
   why2:['العميل يدفع أجرة اليد داخل التطبيق قبل ما تبدأ، وقطع الغيار قبل التركيب.','The customer pays labor in the app before you start, and parts before installation.'],
   why3:['أنت تحدد خدماتك وأسعارك ومدنك، وتقبل الطلب أو ترفضه.','You set your services, prices and cities, and accept or decline each job.'],
-  appPlay:['حمّله من قوقل بلاي','Get it on Google Play'],
-  appApple:['حمّله من آب ستور','Get it on the App Store'],
-  appHow:['طريقة التسجيل','How to register'],
+  appPlay:['قوقل بلاي','Google Play'],
+  appApple:['آب ستور','App Store'],
+  appHow:['كيف تبدأ','How to start'],
   appS1:['حمّل «رزق» وافتحه واختر لغتك.','Download Rizq, open it and pick your language.'],
   appS2:['إذا أنت فني: اضغط «فنيين خافت»، سجّل برقم جوالك وكلمة مرور، واختر جهتك «خافت 001» من القائمة.','If you are a technician: tap “Khafet technicians”, register with your mobile and a password, then pick “خافت 001” from the list.'],
   appS3:['إذا عندك مؤسسة وفريق: اضغط «مزودين خافت»، سجّل مؤسستك ومدنك، ويطلع لك كود تضيف فيه فنيينك.','If you have a company and a team: tap “Khafet providers”, register your company and cities, and you get a code to add your technicians.'],
   appS4:['نعتمد حسابك من عندنا، وتبدأ تستقبل الطلبات.','We approve your account, then jobs start coming to you.'],
   appWhat:['وش فيه التطبيق','What the app gives you'],
-  appF1:['الطلبات توصلك بإشعار وتقبلها من جوالك.','Jobs arrive as a notification and you accept them on your phone.'],
-  appF2:['«أنا في الطريق» و«وصلت» يتابعها العميل.','“On my way” and “Arrived”, the customer follows along.'],
-  appF3:['فاتورة من التطبيق: خدمات وقطع، وتطبعها أو ترسلها للعميل.','Invoice from the app: services and parts, print it or send it to the customer.'],
-  appF4:['مستودع بأصنافك وصورها والكميات، وطلب شراء جاهز PDF.','Stock with your items, photos and quantities, plus a ready purchase order PDF.'],
-  appF5:['دخلك وتقييماتك ومسار يومك على الخريطة.','Your income, your ratings and your day route on the map.'],
-  appF6:['التطبيق بعربي وإنجليزي وأردو وهندي ونيبالي.','The app is in Arabic, English, Urdu, Hindi and Nepali.'],
+  appF1:['الطلبات بإشعار','Jobs by notification'],
+  appF2:['في الطريق ووصلت','On my way and arrived'],
+  appF3:['فاتورة تطبعها وترسلها','Invoice to print or send'],
+  appF4:['مستودع وطلب شراء PDF','Stock and PDF purchase orders'],
+  appF5:['دخلك وتقييماتك ومسار يومك','Your income, ratings and day route'],
+  appF6:['عربي وإنجليزي وأردو وهندي ونيبالي','Arabic, English, Urdu, Hindi and Nepali'],
   appNote:['تقدر تحمّله الحين وتسجّل، ونعتمدك بعد ما نراجع طلبك.','You can download and register now, and we approve you after we review your request.'],
 
   sendArea:['الإرسال','Send'],
